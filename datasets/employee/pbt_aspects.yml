@@ -1,0 +1,74 @@
+version: 1
+schema:
+  type: struct
+  fields:
+  - name: ID
+    type: integer
+    nullable: true
+    metadata:
+      description: Unique identifier for each individual in the dataset
+      mappings: []
+      tags: []
+  - name: First_Name
+    type: string
+    nullable: true
+    metadata:
+      description: The first name of the individual
+      mappings: []
+      tags: []
+  - name: Last_Name
+    type: string
+    nullable: true
+    metadata:
+      description: The last name of the individual
+      mappings: []
+      tags: []
+  - name: Age
+    type: integer
+    nullable: true
+    metadata:
+      description: The age of the individual as a string
+      mappings: []
+      tags: []
+  - name: City
+    type: string
+    nullable: true
+    metadata:
+      description: The city where the individual resides
+      mappings: []
+      tags: []
+  - name: Occupation
+    type: string
+    nullable: true
+    metadata:
+      description: The job title or role of the individual
+      mappings: []
+      tags: []
+  - name: Phone
+    type: double
+    nullable: true
+    metadata:
+      description: Contact number of the individual
+      mappings: []
+      tags: []
+  - name: Email
+    type: string
+    nullable: true
+    metadata:
+      description: Email address of the individual
+      mappings: []
+      tags: []
+  - name: Salary
+    type: decimal(20,2)
+    nullable: true
+    metadata:
+      description: The salary amount of the individual as a string
+      mappings: []
+      tags: []
+  - name: Department
+    type: string
+    nullable: true
+    metadata:
+      description: The department in which the individual works
+      mappings: []
+      tags: []
