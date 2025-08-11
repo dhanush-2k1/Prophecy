@@ -1,0 +1,482 @@
+{
+  "metainfo" : {
+    "migrationVersions" : {
+      "gemBuilderVersion" : "v1",
+      "unitTestNullDataMigrated" : true
+    },
+    "functions" : { },
+    "codeGenConfiguration" : {
+      "editableConfig" : true,
+      "plibVersion" : {
+        "mavenVersion" : "8.11.1",
+        "pyPiVersion" : "2.0.11"
+      },
+      "sparkConfigJinjaEnabled" : true
+    },
+    "id" : "1",
+    "uri" : "pipelines/distrubuted",
+    "sourceSuggestions" : [ ],
+    "pipelineSettingsInfo" : {
+      "applicationName" : "distrubuted",
+      "hasApplication" : true,
+      "isFunctionsPackageDirDefined" : true,
+      "isNullValuesInUnitTestsEnabled" : true,
+      "sparkConfigOptions" : {
+        "disableSparkCreationTimeConfigGeneration" : true
+      }
+    },
+    "language" : "python",
+    "fabricId" : "32124",
+    "frontEndLanguage" : "sql",
+    "mode" : "batch",
+    "udfs" : {
+      "language" : "python",
+      "udfs" : [ ],
+      "functionPackageName" : "dhanushmandapaka2k1gmailcomteam.sparkproject.functions",
+      "sharedFunctionPackageNames" : [ "prophecy.spark_basic.functions", "prophecy.warehouse.functions" ]
+    },
+    "udafs" : {
+      "language" : "python",
+      "code" : ""
+    },
+    "configuration" : {
+      "common" : {
+        "type" : "record",
+        "fields" : [ ]
+      },
+      "oldCommon" : {
+        "type" : "record",
+        "fields" : [ ]
+      },
+      "fabrics" : { },
+      "instances" : { },
+      "selected" : "default",
+      "nonEditable" : [ ],
+      "isSubscribedPipelineWithPipelineConfigs" : false
+    },
+    "sparkConf" : [ {
+      "name" : "spark.default.parallelism",
+      "value" : "4"
+    }, {
+      "name" : "spark.sql.legacy.allowUntypedScalaUDF",
+      "value" : "true"
+    } ],
+    "hadoopConf" : [ ],
+    "codeMode" : "sparse",
+    "buildSystem" : "maven",
+    "externalDependencies" : [ ],
+    "dependentProjectExternalDependencies" : [ {
+      "projectUID" : "12654",
+      "projectName" : "ProphecySparkBasicsPython",
+      "externalDependencies" : [ ]
+    }, {
+      "projectUID" : "12655",
+      "projectName" : "ProphecyWarehousePython",
+      "externalDependencies" : [ ]
+    } ],
+    "isImported" : false,
+    "interimMode" : "Full",
+    "interimModeEnabled" : true,
+    "visualCodeInterimMode" : "Disabled",
+    "recordsLimit" : {
+      "enabled" : false,
+      "value" : 1000
+    },
+    "topLevelPackage" : "distrubuted",
+    "configTopLevelPackage" : "distrubuted",
+    "configurationVersion" : "v2"
+  },
+  "connections" : [ {
+    "id" : "NRqiPCOQ7Mkq5Tcf3riBM$$CfhGwlhlSfc62X-I6ndLC",
+    "source" : "nrcDR8S39d2zwq_aymY30$$jtob3oJtTVvYBHYov1VGc",
+    "sourcePort" : "OpBY3qtf1nacJGhxU7n9X$$AAbef7qeSxm8NbMcrW7KY",
+    "target" : "wscK5X6tiAWaYQkiNn3T_$$0MfQ_9xBr4pbEm87G011C",
+    "targetPort" : "_rTWRwFpDGdTFG9n-9b8Q$$SchXVAf0IGzM9J7QviTll"
+  }, {
+    "id" : "O8onZj3G6sjy9o6YzPOaN$$TgZujyU0Lyq9XouKlRVs_",
+    "source" : "nrcDR8S39d2zwq_aymY30$$jtob3oJtTVvYBHYov1VGc",
+    "sourcePort" : "PDs2xvAXhxUepvqmIk2Kn$$nKIxLSr1mLuvNekbehrTv",
+    "target" : "t76adCdGBfpSynMiayeeT$$e_R9WRLtSMtNAB3zYfNaO",
+    "targetPort" : "stJZm_Wny4bArguZ3KgQR$$SV6FGCXIRzQRbA51TEADR"
+  }, {
+    "id" : "72DJ4q73T5FHg0ae24M6W",
+    "source" : "a5qsewgqG917GqDfblN__$$BNs-iXUWqKK0s8U2jAz1u",
+    "sourcePort" : "AcBVowxdIGU5kkq5Jv6TN$$iqIrbxkKCrq9_2bHK7qLJ",
+    "target" : "nrcDR8S39d2zwq_aymY30$$jtob3oJtTVvYBHYov1VGc",
+    "targetPort" : "f9BmSGf8Uf9R9QIxyYy8o$$Hu5QabBJci3e-vUzDb4Md"
+  } ],
+  "processes" : {
+    "nrcDR8S39d2zwq_aymY30$$jtob3oJtTVvYBHYov1VGc" : {
+      "id" : "nrcDR8S39d2zwq_aymY30$$jtob3oJtTVvYBHYov1VGc",
+      "component" : "RowDistributor",
+      "metadata" : {
+        "label" : "distribute_by_department",
+        "slug" : "distribute_by_department",
+        "x" : -260,
+        "y" : -140,
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false,
+        "isImported" : false,
+        "dataPreview" : false
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "f9BmSGf8Uf9R9QIxyYy8o$$Hu5QabBJci3e-vUzDb4Md",
+          "slug" : "in0",
+          "schema" : {
+            "type" : "struct",
+            "fields" : [ {
+              "name" : "EmployeeID",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "Name",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "DeptID",
+              "type" : "integer",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "Salary",
+              "type" : "double",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "Experience",
+              "type" : "decimal(20,1)",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "Bonus",
+              "type" : "double",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "City",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "Gender",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            } ]
+          },
+          "isStreaming" : false
+        } ],
+        "outputs" : [ {
+          "id" : "OpBY3qtf1nacJGhxU7n9X$$AAbef7qeSxm8NbMcrW7KY",
+          "slug" : "out0"
+        }, {
+          "id" : "PDs2xvAXhxUepvqmIk2Kn$$nKIxLSr1mLuvNekbehrTv",
+          "slug" : "out1"
+        } ],
+        "selectedInputFields" : [ ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      },
+      "properties" : {
+        "outports" : [ {
+          "path" : "out0",
+          "id" : "OpBY3qtf1nacJGhxU7n9X$$AAbef7qeSxm8NbMcrW7KY",
+          "model" : {
+            "format" : "sql",
+            "expression" : "DeptID==101"
+          }
+        }, {
+          "path" : "out1",
+          "id" : "PDs2xvAXhxUepvqmIk2Kn$$nKIxLSr1mLuvNekbehrTv",
+          "model" : {
+            "format" : "sql",
+            "expression" : "DeptID==102"
+          }
+        } ],
+        "distributeUnmatchedRows" : null
+      },
+      "componentInfo" : {
+        "gemId" : "gitUri=http://gitserver:3000/DxEheDCJ_team_5751/DxEheDCJ_project_12654.git&subPath=&tag=0.2.47&projectSubscriptionProjectId=12654&path=gems/RowDistributor",
+        "projectName" : "ProphecySparkBasicsPython"
+      }
+    },
+    "wscK5X6tiAWaYQkiNn3T_$$0MfQ_9xBr4pbEm87G011C" : {
+      "id" : "wscK5X6tiAWaYQkiNn3T_$$0MfQ_9xBr4pbEm87G011C",
+      "component" : "Target",
+      "metadata" : {
+        "label" : "d1",
+        "slug" : "d1",
+        "x" : -80,
+        "y" : -220,
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false,
+        "isImported" : false
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "_rTWRwFpDGdTFG9n-9b8Q$$SchXVAf0IGzM9J7QviTll",
+          "slug" : "in0",
+          "schema" : {
+            "type" : "struct",
+            "fields" : [ {
+              "name" : "EmployeeID",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "Name",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "DeptID",
+              "type" : "integer",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "Salary",
+              "type" : "double",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "Experience",
+              "type" : "decimal(20,1)",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "Bonus",
+              "type" : "double",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "City",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "Gender",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            } ]
+          },
+          "isStreaming" : false
+        } ],
+        "outputs" : [ ],
+        "selectedInputFields" : [ ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      },
+      "properties" : {
+        "datasetId" : "datasets/d1"
+      }
+    },
+    "t76adCdGBfpSynMiayeeT$$e_R9WRLtSMtNAB3zYfNaO" : {
+      "id" : "t76adCdGBfpSynMiayeeT$$e_R9WRLtSMtNAB3zYfNaO",
+      "component" : "Target",
+      "metadata" : {
+        "label" : "d2",
+        "slug" : "d2",
+        "x" : -60,
+        "y" : -80,
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false,
+        "isImported" : false
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "stJZm_Wny4bArguZ3KgQR$$SV6FGCXIRzQRbA51TEADR",
+          "slug" : "in0",
+          "schema" : {
+            "type" : "struct",
+            "fields" : [ {
+              "name" : "EmployeeID",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "Name",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "DeptID",
+              "type" : "integer",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "Salary",
+              "type" : "double",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "Experience",
+              "type" : "decimal(20,1)",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "Bonus",
+              "type" : "double",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "City",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "Gender",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            } ]
+          },
+          "isStreaming" : false
+        } ],
+        "outputs" : [ ],
+        "selectedInputFields" : [ ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      },
+      "properties" : {
+        "datasetId" : "datasets/d2"
+      }
+    },
+    "a5qsewgqG917GqDfblN__$$BNs-iXUWqKK0s8U2jAz1u" : {
+      "id" : "a5qsewgqG917GqDfblN__$$BNs-iXUWqKK0s8U2jAz1u",
+      "component" : "Source",
+      "metadata" : {
+        "label" : "Employee_join",
+        "slug" : "Employee_join",
+        "x" : -540,
+        "y" : -140,
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false,
+        "isImported" : false
+      },
+      "ports" : {
+        "inputs" : [ ],
+        "outputs" : [ {
+          "id" : "AcBVowxdIGU5kkq5Jv6TN$$iqIrbxkKCrq9_2bHK7qLJ",
+          "slug" : "out"
+        } ],
+        "selectedInputFields" : [ ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      },
+      "properties" : {
+        "datasetId" : "datasets/Employee_join"
+      }
+    }
+  },
+  "ports" : {
+    "inputs" : [ ],
+    "outputs" : [ ],
+    "selectedInputFields" : [ ],
+    "isCustomOutputSchema" : false,
+    "autoUpdateOnRun" : false
+  }
+}

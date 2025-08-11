@@ -102,6 +102,22 @@ pipelines:
       - datasets/Test_Shrava
     subgraphs: []
     dependencies: {}
+  pipelines/distrubuted:
+    name: distrubuted
+    description: ''
+    author: dhanushmandapaka2k1@gmail.com
+    mode: batch
+    artefactID: ''
+    language: python
+    createdAt: '2025-08-11 12:57:10'
+    datasets:
+      inputs:
+      - datasets/Employee_join
+      outputs:
+      - datasets/d1
+      - datasets/d2
+    subgraphs: []
+    dependencies: {}
 datasets:
   datasets/emp:
     name: emp
@@ -207,6 +223,32 @@ datasets:
         description: ''
         author: dhanushmandapaka2k1@gmail.com
         createdAt: '2025-08-11 12:40:31'
+  datasets/d1:
+    name: d1
+    description: ''
+    author: dhanushmandapaka2k1@gmail.com
+    createdAt: '2025-08-11 13:00:44'
+    mode: batch
+    physicalDatasets:
+      spark_fabric:
+        fabricId: 32124
+        datasetType: File
+        description: ''
+        author: dhanushmandapaka2k1@gmail.com
+        createdAt: '2025-08-11 13:00:44'
+  datasets/d2:
+    name: d2
+    description: ''
+    author: dhanushmandapaka2k1@gmail.com
+    createdAt: '2025-08-11 13:01:06'
+    mode: batch
+    physicalDatasets:
+      spark_fabric:
+        fabricId: 32124
+        datasetType: File
+        description: ''
+        author: dhanushmandapaka2k1@gmail.com
+        createdAt: '2025-08-11 13:01:06'
 templates: {}
 jobs:
   jobs/test_join:
