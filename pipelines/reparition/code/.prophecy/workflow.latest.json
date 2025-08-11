@@ -1,0 +1,471 @@
+{
+  "metainfo" : {
+    "migrationVersions" : {
+      "gemBuilderVersion" : "v1",
+      "unitTestNullDataMigrated" : true
+    },
+    "functions" : { },
+    "codeGenConfiguration" : {
+      "editableConfig" : true,
+      "plibVersion" : {
+        "mavenVersion" : "8.11.1",
+        "pyPiVersion" : "2.0.11"
+      },
+      "sparkConfigJinjaEnabled" : true
+    },
+    "id" : "1",
+    "uri" : "pipelines/reparition",
+    "sourceSuggestions" : [ ],
+    "pipelineSettingsInfo" : {
+      "applicationName" : "reparition",
+      "hasApplication" : true,
+      "isFunctionsPackageDirDefined" : true,
+      "isNullValuesInUnitTestsEnabled" : true,
+      "sparkConfigOptions" : {
+        "disableSparkCreationTimeConfigGeneration" : true
+      }
+    },
+    "language" : "python",
+    "fabricId" : "32124",
+    "frontEndLanguage" : "sql",
+    "mode" : "batch",
+    "udfs" : {
+      "language" : "python",
+      "udfs" : [ ],
+      "functionPackageName" : "dhanushmandapaka2k1gmailcomteam.sparkproject.functions",
+      "sharedFunctionPackageNames" : [ "prophecy.spark_basic.functions", "prophecy.warehouse.functions" ]
+    },
+    "udafs" : {
+      "language" : "python",
+      "code" : ""
+    },
+    "configuration" : {
+      "common" : {
+        "type" : "record",
+        "fields" : [ ]
+      },
+      "oldCommon" : {
+        "type" : "record",
+        "fields" : [ ]
+      },
+      "fabrics" : { },
+      "instances" : { },
+      "selected" : "default",
+      "nonEditable" : [ ],
+      "isSubscribedPipelineWithPipelineConfigs" : false
+    },
+    "sparkConf" : [ {
+      "name" : "spark.default.parallelism",
+      "value" : "4"
+    }, {
+      "name" : "spark.sql.legacy.allowUntypedScalaUDF",
+      "value" : "true"
+    } ],
+    "hadoopConf" : [ ],
+    "codeMode" : "sparse",
+    "buildSystem" : "maven",
+    "externalDependencies" : [ ],
+    "dependentProjectExternalDependencies" : [ {
+      "projectUID" : "12654",
+      "projectName" : "ProphecySparkBasicsPython",
+      "externalDependencies" : [ ]
+    }, {
+      "projectUID" : "12655",
+      "projectName" : "ProphecyWarehousePython",
+      "externalDependencies" : [ ]
+    } ],
+    "isImported" : false,
+    "interimMode" : "Full",
+    "interimModeEnabled" : true,
+    "visualCodeInterimMode" : "Disabled",
+    "recordsLimit" : {
+      "enabled" : false,
+      "value" : 1000
+    },
+    "topLevelPackage" : "reparition",
+    "configTopLevelPackage" : "reparition",
+    "configurationVersion" : "v2"
+  },
+  "connections" : [ {
+    "id" : "foCNdef2rz4tVCPAd3iop$$lXWUUqWe5r1T-Whw8JZ57",
+    "source" : "fIQ6OvvLQUj8K3tDBhWpq$$UekpX_tngLp6wnBu39qVP",
+    "sourcePort" : "medO-6W31CypLV2zGRDVZ$$J04sxeuIYURbKFrJhwS6i",
+    "target" : "4g6c9Y4OJ7bMxf3S2w4yQ$$_xW3plc_TEVOiHbHBOqOq",
+    "targetPort" : "okWL_eDlgyfecNewncLP7$$X6HaJvGSj1gj0KWZ1skLk"
+  }, {
+    "id" : "QVKv6QrGlkGubANGDuPCR$$d8MtNFVMmysS73yHvrYFW",
+    "source" : "4g6c9Y4OJ7bMxf3S2w4yQ$$_xW3plc_TEVOiHbHBOqOq",
+    "sourcePort" : "nIPR_u2PI7FIMMXT8kQZ7$$amfoeljK811JTUQZkbYHb",
+    "target" : "WxRgypjzFinZJsi8wvGNp$$XLbcB1p9xAwCzZyaT5R9e",
+    "targetPort" : "EV-xGGRhgpJLZMdt1SwBe$$cQIDEpgpW8xuWYur4fhJF"
+  } ],
+  "processes" : {
+    "fIQ6OvvLQUj8K3tDBhWpq$$UekpX_tngLp6wnBu39qVP" : {
+      "id" : "fIQ6OvvLQUj8K3tDBhWpq$$UekpX_tngLp6wnBu39qVP",
+      "component" : "Source",
+      "metadata" : {
+        "label" : "Emp_join",
+        "slug" : "Emp_join",
+        "x" : -460,
+        "y" : -100,
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false,
+        "isImported" : false
+      },
+      "ports" : {
+        "inputs" : [ ],
+        "outputs" : [ {
+          "id" : "medO-6W31CypLV2zGRDVZ$$J04sxeuIYURbKFrJhwS6i",
+          "slug" : "out"
+        } ],
+        "selectedInputFields" : [ ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      },
+      "properties" : {
+        "datasetId" : "datasets/Emp_join"
+      }
+    },
+    "4g6c9Y4OJ7bMxf3S2w4yQ$$_xW3plc_TEVOiHbHBOqOq" : {
+      "id" : "4g6c9Y4OJ7bMxf3S2w4yQ$$_xW3plc_TEVOiHbHBOqOq",
+      "component" : "Repartition",
+      "metadata" : {
+        "label" : "reduce_partitions",
+        "slug" : "reduce_partitions",
+        "x" : -240,
+        "y" : -80,
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false,
+        "isImported" : false,
+        "dataPreview" : false
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "okWL_eDlgyfecNewncLP7$$X6HaJvGSj1gj0KWZ1skLk",
+          "slug" : "Emp_join",
+          "schema" : {
+            "type" : "struct",
+            "fields" : [ {
+              "name" : "Emp_EmployeeID",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "Emp_Name",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "Emp_DeptID",
+              "type" : "integer",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "Emp_Salary",
+              "type" : "double",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "Emp_Experience",
+              "type" : "decimal(20,1)",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "Emp_Bonus",
+              "type" : "decimal(20,10)",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "Emp_City",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "Emp_Gender",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "Dept_DeptID",
+              "type" : "integer",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Unique identifier for the department",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "Dept_Department",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Name of the department within the organization",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "Dept_DeptHead",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "The name of the head of the department",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "Dept_Location",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "The physical location of the department",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "Dept_Budget",
+              "type" : "decimal(20,2)",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Total budget allocated for the department",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "Dept_EmployeeCount",
+              "type" : "integer",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Total number of employees in the department",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            } ]
+          },
+          "isStreaming" : false
+        } ],
+        "outputs" : [ {
+          "id" : "nIPR_u2PI7FIMMXT8kQZ7$$amfoeljK811JTUQZkbYHb",
+          "slug" : "out"
+        } ],
+        "selectedInputFields" : [ ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      },
+      "properties" : {
+        "overwriteDefaultNPartitions" : false,
+        "hashExpressions" : [ {
+          "format" : "sql",
+          "expression" : "Dept_DeptID"
+        } ],
+        "columnsSelector" : [ "okWL_eDlgyfecNewncLP7$$X6HaJvGSj1gj0KWZ1skLk##Dept_DeptID" ],
+        "repartitionType" : "hash_repartitioning",
+        "rangeExpressions" : [ ],
+        "defaultPartitions" : null,
+        "nPartitions" : "2"
+      },
+      "componentInfo" : {
+        "gemId" : "gitUri=http://gitserver:3000/DxEheDCJ_team_5751/DxEheDCJ_project_12654.git&subPath=&tag=0.2.47&projectSubscriptionProjectId=12654&path=gems/Repartition",
+        "projectName" : "ProphecySparkBasicsPython"
+      }
+    },
+    "WxRgypjzFinZJsi8wvGNp$$XLbcB1p9xAwCzZyaT5R9e" : {
+      "id" : "WxRgypjzFinZJsi8wvGNp$$XLbcB1p9xAwCzZyaT5R9e",
+      "component" : "Target",
+      "metadata" : {
+        "label" : "Test_Shrava",
+        "slug" : "Test_Shrava",
+        "x" : -20,
+        "y" : -140,
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false,
+        "isImported" : false
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "EV-xGGRhgpJLZMdt1SwBe$$cQIDEpgpW8xuWYur4fhJF",
+          "slug" : "Repartition_1",
+          "schema" : {
+            "type" : "struct",
+            "fields" : [ {
+              "name" : "Emp_EmployeeID",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "Emp_Name",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "Emp_DeptID",
+              "type" : "integer",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "Emp_Salary",
+              "type" : "double",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "Emp_Experience",
+              "type" : "decimal(20,1)",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "Emp_Bonus",
+              "type" : "decimal(20,10)",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "Emp_City",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "Emp_Gender",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "Dept_DeptID",
+              "type" : "integer",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Unique identifier for the department",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "Dept_Department",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Name of the department within the organization",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "Dept_DeptHead",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "The name of the head of the department",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "Dept_Location",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "The physical location of the department",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "Dept_Budget",
+              "type" : "decimal(20,2)",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Total budget allocated for the department",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "Dept_EmployeeCount",
+              "type" : "integer",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Total number of employees in the department",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            } ]
+          },
+          "isStreaming" : false
+        } ],
+        "outputs" : [ ],
+        "selectedInputFields" : [ ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      },
+      "properties" : {
+        "datasetId" : "datasets/Test_Shrava"
+      }
+    }
+  },
+  "ports" : {
+    "inputs" : [ ],
+    "outputs" : [ ],
+    "selectedInputFields" : [ ],
+    "isCustomOutputSchema" : false,
+    "autoUpdateOnRun" : false
+  }
+}

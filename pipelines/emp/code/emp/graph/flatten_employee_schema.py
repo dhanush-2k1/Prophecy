@@ -8,6 +8,6 @@ from emp.functions import *
 
 def flatten_employee_schema(spark: SparkSession, remove_duplicates: DataFrame) -> DataFrame:
     flt_col = remove_duplicates.columns
-    selectCols = [col("Emp_Department") if "Emp_Department" in flt_col else col("Emp_Department"),                   col("Emp_avg_sal") if "Emp_avg_sal" in flt_col else col("Emp_avg_sal"),                   col("Emp_avg_age") if "Emp_avg_age" in flt_col else col("Emp_avg_age")]
+    selectCols = [col("DeptID") if "DeptID" in flt_col else col("DeptID"),                   col("Experience") if "Experience" in flt_col else col("Experience"),                   col("Emp_avg_sal") if "Emp_avg_sal" in flt_col else col("Emp_avg_sal")]
 
     return remove_duplicates.select(*selectCols)

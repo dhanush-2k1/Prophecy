@@ -87,6 +87,21 @@ pipelines:
       outputs: []
     subgraphs: []
     dependencies: {}
+  pipelines/reparition:
+    name: reparition
+    description: ''
+    author: dhanushmandapaka2k1@gmail.com
+    mode: batch
+    artefactID: ''
+    language: python
+    createdAt: '2025-08-11 12:36:07'
+    datasets:
+      inputs:
+      - datasets/Emp_join
+      outputs:
+      - datasets/Test_Shrava
+    subgraphs: []
+    dependencies: {}
 datasets:
   datasets/emp:
     name: emp
@@ -179,6 +194,19 @@ datasets:
         description: ''
         author: dhanushmandapaka2k1@gmail.com
         createdAt: '2025-08-11 11:32:13'
+  datasets/Test_Shrava:
+    name: Test_Shrava
+    description: ''
+    author: dhanushmandapaka2k1@gmail.com
+    createdAt: '2025-08-11 12:40:31'
+    mode: batch
+    physicalDatasets:
+      spark_fabric:
+        fabricId: 32124
+        datasetType: File
+        description: ''
+        author: dhanushmandapaka2k1@gmail.com
+        createdAt: '2025-08-11 12:40:31'
 templates: {}
 jobs:
   jobs/test_join:

@@ -213,10 +213,10 @@
         "autoUpdateOnRun" : false
       },
       "properties" : {
-        "columnsSelector" : [ "5dH6B8Xkpm45-HhjksDl3$$fr5Yt82gsPoMgwS9ru3xr##Age", "5dH6B8Xkpm45-HhjksDl3$$fr5Yt82gsPoMgwS9ru3xr##Salary" ],
+        "columnsSelector" : [ "5dH6B8Xkpm45-HhjksDl3$$fr5Yt82gsPoMgwS9ru3xr##Salary", "5dH6B8Xkpm45-HhjksDl3$$fr5Yt82gsPoMgwS9ru3xr##Experience" ],
         "condition" : {
           "format" : "sql",
-          "expression" : "Age > 25 and Salary >= 500000"
+          "expression" : "Experience > 2 and Salary >= 500000"
         }
       },
       "componentInfo" : {
@@ -240,7 +240,39 @@
       "ports" : {
         "inputs" : [ {
           "id" : "2CxquRBkQa4wHq02FNPTs$$7CMKpXbzO0aSuSbP72TLS",
-          "slug" : "flatten_employee_schema"
+          "slug" : "flatten_employee_schema",
+          "schema" : {
+            "type" : "struct",
+            "fields" : [ {
+              "name" : "DeptID",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "Experience",
+              "type" : "double",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "Emp_avg_sal",
+              "type" : "double",
+              "nullable" : false,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            } ]
+          },
+          "isStreaming" : false
         } ],
         "outputs" : [ ],
         "selectedInputFields" : [ ],
@@ -251,38 +283,13 @@
         "datasetId" : "datasets/tagrget_output"
       }
     },
-    "wDVREzpU2KF1RPHca19p-$$4nBrztS2vSxrwa-82OT_H" : {
-      "id" : "wDVREzpU2KF1RPHca19p-$$4nBrztS2vSxrwa-82OT_H",
-      "component" : "Target",
-      "metadata" : {
-        "label" : "Target_1",
-        "slug" : "Target_1",
-        "x" : 340,
-        "y" : -500,
-        "phase" : 0,
-        "cache" : false,
-        "detailedStats" : false,
-        "isImported" : false
-      },
-      "ports" : {
-        "inputs" : [ {
-          "id" : "kmb5t8OIf_MVSSNFx91yY$$1vty1mKUSK3szF_ZDRIRV",
-          "slug" : "in0"
-        } ],
-        "outputs" : [ ],
-        "selectedInputFields" : [ ],
-        "isCustomOutputSchema" : false,
-        "autoUpdateOnRun" : false
-      },
-      "properties" : { }
-    },
     "ySAetswf6zJapAA0p0Xqi$$XZCI1D6fJM3ly0WPPQKPr" : {
       "id" : "ySAetswf6zJapAA0p0Xqi$$XZCI1D6fJM3ly0WPPQKPr",
       "component" : "Aggregate",
       "metadata" : {
         "label" : "department_salary_age_avg",
         "slug" : "department_salary_age_avg",
-        "x" : -420,
+        "x" : -520,
         "y" : -440,
         "phase" : 0,
         "cache" : false,
@@ -293,7 +300,57 @@
       "ports" : {
         "inputs" : [ {
           "id" : "3UvTtElhTLtiNEjuOB-u_$$hZUdi8uJ265JbWvrNO_K_",
-          "slug" : "in0"
+          "slug" : "in0",
+          "schema" : {
+            "type" : "struct",
+            "fields" : [ {
+              "name" : "EmployeeID",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "Name",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "DeptID",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "Salary",
+              "type" : "double",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "Experience",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            } ]
+          },
+          "isStreaming" : false
         } ],
         "outputs" : [ {
           "id" : "3xJvZzILpZ57LLLHi-t0l$$GNTYSK8RIj8UzprtFDUxy",
@@ -316,28 +373,28 @@
           "description" : "",
           "_row_id" : null
         }, {
-          "target" : "avg_age",
+          "target" : "Experience",
           "expression" : {
             "format" : "sql",
-            "expression" : "round(avg(Age),2)"
+            "expression" : "round(avg(Experience))"
           },
           "description" : "",
-          "_row_id" : "hYrTUZK5bG"
+          "_row_id" : null
         } ],
         "allowSelection" : true,
         "pivotColumn" : null,
         "pivotValues" : [ ],
         "importString" : "",
-        "activeTab" : "aggregate",
-        "columnsSelector" : [ "3UvTtElhTLtiNEjuOB-u_$$hZUdi8uJ265JbWvrNO_K_##Age", "3UvTtElhTLtiNEjuOB-u_$$hZUdi8uJ265JbWvrNO_K_##Salary", "3UvTtElhTLtiNEjuOB-u_$$hZUdi8uJ265JbWvrNO_K_##Department" ],
+        "activeTab" : "groupBy",
+        "columnsSelector" : [ "3UvTtElhTLtiNEjuOB-u_$$hZUdi8uJ265JbWvrNO_K_##Experience", "3UvTtElhTLtiNEjuOB-u_$$hZUdi8uJ265JbWvrNO_K_##Salary", "3UvTtElhTLtiNEjuOB-u_$$hZUdi8uJ265JbWvrNO_K_##DeptID" ],
         "groupBy" : [ {
-          "target" : "Department",
+          "target" : "DeptID",
           "expression" : {
             "format" : "sql",
-            "expression" : "Department"
+            "expression" : "DeptID"
           },
           "description" : "",
-          "_row_id" : "0XlRok6h5U"
+          "_row_id" : null
         } ]
       },
       "componentInfo" : {
@@ -362,7 +419,39 @@
       "ports" : {
         "inputs" : [ {
           "id" : "I-2VqZdiYAL1MoG3vZKOm$$1qUcLlJbH3iYSxPFZHyNk",
-          "slug" : "in0"
+          "slug" : "in0",
+          "schema" : {
+            "type" : "struct",
+            "fields" : [ {
+              "name" : "DeptID",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "avg_sal",
+              "type" : "double",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "Experience",
+              "type" : "double",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            } ]
+          },
+          "isStreaming" : false
         } ],
         "outputs" : [ {
           "id" : "1hN6MTtuDmmyEkysSFKBp$$zexfNW6ohImhH77xyn0mG",
@@ -404,7 +493,39 @@
       "ports" : {
         "inputs" : [ {
           "id" : "Buw6MBIpCLaqkOnQpCYQz$$EQRF2PPtPEm3qojRGg10j",
-          "slug" : "remove_duplicates"
+          "slug" : "remove_duplicates",
+          "schema" : {
+            "type" : "struct",
+            "fields" : [ {
+              "name" : "DeptID",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "Experience",
+              "type" : "double",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "Emp_avg_sal",
+              "type" : "double",
+              "nullable" : false,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            } ]
+          },
+          "isStreaming" : false
         } ],
         "outputs" : [ {
           "id" : "UibM7pQqSjWXowDAWSBzj$$EYXu7Q6-FAEaZhV8YW3K0",
@@ -418,13 +539,22 @@
         "explodedColsNewName" : [ ],
         "fsExpressions" : [ {
           "exploded" : "",
-          "flattenedExpression" : "Emp_Department",
+          "flattenedExpression" : "DeptID",
           "expression" : {
             "format" : "sql",
-            "expression" : "Emp_Department"
+            "expression" : "DeptID"
           },
-          "targetTokens" : [ "Emp_Department" ],
-          "target" : "Emp_Department"
+          "targetTokens" : [ "DeptID" ],
+          "target" : "DeptID"
+        }, {
+          "exploded" : "",
+          "flattenedExpression" : "Experience",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "Experience"
+          },
+          "targetTokens" : [ "Experience" ],
+          "target" : "Experience"
         }, {
           "exploded" : "",
           "flattenedExpression" : "Emp_avg_sal",
@@ -434,17 +564,8 @@
           },
           "targetTokens" : [ "Emp_avg_sal" ],
           "target" : "Emp_avg_sal"
-        }, {
-          "exploded" : "",
-          "flattenedExpression" : "Emp_avg_age",
-          "expression" : {
-            "format" : "sql",
-            "expression" : "Emp_avg_age"
-          },
-          "targetTokens" : [ "Emp_avg_age" ],
-          "target" : "Emp_avg_age"
         } ],
-        "columnsSelector" : [ "Buw6MBIpCLaqkOnQpCYQz$$EQRF2PPtPEm3qojRGg10j##Emp_avg_sal", "Buw6MBIpCLaqkOnQpCYQz$$EQRF2PPtPEm3qojRGg10j##Emp_avg_age", "Buw6MBIpCLaqkOnQpCYQz$$EQRF2PPtPEm3qojRGg10j##Emp_Department" ],
+        "columnsSelector" : [ "Buw6MBIpCLaqkOnQpCYQz$$EQRF2PPtPEm3qojRGg10j##Experience", "Buw6MBIpCLaqkOnQpCYQz$$EQRF2PPtPEm3qojRGg10j##Emp_avg_sal", "Buw6MBIpCLaqkOnQpCYQz$$EQRF2PPtPEm3qojRGg10j##DeptID" ],
         "explodeColumns" : [ ],
         "delimiter" : "-"
       },
@@ -470,7 +591,39 @@
       "ports" : {
         "inputs" : [ {
           "id" : "_PzoDBEhP1gLV6tm2C0lA$$86SibKbXLGwOGoVMomYUM",
-          "slug" : "df"
+          "slug" : "df",
+          "schema" : {
+            "type" : "struct",
+            "fields" : [ {
+              "name" : "Emp_avg_sal",
+              "type" : "double",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "DeptID",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "Experience",
+              "type" : "double",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            } ]
+          },
+          "isStreaming" : false
         } ],
         "outputs" : [ {
           "id" : "DQAgLF_xUDaw5xuikNsn8$$qjF024RUfdqtvIc-vQent",
@@ -577,7 +730,39 @@
       "ports" : {
         "inputs" : [ {
           "id" : "ftVmHWxvPmwZhHagSvbNi$$JeKJ5ak_7SmOUqXL9icB3",
-          "slug" : "clean_dataframe"
+          "slug" : "clean_dataframe",
+          "schema" : {
+            "type" : "struct",
+            "fields" : [ {
+              "name" : "DeptID",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "Experience",
+              "type" : "double",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "Emp_avg_sal",
+              "type" : "double",
+              "nullable" : false,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            } ]
+          },
+          "isStreaming" : false
         } ],
         "outputs" : [ {
           "id" : "VrJ0gGir5GqD9ONZl9Att$$9mHb6CWlwY8UN3Y-wO2JZ",
@@ -616,7 +801,39 @@
       "ports" : {
         "inputs" : [ {
           "id" : "l18ReqKjK_0fZqRZ5m8Zu$$8KUp0Y1gb3hhYv1ZfFBtC",
-          "slug" : "in0"
+          "slug" : "in0",
+          "schema" : {
+            "type" : "struct",
+            "fields" : [ {
+              "name" : "DeptID",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "avg_sal",
+              "type" : "double",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "Experience",
+              "type" : "double",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            } ]
+          },
+          "isStreaming" : false
         } ],
         "outputs" : [ {
           "id" : "-h2fKLqctUJ3fvHZUMrhT$$4_7hfmXxxy_GS2kZb7wBS",
@@ -676,182 +893,5 @@
     "selectedInputFields" : [ ],
     "isCustomOutputSchema" : false,
     "autoUpdateOnRun" : false
-  },
-  "diagnostics" : [ {
-    "property" : "$.workflow.processes.l9feL7NGe8IB-Nu4QwsUB$$lAnpiCfydmBcC5EPfLQvb",
-    "range" : {
-      "start" : {
-        "line" : 0,
-        "character" : 0
-      },
-      "end" : {
-        "line" : 0,
-        "character" : 0
-      }
-    },
-    "severity" : 1,
-    "message" : "Error occurred while doing Schema Analysis: [UNRESOLVED_COLUMN.WITH_SUGGESTION] A column or function parameter with name `Age` cannot be resolved. Did you mean one of the following? [`Name`, `DeptID`, `Salary`, `EmployeeID`, `Experience`].;\n'Filter (('Age > 25) AND (Salary#1090 >= cast(500000 as double)))\n+- LogicalRDD [EmployeeID#1087, Name#1088, DeptID#1089, Salary#1090, Experience#1091], false\n",
-    "tags" : [ ],
-    "relatedInformation" : [ ]
-  }, {
-    "property" : "$.workflow.processes.ySAetswf6zJapAA0p0Xqi$$XZCI1D6fJM3ly0WPPQKPr",
-    "range" : {
-      "start" : {
-        "line" : 0,
-        "character" : 0
-      },
-      "end" : {
-        "line" : 0,
-        "character" : 0
-      }
-    },
-    "severity" : 2,
-    "message" : "One of the upstream gems is broken. Please, fix it first.",
-    "tags" : [ ],
-    "relatedInformation" : [ ]
-  }, {
-    "property" : "$.workflow.processes._dkYEJ_hOCaujQ1aJotoj$$mBQbeGF7c6S7u0nYzEADm",
-    "range" : {
-      "start" : {
-        "line" : 0,
-        "character" : 0
-      },
-      "end" : {
-        "line" : 0,
-        "character" : 0
-      }
-    },
-    "severity" : 2,
-    "message" : "One of the upstream gems is broken. Please, fix it first.",
-    "tags" : [ ],
-    "relatedInformation" : [ ]
-  }, {
-    "property" : "$.workflow.processes._dkYEJ_hOCaujQ1aJotoj$$mBQbeGF7c6S7u0nYzEADm.properties.orders[0].expression.expression",
-    "range" : {
-      "start" : {
-        "line" : 0,
-        "character" : 0
-      },
-      "end" : {
-        "line" : 0,
-        "character" : 0
-      }
-    },
-    "severity" : 2,
-    "message" : "No match found for column avg_sal",
-    "tags" : [ ],
-    "relatedInformation" : [ ]
-  }, {
-    "property" : "$.workflow.processes.9fBud8XZT5u79uEHI0PLU$$XEqRuE0SPdNY7_An7omj8",
-    "range" : {
-      "start" : {
-        "line" : 0,
-        "character" : 0
-      },
-      "end" : {
-        "line" : 0,
-        "character" : 0
-      }
-    },
-    "severity" : 2,
-    "message" : "One of the upstream gems is broken. Please, fix it first.",
-    "tags" : [ ],
-    "relatedInformation" : [ ]
-  }, {
-    "property" : "$.workflow.processes.fzIyNp4S3QHOKqz8Wxbqq$$oY72_W38Eo5WlY6jbCgrR",
-    "range" : {
-      "start" : {
-        "line" : 0,
-        "character" : 0
-      },
-      "end" : {
-        "line" : 0,
-        "character" : 0
-      }
-    },
-    "severity" : 2,
-    "message" : "One of the upstream gems is broken. Please, fix it first.",
-    "tags" : [ ],
-    "relatedInformation" : [ ]
-  }, {
-    "property" : "$.workflow.processes.vA5vF5pDj2brHr7pj0MMj$$8mMM_5bdoSJfahk0ZeauB",
-    "range" : {
-      "start" : {
-        "line" : 0,
-        "character" : 0
-      },
-      "end" : {
-        "line" : 0,
-        "character" : 0
-      }
-    },
-    "severity" : 2,
-    "message" : "One of the upstream gems is broken. Please, fix it first.",
-    "tags" : [ ],
-    "relatedInformation" : [ ]
-  }, {
-    "property" : "$.workflow.processes.oMAZfbge7P0mxSHnVhn57$$UR-N0-AUK4PeEwwtMElkb",
-    "range" : {
-      "start" : {
-        "line" : 0,
-        "character" : 0
-      },
-      "end" : {
-        "line" : 0,
-        "character" : 0
-      }
-    },
-    "severity" : 2,
-    "message" : "One of the upstream gems is broken. Please, fix it first.",
-    "tags" : [ ],
-    "relatedInformation" : [ ]
-  }, {
-    "property" : "$.workflow.processes.H41cMFZhKpx3jq26GzbSs$$sGk92ZfI4Yb7k1FWFxzoH",
-    "range" : {
-      "start" : {
-        "line" : 0,
-        "character" : 0
-      },
-      "end" : {
-        "line" : 0,
-        "character" : 0
-      }
-    },
-    "severity" : 2,
-    "message" : "One of the upstream gems is broken. Please, fix it first.",
-    "tags" : [ ],
-    "relatedInformation" : [ ]
-  }, {
-    "property" : "$.workflow.processes.wDVREzpU2KF1RPHca19p-$$4nBrztS2vSxrwa-82OT_H.ports.inputs[0]",
-    "range" : {
-      "start" : {
-        "line" : 0,
-        "character" : 0
-      },
-      "end" : {
-        "line" : 0,
-        "character" : 0
-      }
-    },
-    "severity" : 1,
-    "message" : "Please connect input port in0",
-    "tags" : [ ],
-    "relatedInformation" : [ ]
-  }, {
-    "property" : "$.workflow.processes.wDVREzpU2KF1RPHca19p-$$4nBrztS2vSxrwa-82OT_H.properties.datasetId",
-    "range" : {
-      "start" : {
-        "line" : 0,
-        "character" : 0
-      },
-      "end" : {
-        "line" : 0,
-        "character" : 0
-      }
-    },
-    "severity" : 1,
-    "message" : "dataset id missing",
-    "tags" : [ ],
-    "relatedInformation" : [ ]
-  } ]
+  }
 }

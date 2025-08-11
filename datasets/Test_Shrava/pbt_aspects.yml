@@ -1,0 +1,102 @@
+version: 1
+schema:
+  type: struct
+  fields:
+  - name: Emp_EmployeeID
+    type: string
+    nullable: true
+    metadata:
+      description: ''
+      mappings: []
+      tags: []
+  - name: Emp_Name
+    type: string
+    nullable: true
+    metadata:
+      description: ''
+      mappings: []
+      tags: []
+  - name: Emp_DeptID
+    type: integer
+    nullable: true
+    metadata:
+      description: ''
+      mappings: []
+      tags: []
+  - name: Emp_Salary
+    type: double
+    nullable: true
+    metadata:
+      description: ''
+      mappings: []
+      tags: []
+  - name: Emp_Experience
+    type: decimal(20,1)
+    nullable: true
+    metadata:
+      description: ''
+      mappings: []
+      tags: []
+  - name: Emp_Bonus
+    type: decimal(20,10)
+    nullable: true
+    metadata:
+      description: ''
+      mappings: []
+      tags: []
+  - name: Emp_City
+    type: string
+    nullable: true
+    metadata:
+      description: ''
+      mappings: []
+      tags: []
+  - name: Emp_Gender
+    type: string
+    nullable: true
+    metadata:
+      description: ''
+      mappings: []
+      tags: []
+  - name: Dept_DeptID
+    type: integer
+    nullable: true
+    metadata:
+      description: Unique identifier for the department
+      mappings: []
+      tags: []
+  - name: Dept_Department
+    type: string
+    nullable: true
+    metadata:
+      description: Name of the department within the organization
+      mappings: []
+      tags: []
+  - name: Dept_DeptHead
+    type: string
+    nullable: true
+    metadata:
+      description: The name of the head of the department
+      mappings: []
+      tags: []
+  - name: Dept_Location
+    type: string
+    nullable: true
+    metadata:
+      description: The physical location of the department
+      mappings: []
+      tags: []
+  - name: Dept_Budget
+    type: decimal(20,2)
+    nullable: true
+    metadata:
+      description: Total budget allocated for the department
+      mappings: []
+      tags: []
+  - name: Dept_EmployeeCount
+    type: integer
+    nullable: true
+    metadata:
+      description: Total number of employees in the department
+      mappings: []
+      tags: []
