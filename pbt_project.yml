@@ -118,6 +118,20 @@ pipelines:
       - datasets/d2
     subgraphs: []
     dependencies: {}
+  pipelines/script:
+    name: script
+    description: ''
+    author: dhanushmandapaka2k1@gmail.com
+    mode: batch
+    artefactID: ''
+    language: python
+    createdAt: '2025-08-11 13:02:31'
+    datasets:
+      inputs:
+      - datasets/Employee_join
+      outputs: []
+    subgraphs: []
+    dependencies: {}
 datasets:
   datasets/emp:
     name: emp
