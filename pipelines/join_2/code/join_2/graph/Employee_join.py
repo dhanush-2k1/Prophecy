@@ -10,7 +10,7 @@ def Employee_join(spark: SparkSession) -> DataFrame:
     return spark.read\
         .schema(
           StructType([
-            StructField("EmployeeID", StringType(), True), StructField("Name", StringType(), True), StructField("DeptID", StringType(), True), StructField("Salary", StringType(), True), StructField("Experience", StringType(), True), StructField("Bonus", StringType(), True), StructField("City", StringType(), True), StructField("Gender", StringType(), True)
+            StructField("EmployeeID", StringType(), True), StructField("Name", StringType(), True), StructField("DeptID", IntegerType(), True), StructField("Salary", DoubleType(), True), StructField("Experience", DecimalType(20, 1), True), StructField("Bonus", DoubleType(), True), StructField("City", StringType(), True), StructField("Gender", StringType(), True)
         ])
         )\
         .option("header", True)\

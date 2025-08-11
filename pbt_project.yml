@@ -57,6 +57,21 @@ pipelines:
       - datasets/Test_Shravan
     subgraphs: []
     dependencies: {}
+  pipelines/test_sample_1:
+    name: test_sample_1
+    description: ''
+    author: dhanushmandapaka2k1@gmail.com
+    mode: batch
+    artefactID: ''
+    language: python
+    createdAt: '2025-08-11 10:42:20'
+    datasets:
+      inputs:
+      - datasets/Department_Join
+      - datasets/Employee_join
+      outputs: []
+    subgraphs: []
+    dependencies: {}
 datasets:
   datasets/emp:
     name: emp

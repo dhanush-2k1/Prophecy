@@ -3,8 +3,8 @@ from pyspark.sql.functions import *
 from pyspark.sql.types import *
 from prophecy.utils import *
 from prophecy.libs import typed_lit
-from join.config.ConfigStore import *
-from join.functions import *
+from test_sample_1.config.ConfigStore import *
+from test_sample_1.functions import *
 
 def Employee_join(spark: SparkSession) -> DataFrame:
     return spark.read\

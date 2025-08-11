@@ -157,7 +157,7 @@
               }
             }, {
               "name" : "Emp_DeptID",
-              "type" : "string",
+              "type" : "integer",
               "nullable" : true,
               "metadata" : {
                 "description" : "",
@@ -166,7 +166,7 @@
               }
             }, {
               "name" : "Emp_Salary",
-              "type" : "string",
+              "type" : "double",
               "nullable" : true,
               "metadata" : {
                 "description" : "",
@@ -175,7 +175,7 @@
               }
             }, {
               "name" : "Emp_Experience",
-              "type" : "string",
+              "type" : "decimal(20,1)",
               "nullable" : true,
               "metadata" : {
                 "description" : "",
@@ -184,7 +184,7 @@
               }
             }, {
               "name" : "Emp_Bonus",
-              "type" : "string",
+              "type" : "double",
               "nullable" : true,
               "metadata" : {
                 "description" : "",
@@ -472,7 +472,7 @@
               }
             }, {
               "name" : "DeptID",
-              "type" : "string",
+              "type" : "integer",
               "nullable" : true,
               "metadata" : {
                 "description" : "",
@@ -481,7 +481,7 @@
               }
             }, {
               "name" : "Salary",
-              "type" : "string",
+              "type" : "double",
               "nullable" : true,
               "metadata" : {
                 "description" : "",
@@ -490,7 +490,7 @@
               }
             }, {
               "name" : "Experience",
-              "type" : "string",
+              "type" : "decimal(20,1)",
               "nullable" : true,
               "metadata" : {
                 "description" : "",
@@ -499,7 +499,7 @@
               }
             }, {
               "name" : "Bonus",
-              "type" : "string",
+              "type" : "double",
               "nullable" : true,
               "metadata" : {
                 "description" : "",
@@ -664,7 +664,7 @@
               }
             }, {
               "name" : "Emp_DeptID",
-              "type" : "string",
+              "type" : "integer",
               "nullable" : true,
               "metadata" : {
                 "description" : "",
@@ -673,7 +673,7 @@
               }
             }, {
               "name" : "Emp_Salary",
-              "type" : "string",
+              "type" : "double",
               "nullable" : true,
               "metadata" : {
                 "description" : "",
@@ -682,7 +682,7 @@
               }
             }, {
               "name" : "Emp_Experience",
-              "type" : "string",
+              "type" : "decimal(20,1)",
               "nullable" : true,
               "metadata" : {
                 "description" : "",
@@ -691,7 +691,7 @@
               }
             }, {
               "name" : "Emp_Bonus",
-              "type" : "string",
+              "type" : "double",
               "nullable" : true,
               "metadata" : {
                 "description" : "",
