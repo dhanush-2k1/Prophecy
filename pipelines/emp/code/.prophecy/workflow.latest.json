@@ -1,0 +1,1045 @@
+{
+  "metainfo" : {
+    "migrationVersions" : {
+      "gemBuilderVersion" : "v1",
+      "unitTestNullDataMigrated" : true
+    },
+    "functions" : { },
+    "codeGenConfiguration" : {
+      "editableConfig" : true,
+      "plibVersion" : {
+        "mavenVersion" : "8.11.1",
+        "pyPiVersion" : "2.0.11"
+      },
+      "sparkConfigJinjaEnabled" : true
+    },
+    "id" : "1",
+    "uri" : "pipelines/emp",
+    "pipelineSettingsInfo" : {
+      "applicationName" : "emp",
+      "hasApplication" : true,
+      "isFunctionsPackageDirDefined" : true,
+      "isNullValuesInUnitTestsEnabled" : true,
+      "sparkConfigOptions" : {
+        "disableSparkCreationTimeConfigGeneration" : true
+      }
+    },
+    "language" : "python",
+    "fabricId" : "32124",
+    "frontEndLanguage" : "sql",
+    "mode" : "batch",
+    "udfs" : {
+      "language" : "python",
+      "udfs" : [ ],
+      "functionPackageName" : "dhanushmandapaka2k1gmailcomteam.sparkproject.functions",
+      "sharedFunctionPackageNames" : [ "prophecy.spark_basic.functions", "prophecy.warehouse.functions" ]
+    },
+    "udafs" : {
+      "language" : "python",
+      "code" : ""
+    },
+    "configuration" : {
+      "common" : {
+        "type" : "record",
+        "fields" : [ ]
+      },
+      "oldCommon" : {
+        "type" : "record",
+        "fields" : [ ]
+      },
+      "fabrics" : { },
+      "instances" : { },
+      "selected" : "default",
+      "nonEditable" : [ ],
+      "isSubscribedPipelineWithPipelineConfigs" : false
+    },
+    "sparkConf" : [ {
+      "name" : "spark.default.parallelism",
+      "value" : "4"
+    }, {
+      "name" : "spark.sql.legacy.allowUntypedScalaUDF",
+      "value" : "true"
+    } ],
+    "hadoopConf" : [ ],
+    "codeMode" : "sparse",
+    "buildSystem" : "maven",
+    "externalDependencies" : [ ],
+    "dependentProjectExternalDependencies" : [ {
+      "projectUID" : "12654",
+      "projectName" : "ProphecySparkBasicsPython",
+      "externalDependencies" : [ ]
+    }, {
+      "projectUID" : "12655",
+      "projectName" : "ProphecyWarehousePython",
+      "externalDependencies" : [ ]
+    } ],
+    "isImported" : false,
+    "interimMode" : "Full",
+    "interimModeEnabled" : true,
+    "visualCodeInterimMode" : "Disabled",
+    "recordsLimit" : {
+      "enabled" : false,
+      "value" : 1000
+    },
+    "topLevelPackage" : "emp",
+    "configTopLevelPackage" : "emp",
+    "configurationVersion" : "v2"
+  },
+  "connections" : [ {
+    "id" : "ctLhvLSNQaJEI8CP-IC0u$$MUaw-aB0eJWABPg_7W9V0",
+    "source" : "1bmv_i-3Eqb1lMjHu3pSd$$T6JxFJ-H0ipwTP4p_CAGS",
+    "sourcePort" : "ujCMGlCeMDltrIRHNeXbK$$SacLn86INlGqVoZgCo_w4",
+    "target" : "l9feL7NGe8IB-Nu4QwsUB$$lAnpiCfydmBcC5EPfLQvb",
+    "targetPort" : "5dH6B8Xkpm45-HhjksDl3$$fr5Yt82gsPoMgwS9ru3xr"
+  }, {
+    "id" : "igBgr02pbdJj-eoJBNZ-L$$feY8CvIn6v9RaRbl_W46r",
+    "source" : "l9feL7NGe8IB-Nu4QwsUB$$lAnpiCfydmBcC5EPfLQvb",
+    "sourcePort" : "-6lV7bOIkTgHLcPUBhuG-$$kr86JBG4hZPa621Xmd7dc",
+    "target" : "ySAetswf6zJapAA0p0Xqi$$XZCI1D6fJM3ly0WPPQKPr",
+    "targetPort" : "3UvTtElhTLtiNEjuOB-u_$$hZUdi8uJ265JbWvrNO_K_"
+  }, {
+    "id" : "PxIuefz0DMGJ3tXZ5B68c$$Q21zGnYUVyRqpwNxNOwR2",
+    "source" : "ySAetswf6zJapAA0p0Xqi$$XZCI1D6fJM3ly0WPPQKPr",
+    "sourcePort" : "3xJvZzILpZ57LLLHi-t0l$$GNTYSK8RIj8UzprtFDUxy",
+    "target" : "_dkYEJ_hOCaujQ1aJotoj$$mBQbeGF7c6S7u0nYzEADm",
+    "targetPort" : "I-2VqZdiYAL1MoG3vZKOm$$1qUcLlJbH3iYSxPFZHyNk"
+  }, {
+    "id" : "fjpnlfZtFDJaBgD15PH93$$J-qSmQJWyoDOa1pOpUSKD",
+    "source" : "_dkYEJ_hOCaujQ1aJotoj$$mBQbeGF7c6S7u0nYzEADm",
+    "sourcePort" : "1hN6MTtuDmmyEkysSFKBp$$zexfNW6ohImhH77xyn0mG",
+    "target" : "9fBud8XZT5u79uEHI0PLU$$XEqRuE0SPdNY7_An7omj8",
+    "targetPort" : "l18ReqKjK_0fZqRZ5m8Zu$$8KUp0Y1gb3hhYv1ZfFBtC"
+  }, {
+    "id" : "bmu458mfcbVamWcNnUn4T$$SsC9sSB2tC32SXd9Feqb6",
+    "source" : "9fBud8XZT5u79uEHI0PLU$$XEqRuE0SPdNY7_An7omj8",
+    "sourcePort" : "-h2fKLqctUJ3fvHZUMrhT$$4_7hfmXxxy_GS2kZb7wBS",
+    "target" : "fzIyNp4S3QHOKqz8Wxbqq$$oY72_W38Eo5WlY6jbCgrR",
+    "targetPort" : "_PzoDBEhP1gLV6tm2C0lA$$86SibKbXLGwOGoVMomYUM"
+  }, {
+    "id" : "nakNq5FGuV9Ny8SqnWNIi$$wx89rN_RueBA3m7vcE29r",
+    "source" : "fzIyNp4S3QHOKqz8Wxbqq$$oY72_W38Eo5WlY6jbCgrR",
+    "sourcePort" : "DQAgLF_xUDaw5xuikNsn8$$qjF024RUfdqtvIc-vQent",
+    "target" : "vA5vF5pDj2brHr7pj0MMj$$8mMM_5bdoSJfahk0ZeauB",
+    "targetPort" : "ftVmHWxvPmwZhHagSvbNi$$JeKJ5ak_7SmOUqXL9icB3"
+  }, {
+    "id" : "1Ni72Nk56su3b-koWEmxD$$lNjC-125Ija26VNSCNHN1",
+    "source" : "vA5vF5pDj2brHr7pj0MMj$$8mMM_5bdoSJfahk0ZeauB",
+    "sourcePort" : "VrJ0gGir5GqD9ONZl9Att$$9mHb6CWlwY8UN3Y-wO2JZ",
+    "target" : "oMAZfbge7P0mxSHnVhn57$$UR-N0-AUK4PeEwwtMElkb",
+    "targetPort" : "Buw6MBIpCLaqkOnQpCYQz$$EQRF2PPtPEm3qojRGg10j"
+  }, {
+    "id" : "i5DF8LZbheH-8UKOfs39e$$65aaiBMsBKzxQ4o1bjEFb",
+    "source" : "oMAZfbge7P0mxSHnVhn57$$UR-N0-AUK4PeEwwtMElkb",
+    "sourcePort" : "UibM7pQqSjWXowDAWSBzj$$EYXu7Q6-FAEaZhV8YW3K0",
+    "target" : "H41cMFZhKpx3jq26GzbSs$$sGk92ZfI4Yb7k1FWFxzoH",
+    "targetPort" : "2CxquRBkQa4wHq02FNPTs$$7CMKpXbzO0aSuSbP72TLS"
+  } ],
+  "processes" : {
+    "l9feL7NGe8IB-Nu4QwsUB$$lAnpiCfydmBcC5EPfLQvb" : {
+      "id" : "l9feL7NGe8IB-Nu4QwsUB$$lAnpiCfydmBcC5EPfLQvb",
+      "component" : "Filter",
+      "metadata" : {
+        "label" : "filter_by_age_salary",
+        "slug" : "filter_by_age_salary",
+        "x" : -700,
+        "y" : -360,
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false,
+        "isImported" : false,
+        "dataPreview" : false
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "5dH6B8Xkpm45-HhjksDl3$$fr5Yt82gsPoMgwS9ru3xr",
+          "slug" : "in0",
+          "schema" : {
+            "type" : "struct",
+            "fields" : [ {
+              "name" : "ID",
+              "type" : "integer",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Unique identifier for each employee in the dataset.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "First_Name",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "The first name of the employee.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "Last_Name",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "The surname of the employee, used for identification and formal communication.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "Age",
+              "type" : "integer",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "The age of the employee, indicating their experience level and potential career stage.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "City",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "City where the employee resides.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "Occupation",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Job title or role of the employee within the organization.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "Phone",
+              "type" : "double",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Contact number of the employee; A 10-digit mobile number used for communication.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "Email",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Email address of the employee; Used for official communication and correspondence.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "Salary",
+              "type" : "decimal(20,2)",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Annual salary of the employee; Represents the total compensation in a decimal format with two decimal places.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "Department",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "The department where the employee works, indicating their area of expertise and organizational role.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            } ]
+          },
+          "isStreaming" : false
+        } ],
+        "outputs" : [ {
+          "id" : "-6lV7bOIkTgHLcPUBhuG-$$kr86JBG4hZPa621Xmd7dc",
+          "slug" : "out"
+        } ],
+        "selectedInputFields" : [ ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      },
+      "properties" : {
+        "columnsSelector" : [ "5dH6B8Xkpm45-HhjksDl3$$fr5Yt82gsPoMgwS9ru3xr##Age", "5dH6B8Xkpm45-HhjksDl3$$fr5Yt82gsPoMgwS9ru3xr##Salary" ],
+        "condition" : {
+          "format" : "sql",
+          "expression" : "Age > 25 and Salary >= 500000"
+        }
+      },
+      "componentInfo" : {
+        "gemId" : "gitUri=http://gitserver:3000/DxEheDCJ_team_5751/DxEheDCJ_project_12654.git&subPath=&tag=0.2.47&projectSubscriptionProjectId=12654&path=gems/Filter",
+        "projectName" : "ProphecySparkBasicsPython"
+      }
+    },
+    "H41cMFZhKpx3jq26GzbSs$$sGk92ZfI4Yb7k1FWFxzoH" : {
+      "id" : "H41cMFZhKpx3jq26GzbSs$$sGk92ZfI4Yb7k1FWFxzoH",
+      "component" : "Target",
+      "metadata" : {
+        "label" : "tagrget_output",
+        "slug" : "tagrget_output",
+        "x" : 480,
+        "y" : -180,
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false,
+        "isImported" : false
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "2CxquRBkQa4wHq02FNPTs$$7CMKpXbzO0aSuSbP72TLS",
+          "slug" : "flatten_employee_schema",
+          "schema" : {
+            "type" : "struct",
+            "fields" : [ {
+              "name" : "Emp_Department",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "The department where the employee works, indicating their area of expertise and organizational role.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "Emp_avg_sal",
+              "type" : "decimal(21,2)",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "Emp_avg_age",
+              "type" : "double",
+              "nullable" : false,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            } ]
+          },
+          "isStreaming" : false
+        } ],
+        "outputs" : [ ],
+        "selectedInputFields" : [ ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      },
+      "properties" : {
+        "datasetId" : "datasets/tagrget_output"
+      }
+    },
+    "wDVREzpU2KF1RPHca19p-$$4nBrztS2vSxrwa-82OT_H" : {
+      "id" : "wDVREzpU2KF1RPHca19p-$$4nBrztS2vSxrwa-82OT_H",
+      "component" : "Target",
+      "metadata" : {
+        "label" : "Target_1",
+        "slug" : "Target_1",
+        "x" : 340,
+        "y" : -500,
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false,
+        "isImported" : false
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "kmb5t8OIf_MVSSNFx91yY$$1vty1mKUSK3szF_ZDRIRV",
+          "slug" : "in0"
+        } ],
+        "outputs" : [ ],
+        "selectedInputFields" : [ ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      },
+      "properties" : { }
+    },
+    "ySAetswf6zJapAA0p0Xqi$$XZCI1D6fJM3ly0WPPQKPr" : {
+      "id" : "ySAetswf6zJapAA0p0Xqi$$XZCI1D6fJM3ly0WPPQKPr",
+      "component" : "Aggregate",
+      "metadata" : {
+        "label" : "department_salary_age_avg",
+        "slug" : "department_salary_age_avg",
+        "x" : -420,
+        "y" : -440,
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false,
+        "isImported" : false,
+        "dataPreview" : false
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "3UvTtElhTLtiNEjuOB-u_$$hZUdi8uJ265JbWvrNO_K_",
+          "slug" : "in0",
+          "schema" : {
+            "type" : "struct",
+            "fields" : [ {
+              "name" : "ID",
+              "type" : "integer",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Unique identifier for each employee in the dataset.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "First_Name",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "The first name of the employee.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "Last_Name",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "The surname of the employee, used for identification and formal communication.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "Age",
+              "type" : "integer",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "The age of the employee, indicating their experience level and potential career stage.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "City",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "City where the employee resides.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "Occupation",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Job title or role of the employee within the organization.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "Phone",
+              "type" : "double",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Contact number of the employee; A 10-digit mobile number used for communication.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "Email",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Email address of the employee; Used for official communication and correspondence.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "Salary",
+              "type" : "decimal(20,2)",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Annual salary of the employee; Represents the total compensation in a decimal format with two decimal places.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "Department",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "The department where the employee works, indicating their area of expertise and organizational role.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            } ]
+          },
+          "isStreaming" : false
+        } ],
+        "outputs" : [ {
+          "id" : "3xJvZzILpZ57LLLHi-t0l$$GNTYSK8RIj8UzprtFDUxy",
+          "slug" : "out"
+        } ],
+        "selectedInputFields" : [ ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      },
+      "properties" : {
+        "importLanguage" : "${$.workflow.metainfo.frontEndLanguage}",
+        "allIns" : false,
+        "doPivot" : false,
+        "aggregate" : [ {
+          "target" : "avg_sal",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "round(avg(Salary),2)"
+          },
+          "description" : "",
+          "_row_id" : null
+        }, {
+          "target" : "avg_age",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "round(avg(Age),2)"
+          },
+          "description" : "",
+          "_row_id" : "hYrTUZK5bG"
+        } ],
+        "allowSelection" : true,
+        "pivotColumn" : null,
+        "pivotValues" : [ ],
+        "importString" : "",
+        "activeTab" : "aggregate",
+        "columnsSelector" : [ "3UvTtElhTLtiNEjuOB-u_$$hZUdi8uJ265JbWvrNO_K_##Age", "3UvTtElhTLtiNEjuOB-u_$$hZUdi8uJ265JbWvrNO_K_##Salary", "3UvTtElhTLtiNEjuOB-u_$$hZUdi8uJ265JbWvrNO_K_##Department" ],
+        "groupBy" : [ {
+          "target" : "Department",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "Department"
+          },
+          "description" : "",
+          "_row_id" : "0XlRok6h5U"
+        } ]
+      },
+      "componentInfo" : {
+        "gemId" : "gitUri=http://gitserver:3000/DxEheDCJ_team_5751/DxEheDCJ_project_12654.git&subPath=&tag=0.2.47&projectSubscriptionProjectId=12654&path=gems/Aggregate",
+        "projectName" : "ProphecySparkBasicsPython"
+      }
+    },
+    "_dkYEJ_hOCaujQ1aJotoj$$mBQbeGF7c6S7u0nYzEADm" : {
+      "id" : "_dkYEJ_hOCaujQ1aJotoj$$mBQbeGF7c6S7u0nYzEADm",
+      "component" : "OrderBy",
+      "metadata" : {
+        "label" : "sort_by_avg_salary_desc",
+        "slug" : "sort_by_avg_salary_desc",
+        "x" : -180,
+        "y" : -600,
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false,
+        "isImported" : false,
+        "dataPreview" : false
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "I-2VqZdiYAL1MoG3vZKOm$$1qUcLlJbH3iYSxPFZHyNk",
+          "slug" : "in0",
+          "schema" : {
+            "type" : "struct",
+            "fields" : [ {
+              "name" : "Department",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "The department where the employee works, indicating their area of expertise and organizational role.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "avg_sal",
+              "type" : "decimal(21,2)",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "avg_age",
+              "type" : "double",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            } ]
+          },
+          "isStreaming" : false
+        } ],
+        "outputs" : [ {
+          "id" : "1hN6MTtuDmmyEkysSFKBp$$zexfNW6ohImhH77xyn0mG",
+          "slug" : "out"
+        } ],
+        "selectedInputFields" : [ ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      },
+      "properties" : {
+        "columnsSelector" : [ "I-2VqZdiYAL1MoG3vZKOm$$1qUcLlJbH3iYSxPFZHyNk##avg_sal" ],
+        "orders" : [ {
+          "expression" : {
+            "format" : "sql",
+            "expression" : "avg_sal"
+          },
+          "sortType" : "desc_nulls_first"
+        } ]
+      },
+      "componentInfo" : {
+        "gemId" : "gitUri=http://gitserver:3000/DxEheDCJ_team_5751/DxEheDCJ_project_12654.git&subPath=&tag=0.2.47&projectSubscriptionProjectId=12654&path=gems/OrderBy",
+        "projectName" : "ProphecySparkBasicsPython"
+      }
+    },
+    "oMAZfbge7P0mxSHnVhn57$$UR-N0-AUK4PeEwwtMElkb" : {
+      "id" : "oMAZfbge7P0mxSHnVhn57$$UR-N0-AUK4PeEwwtMElkb",
+      "component" : "FlattenSchema",
+      "metadata" : {
+        "label" : "flatten_employee_schema",
+        "slug" : "flatten_employee_schema",
+        "x" : -180,
+        "y" : -180,
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false,
+        "isImported" : false,
+        "dataPreview" : false
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "Buw6MBIpCLaqkOnQpCYQz$$EQRF2PPtPEm3qojRGg10j",
+          "slug" : "remove_duplicates",
+          "schema" : {
+            "type" : "struct",
+            "fields" : [ {
+              "name" : "Emp_Department",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "The department where the employee works, indicating their area of expertise and organizational role.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "Emp_avg_sal",
+              "type" : "decimal(21,2)",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "Emp_avg_age",
+              "type" : "double",
+              "nullable" : false,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            } ]
+          },
+          "isStreaming" : false
+        } ],
+        "outputs" : [ {
+          "id" : "UibM7pQqSjWXowDAWSBzj$$EYXu7Q6-FAEaZhV8YW3K0",
+          "slug" : "out"
+        } ],
+        "selectedInputFields" : [ ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      },
+      "properties" : {
+        "explodedColsNewName" : [ ],
+        "fsExpressions" : [ {
+          "exploded" : "",
+          "flattenedExpression" : "Emp_Department",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "Emp_Department"
+          },
+          "targetTokens" : [ "Emp_Department" ],
+          "target" : "Emp_Department"
+        }, {
+          "exploded" : "",
+          "flattenedExpression" : "Emp_avg_sal",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "Emp_avg_sal"
+          },
+          "targetTokens" : [ "Emp_avg_sal" ],
+          "target" : "Emp_avg_sal"
+        }, {
+          "exploded" : "",
+          "flattenedExpression" : "Emp_avg_age",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "Emp_avg_age"
+          },
+          "targetTokens" : [ "Emp_avg_age" ],
+          "target" : "Emp_avg_age"
+        } ],
+        "columnsSelector" : [ "Buw6MBIpCLaqkOnQpCYQz$$EQRF2PPtPEm3qojRGg10j##Emp_avg_sal", "Buw6MBIpCLaqkOnQpCYQz$$EQRF2PPtPEm3qojRGg10j##Emp_avg_age", "Buw6MBIpCLaqkOnQpCYQz$$EQRF2PPtPEm3qojRGg10j##Emp_Department" ],
+        "explodeColumns" : [ ],
+        "delimiter" : "-"
+      },
+      "componentInfo" : {
+        "gemId" : "gitUri=http://gitserver:3000/DxEheDCJ_team_5751/DxEheDCJ_project_12654.git&subPath=&tag=0.2.47&projectSubscriptionProjectId=12654&path=gems/FlattenSchema",
+        "projectName" : "ProphecySparkBasicsPython"
+      }
+    },
+    "fzIyNp4S3QHOKqz8Wxbqq$$oY72_W38Eo5WlY6jbCgrR" : {
+      "id" : "fzIyNp4S3QHOKqz8Wxbqq$$oY72_W38Eo5WlY6jbCgrR",
+      "component" : "DataCleansing",
+      "metadata" : {
+        "label" : "clean_dataframe",
+        "slug" : "clean_dataframe",
+        "x" : 80,
+        "y" : -320,
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false,
+        "isImported" : false,
+        "dataPreview" : false
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "_PzoDBEhP1gLV6tm2C0lA$$86SibKbXLGwOGoVMomYUM",
+          "slug" : "df",
+          "schema" : {
+            "type" : "struct",
+            "fields" : [ {
+              "name" : "Emp_Department",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "The department where the employee works, indicating their area of expertise and organizational role.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "Emp_avg_sal",
+              "type" : "decimal(21,2)",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "Emp_avg_age",
+              "type" : "double",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            } ]
+          },
+          "isStreaming" : false
+        } ],
+        "outputs" : [ {
+          "id" : "DQAgLF_xUDaw5xuikNsn8$$qjF024RUfdqtvIc-vQent",
+          "slug" : "out"
+        } ],
+        "selectedInputFields" : [ ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      },
+      "properties" : {
+        "trimWhiteSpace" : true,
+        "replaceNullForNumericFields" : true,
+        "cleanLetters" : false,
+        "replaceNullTextWith" : "NA",
+        "replaceNullTextFields" : false,
+        "columnNames" : [ "Emp_avg_sal", "Emp_avg_age" ],
+        "makeTitlecase" : false,
+        "schema" : {
+          "type" : "struct",
+          "fields" : [ {
+            "name" : "Emp_Department",
+            "type" : "string",
+            "nullable" : true,
+            "metadata" : {
+              "description" : "The department where the employee works, indicating their area of expertise and organizational role.",
+              "mappings" : [ ],
+              "tags" : [ ]
+            }
+          }, {
+            "name" : "Emp_avg_sal",
+            "type" : "decimal(21,2)",
+            "nullable" : true,
+            "metadata" : {
+              "description" : "",
+              "mappings" : [ ],
+              "tags" : [ ]
+            }
+          }, {
+            "name" : "Emp_avg_age",
+            "type" : "double",
+            "nullable" : true,
+            "metadata" : {
+              "description" : "",
+              "mappings" : [ ],
+              "tags" : [ ]
+            }
+          } ]
+        },
+        "allWhiteSpace" : true,
+        "removeTabsLineBreaksAndDuplicateWhitespace" : true,
+        "cleanPunctuations" : false,
+        "null_operation" : "keep_all",
+        "makeLowercase" : false,
+        "makeUppercase" : false,
+        "cleanNumbers" : false,
+        "replaceNullNumericWith" : 0
+      },
+      "componentInfo" : {
+        "gemId" : "gitUri=http://gitserver:3000/DxEheDCJ_team_5751/DxEheDCJ_project_12654.git&subPath=&tag=0.2.47&projectSubscriptionProjectId=12654&path=gems/DataCleansing",
+        "projectName" : "ProphecySparkBasicsPython"
+      }
+    },
+    "1bmv_i-3Eqb1lMjHu3pSd$$T6JxFJ-H0ipwTP4p_CAGS" : {
+      "id" : "1bmv_i-3Eqb1lMjHu3pSd$$T6JxFJ-H0ipwTP4p_CAGS",
+      "component" : "Source",
+      "metadata" : {
+        "label" : "emp",
+        "slug" : "emp",
+        "x" : -880,
+        "y" : -160,
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false,
+        "isImported" : false
+      },
+      "ports" : {
+        "inputs" : [ ],
+        "outputs" : [ {
+          "id" : "ujCMGlCeMDltrIRHNeXbK$$SacLn86INlGqVoZgCo_w4",
+          "slug" : "out"
+        } ],
+        "selectedInputFields" : [ ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      },
+      "properties" : {
+        "datasetId" : "datasets/emp"
+      }
+    },
+    "vA5vF5pDj2brHr7pj0MMj$$8mMM_5bdoSJfahk0ZeauB" : {
+      "id" : "vA5vF5pDj2brHr7pj0MMj$$8mMM_5bdoSJfahk0ZeauB",
+      "component" : "Deduplicate",
+      "metadata" : {
+        "label" : "remove_duplicates",
+        "slug" : "remove_duplicates",
+        "x" : -440,
+        "y" : -200,
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false,
+        "isImported" : false,
+        "dataPreview" : false
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "ftVmHWxvPmwZhHagSvbNi$$JeKJ5ak_7SmOUqXL9icB3",
+          "slug" : "clean_dataframe",
+          "schema" : {
+            "type" : "struct",
+            "fields" : [ {
+              "name" : "Emp_Department",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "The department where the employee works, indicating their area of expertise and organizational role.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "Emp_avg_sal",
+              "type" : "decimal(21,2)",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "Emp_avg_age",
+              "type" : "double",
+              "nullable" : false,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            } ]
+          },
+          "isStreaming" : false
+        } ],
+        "outputs" : [ {
+          "id" : "VrJ0gGir5GqD9ONZl9Att$$9mHb6CWlwY8UN3Y-wO2JZ",
+          "slug" : "out"
+        } ],
+        "selectedInputFields" : [ ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      },
+      "properties" : {
+        "dedupColumns" : [ ],
+        "dedupType" : "distinct",
+        "columnsSelector" : [ ],
+        "orders" : [ ],
+        "useOrderBy" : false
+      },
+      "componentInfo" : {
+        "gemId" : "gitUri=http://gitserver:3000/DxEheDCJ_team_5751/DxEheDCJ_project_12654.git&subPath=&tag=0.2.47&projectSubscriptionProjectId=12654&path=gems/Deduplicate",
+        "projectName" : "ProphecySparkBasicsPython"
+      }
+    },
+    "9fBud8XZT5u79uEHI0PLU$$XEqRuE0SPdNY7_An7omj8" : {
+      "id" : "9fBud8XZT5u79uEHI0PLU$$XEqRuE0SPdNY7_An7omj8",
+      "component" : "BulkColumnRename",
+      "metadata" : {
+        "label" : "bulk_rename_columns",
+        "slug" : "bulk_rename_columns",
+        "x" : -140,
+        "y" : -440,
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false,
+        "isImported" : false,
+        "dataPreview" : false
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "l18ReqKjK_0fZqRZ5m8Zu$$8KUp0Y1gb3hhYv1ZfFBtC",
+          "slug" : "in0",
+          "schema" : {
+            "type" : "struct",
+            "fields" : [ {
+              "name" : "Department",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "The department where the employee works, indicating their area of expertise and organizational role.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "avg_sal",
+              "type" : "decimal(21,2)",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "avg_age",
+              "type" : "double",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            } ]
+          },
+          "isStreaming" : false
+        } ],
+        "outputs" : [ {
+          "id" : "-h2fKLqctUJ3fvHZUMrhT$$4_7hfmXxxy_GS2kZb7wBS",
+          "slug" : "out"
+        } ],
+        "selectedInputFields" : [ ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      },
+      "properties" : {
+        "prefix" : "Emp_",
+        "columnNames" : [ "Department", "avg_sal", "avg_age" ],
+        "suffix" : "",
+        "schema" : {
+          "type" : "struct",
+          "fields" : [ {
+            "name" : "Department",
+            "type" : "string",
+            "nullable" : true,
+            "metadata" : {
+              "description" : "The department where the employee works, indicating their area of expertise and organizational role.",
+              "mappings" : [ ],
+              "tags" : [ ]
+            }
+          }, {
+            "name" : "avg_sal",
+            "type" : "decimal(21,2)",
+            "nullable" : true,
+            "metadata" : {
+              "description" : "",
+              "mappings" : [ ],
+              "tags" : [ ]
+            }
+          }, {
+            "name" : "avg_age",
+            "type" : "double",
+            "nullable" : true,
+            "metadata" : {
+              "description" : "",
+              "mappings" : [ ],
+              "tags" : [ ]
+            }
+          } ]
+        },
+        "customExpression" : "",
+        "renameMethod" : "Add Prefix"
+      },
+      "componentInfo" : {
+        "gemId" : "gitUri=http://gitserver:3000/DxEheDCJ_team_5751/DxEheDCJ_project_12654.git&subPath=&tag=0.2.47&projectSubscriptionProjectId=12654&path=gems/BulkColumnRename",
+        "projectName" : "ProphecySparkBasicsPython"
+      }
+    }
+  },
+  "ports" : {
+    "inputs" : [ ],
+    "outputs" : [ ],
+    "selectedInputFields" : [ ],
+    "isCustomOutputSchema" : false,
+    "autoUpdateOnRun" : false
+  },
+  "diagnostics" : [ {
+    "property" : "$.workflow.processes.wDVREzpU2KF1RPHca19p-$$4nBrztS2vSxrwa-82OT_H.ports.inputs[0]",
+    "range" : {
+      "start" : {
+        "line" : 0,
+        "character" : 0
+      },
+      "end" : {
+        "line" : 0,
+        "character" : 0
+      }
+    },
+    "severity" : 1,
+    "message" : "Please connect input port in0",
+    "tags" : [ ],
+    "relatedInformation" : [ ]
+  }, {
+    "property" : "$.workflow.processes.wDVREzpU2KF1RPHca19p-$$4nBrztS2vSxrwa-82OT_H.properties.datasetId",
+    "range" : {
+      "start" : {
+        "line" : 0,
+        "character" : 0
+      },
+      "end" : {
+        "line" : 0,
+        "character" : 0
+      }
+    },
+    "severity" : 1,
+    "message" : "dataset id missing",
+    "tags" : [ ],
+    "relatedInformation" : [ ]
+  } ]
+}

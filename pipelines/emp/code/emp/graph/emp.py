@@ -3,10 +3,10 @@ from pyspark.sql.functions import *
 from pyspark.sql.types import *
 from prophecy.utils import *
 from prophecy.libs import typed_lit
-from test_spark.config.ConfigStore import *
-from test_spark.functions import *
+from emp.config.ConfigStore import *
+from emp.functions import *
 
-def employee(spark: SparkSession) -> DataFrame:
+def emp(spark: SparkSession) -> DataFrame:
     return spark.read\
         .schema(
           StructType([

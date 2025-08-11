@@ -6,69 +6,75 @@ schema:
     type: integer
     nullable: true
     metadata:
-      description: Unique identifier for each individual in the dataset
+      description: Unique identifier for each employee in the dataset.
       mappings: []
       tags: []
   - name: First_Name
     type: string
     nullable: true
     metadata:
-      description: The first name of the individual
+      description: The first name of the employee.
       mappings: []
       tags: []
   - name: Last_Name
     type: string
     nullable: true
     metadata:
-      description: The last name of the individual
+      description: The surname of the employee, used for identification and formal
+        communication.
       mappings: []
       tags: []
   - name: Age
     type: integer
     nullable: true
     metadata:
-      description: The age of the individual as a string
+      description: The age of the employee, indicating their experience level and
+        potential career stage.
       mappings: []
       tags: []
   - name: City
     type: string
     nullable: true
     metadata:
-      description: The city where the individual resides
+      description: City where the employee resides.
       mappings: []
       tags: []
   - name: Occupation
     type: string
     nullable: true
     metadata:
-      description: The job title or role of the individual
+      description: Job title or role of the employee within the organization.
       mappings: []
       tags: []
   - name: Phone
     type: double
     nullable: true
     metadata:
-      description: Contact number of the individual
+      description: Contact number of the employee; A 10-digit mobile number used for
+        communication.
       mappings: []
       tags: []
   - name: Email
     type: string
     nullable: true
     metadata:
-      description: Email address of the individual
+      description: Email address of the employee; Used for official communication
+        and correspondence.
       mappings: []
       tags: []
   - name: Salary
     type: decimal(20,2)
     nullable: true
     metadata:
-      description: The salary amount of the individual as a string
+      description: Annual salary of the employee; Represents the total compensation
+        in a decimal format with two decimal places.
       mappings: []
       tags: []
   - name: Department
     type: string
     nullable: true
     metadata:
-      description: The department in which the individual works
+      description: The department where the employee works, indicating their area
+        of expertise and organizational role.
       mappings: []
       tags: []
