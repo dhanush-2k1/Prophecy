@@ -1,0 +1,888 @@
+{
+  "metainfo" : {
+    "migrationVersions" : {
+      "gemBuilderVersion" : "v1",
+      "unitTestNullDataMigrated" : true
+    },
+    "functions" : { },
+    "codeGenConfiguration" : {
+      "editableConfig" : true,
+      "plibVersion" : {
+        "mavenVersion" : "8.11.1",
+        "pyPiVersion" : "2.0.11"
+      },
+      "sparkConfigJinjaEnabled" : true
+    },
+    "id" : "1",
+    "uri" : "pipelines/join",
+    "sourceSuggestions" : [ ],
+    "pipelineSettingsInfo" : {
+      "applicationName" : "join",
+      "hasApplication" : true,
+      "isFunctionsPackageDirDefined" : true,
+      "isNullValuesInUnitTestsEnabled" : true,
+      "sparkConfigOptions" : {
+        "disableSparkCreationTimeConfigGeneration" : true
+      }
+    },
+    "language" : "python",
+    "fabricId" : "32124",
+    "frontEndLanguage" : "sql",
+    "mode" : "batch",
+    "udfs" : {
+      "language" : "python",
+      "udfs" : [ ],
+      "functionPackageName" : "dhanushmandapaka2k1gmailcomteam.sparkproject.functions",
+      "sharedFunctionPackageNames" : [ "prophecy.spark_basic.functions", "prophecy.warehouse.functions" ]
+    },
+    "udafs" : {
+      "language" : "python",
+      "code" : ""
+    },
+    "configuration" : {
+      "common" : {
+        "type" : "record",
+        "fields" : [ ]
+      },
+      "oldCommon" : {
+        "type" : "record",
+        "fields" : [ ]
+      },
+      "fabrics" : { },
+      "instances" : { },
+      "selected" : "default",
+      "nonEditable" : [ ],
+      "isSubscribedPipelineWithPipelineConfigs" : false
+    },
+    "sparkConf" : [ {
+      "name" : "spark.default.parallelism",
+      "value" : "4"
+    }, {
+      "name" : "spark.sql.legacy.allowUntypedScalaUDF",
+      "value" : "true"
+    } ],
+    "hadoopConf" : [ ],
+    "codeMode" : "sparse",
+    "buildSystem" : "maven",
+    "externalDependencies" : [ ],
+    "dependentProjectExternalDependencies" : [ {
+      "projectUID" : "12654",
+      "projectName" : "ProphecySparkBasicsPython",
+      "externalDependencies" : [ ]
+    }, {
+      "projectUID" : "12655",
+      "projectName" : "ProphecyWarehousePython",
+      "externalDependencies" : [ ]
+    } ],
+    "isImported" : false,
+    "interimMode" : "Full",
+    "interimModeEnabled" : true,
+    "visualCodeInterimMode" : "Disabled",
+    "recordsLimit" : {
+      "enabled" : false,
+      "value" : 1000
+    },
+    "topLevelPackage" : "join",
+    "configTopLevelPackage" : "join",
+    "configurationVersion" : "v2"
+  },
+  "connections" : [ {
+    "id" : "lbMzW8CGNQG-CGbE_jKBf$$ndKdMDC_U-Y24kGfm5NZN",
+    "source" : "yP2dFzxp4H4ylgfupDmeD$$Tdqyr8hxEoxZKc9SMWoPB",
+    "sourcePort" : "bYo1exPuGoW5MotFNbdab$$t1jNxcIJ7rubO-X1YtT75",
+    "target" : "RyltwW0WYgJoTxg2mWxQg$$XYc6NODh4RWvHcCSWnzNj",
+    "targetPort" : "T4h8fLLWPj_QHh3kLvrEh$$4sOq93M2waE3t4evQJoRQ"
+  }, {
+    "id" : "W32whi5KKy7GwYa7XzZj2$$Haz1axq8OxZ5nPEIMquZo",
+    "source" : "hnelYUsNsCedks_BhiQpY$$i3Ud1w_tWn1pYi2O2L9mG",
+    "sourcePort" : "DDQK1u5pJo_72vk8JzYWF$$Nsr85Nywujg_hrq_bDHOi",
+    "target" : "qQgx2Gk8Lf-QWWx35AKRz$$Xwsqq4sE-9RRJc1Vl3LyR",
+    "targetPort" : "eUNcn29GtpcMs6LX2t57Z$$L3Ecz-2edkFHo2qGt45Du"
+  }, {
+    "id" : "aRy5JaTubp-gpoDlsbW6j$$6ex6r0WbYZmuQHKmI-8eM",
+    "source" : "RyltwW0WYgJoTxg2mWxQg$$XYc6NODh4RWvHcCSWnzNj",
+    "sourcePort" : "UQBLh08K4yyYA65gy-Nt7$$qEZglSQdizQXekzoY4_Kv",
+    "target" : "WruWVP-79a-xlQa3bo7uK$$Z7YqYFTIIDGhEBBWt1Ie1",
+    "targetPort" : "gCzjWVw4ThYkSLhIZwsUP$$aDtSGuNs0NUpy3ydzzc-_"
+  }, {
+    "id" : "xDcm2u8EOE9Vg0v3IvUsf$$UdNBKe1aZCh20OWeJ-Mrk",
+    "source" : "qQgx2Gk8Lf-QWWx35AKRz$$Xwsqq4sE-9RRJc1Vl3LyR",
+    "sourcePort" : "7wpOjPKQ6-e9p-rAWhU7i$$wVlisXbJql2FqL3rIiV9E",
+    "target" : "WruWVP-79a-xlQa3bo7uK$$Z7YqYFTIIDGhEBBWt1Ie1",
+    "targetPort" : "H_T6n_vbyjojiIYZ0aJl6$$DMsmLr2a1Rj8qDyzeEOwW"
+  }, {
+    "id" : "810W5oemL_8o9yNj2mGIl$$6T9GlqFLGIC1_Qgtt34KG",
+    "source" : "WruWVP-79a-xlQa3bo7uK$$Z7YqYFTIIDGhEBBWt1Ie1",
+    "sourcePort" : "FaQ_ORaZqq8T0j7W80m1r$$czAVO0MNzHCG08MCWAGPQ",
+    "target" : "Lca-RDoPNtVfnFf92qhc8$$o59UxUc3AnjGIs4fhWsKL",
+    "targetPort" : "Byp1-EsWUm8sOIfo_hINm$$IMnfd88eGXEQbjfaCjq4W"
+  } ],
+  "processes" : {
+    "Lca-RDoPNtVfnFf92qhc8$$o59UxUc3AnjGIs4fhWsKL" : {
+      "id" : "Lca-RDoPNtVfnFf92qhc8$$o59UxUc3AnjGIs4fhWsKL",
+      "component" : "Target",
+      "metadata" : {
+        "label" : "Emp_join",
+        "slug" : "Emp_join",
+        "x" : 120,
+        "y" : -80,
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false,
+        "isImported" : false
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "Byp1-EsWUm8sOIfo_hINm$$IMnfd88eGXEQbjfaCjq4W",
+          "slug" : "Source_0_Source_1",
+          "schema" : {
+            "type" : "struct",
+            "fields" : [ {
+              "name" : "Emp_EmployeeID",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Unique identifier for each employee",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "Emp_Name",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "The full name of the employee",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "Emp_DeptID",
+              "type" : "integer",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Identifier for the department where the employee works",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "Emp_Salary",
+              "type" : "decimal(20,2)",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "The salary amount of the employee as a string",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "Emp_Experience",
+              "type" : "decimal(20,1)",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "The number of years the employee has worked in their field",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "Emp_Bonus",
+              "type" : "decimal(20,2)",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "String value representing the bonus amount received by the employee",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "Emp_City",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "City where the employee is located",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "Emp_Gender",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "The gender of the employee",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "Dept_DeptID",
+              "type" : "integer",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Unique identifier for the department",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "Dept_Department",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Name of the department within the organization",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "Dept_DeptHead",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "The name of the head of the department",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "Dept_Location",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "The physical location of the department",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "Dept_Budget",
+              "type" : "decimal(20,2)",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Total budget allocated for the department",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "Dept_EmployeeCount",
+              "type" : "integer",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Total number of employees in the department",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            } ]
+          },
+          "isStreaming" : false
+        } ],
+        "outputs" : [ ],
+        "selectedInputFields" : [ ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      },
+      "properties" : {
+        "datasetId" : "datasets/Emp_join"
+      }
+    },
+    "qQgx2Gk8Lf-QWWx35AKRz$$Xwsqq4sE-9RRJc1Vl3LyR" : {
+      "id" : "qQgx2Gk8Lf-QWWx35AKRz$$Xwsqq4sE-9RRJc1Vl3LyR",
+      "component" : "BulkColumnRename",
+      "metadata" : {
+        "label" : "bulk_rename_columns_1",
+        "slug" : "bulk_rename_columns_1",
+        "x" : -320,
+        "y" : 0,
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false,
+        "isImported" : false,
+        "dataPreview" : false
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "eUNcn29GtpcMs6LX2t57Z$$L3Ecz-2edkFHo2qGt45Du",
+          "slug" : "in0",
+          "schema" : {
+            "type" : "struct",
+            "fields" : [ {
+              "name" : "DeptID",
+              "type" : "integer",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Unique identifier for the department",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "Department",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Name of the department within the organization",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "DeptHead",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "The name of the head of the department",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "Location",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "The physical location of the department",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "Budget",
+              "type" : "decimal(20,2)",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Total budget allocated for the department",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "EmployeeCount",
+              "type" : "integer",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Total number of employees in the department",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            } ]
+          },
+          "isStreaming" : false
+        } ],
+        "outputs" : [ {
+          "id" : "7wpOjPKQ6-e9p-rAWhU7i$$wVlisXbJql2FqL3rIiV9E",
+          "slug" : "out"
+        } ],
+        "selectedInputFields" : [ ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      },
+      "properties" : {
+        "prefix" : "Dept_",
+        "columnNames" : [ "DeptID", "Department", "DeptHead", "Location", "Budget", "EmployeeCount" ],
+        "suffix" : "",
+        "schema" : {
+          "type" : "struct",
+          "fields" : [ {
+            "name" : "DeptID",
+            "type" : "integer",
+            "nullable" : true,
+            "metadata" : {
+              "description" : "Unique identifier for the department",
+              "mappings" : [ ],
+              "tags" : [ ]
+            }
+          }, {
+            "name" : "Department",
+            "type" : "string",
+            "nullable" : true,
+            "metadata" : {
+              "description" : "Name of the department within the organization",
+              "mappings" : [ ],
+              "tags" : [ ]
+            }
+          }, {
+            "name" : "DeptHead",
+            "type" : "string",
+            "nullable" : true,
+            "metadata" : {
+              "description" : "The name of the head of the department",
+              "mappings" : [ ],
+              "tags" : [ ]
+            }
+          }, {
+            "name" : "Location",
+            "type" : "string",
+            "nullable" : true,
+            "metadata" : {
+              "description" : "The physical location of the department",
+              "mappings" : [ ],
+              "tags" : [ ]
+            }
+          }, {
+            "name" : "Budget",
+            "type" : "decimal(20,2)",
+            "nullable" : true,
+            "metadata" : {
+              "description" : "Total budget allocated for the department",
+              "mappings" : [ ],
+              "tags" : [ ]
+            }
+          }, {
+            "name" : "EmployeeCount",
+            "type" : "integer",
+            "nullable" : true,
+            "metadata" : {
+              "description" : "Total number of employees in the department",
+              "mappings" : [ ],
+              "tags" : [ ]
+            }
+          } ]
+        },
+        "customExpression" : "",
+        "renameMethod" : "Add Prefix"
+      },
+      "componentInfo" : {
+        "gemId" : "gitUri=http://gitserver:3000/DxEheDCJ_team_5751/DxEheDCJ_project_12654.git&subPath=&tag=0.2.47&projectSubscriptionProjectId=12654&path=gems/BulkColumnRename",
+        "projectName" : "ProphecySparkBasicsPython"
+      }
+    },
+    "RyltwW0WYgJoTxg2mWxQg$$XYc6NODh4RWvHcCSWnzNj" : {
+      "id" : "RyltwW0WYgJoTxg2mWxQg$$XYc6NODh4RWvHcCSWnzNj",
+      "component" : "BulkColumnRename",
+      "metadata" : {
+        "label" : "bulk_rename_columns",
+        "slug" : "bulk_rename_columns",
+        "x" : -300,
+        "y" : -200,
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false,
+        "isImported" : false,
+        "dataPreview" : false
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "T4h8fLLWPj_QHh3kLvrEh$$4sOq93M2waE3t4evQJoRQ",
+          "slug" : "in0",
+          "schema" : {
+            "type" : "struct",
+            "fields" : [ {
+              "name" : "EmployeeID",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Unique identifier for each employee",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "Name",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "The full name of the employee",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "DeptID",
+              "type" : "integer",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Identifier for the department where the employee works",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "Salary",
+              "type" : "decimal(20,2)",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "The salary amount of the employee as a string",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "Experience",
+              "type" : "decimal(20,1)",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "The number of years the employee has worked in their field",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "Bonus",
+              "type" : "decimal(20,2)",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "String value representing the bonus amount received by the employee",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "City",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "City where the employee is located",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "Gender",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "The gender of the employee",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            } ]
+          },
+          "isStreaming" : false
+        } ],
+        "outputs" : [ {
+          "id" : "UQBLh08K4yyYA65gy-Nt7$$qEZglSQdizQXekzoY4_Kv",
+          "slug" : "out"
+        } ],
+        "selectedInputFields" : [ ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      },
+      "properties" : {
+        "prefix" : "Emp_",
+        "columnNames" : [ "EmployeeID", "Name", "DeptID", "Salary", "Experience", "Bonus", "City", "Gender" ],
+        "suffix" : "",
+        "schema" : {
+          "type" : "struct",
+          "fields" : [ {
+            "name" : "EmployeeID",
+            "type" : "string",
+            "nullable" : true,
+            "metadata" : {
+              "description" : "Unique identifier for each employee",
+              "mappings" : [ ],
+              "tags" : [ ]
+            }
+          }, {
+            "name" : "Name",
+            "type" : "string",
+            "nullable" : true,
+            "metadata" : {
+              "description" : "The full name of the employee",
+              "mappings" : [ ],
+              "tags" : [ ]
+            }
+          }, {
+            "name" : "DeptID",
+            "type" : "integer",
+            "nullable" : true,
+            "metadata" : {
+              "description" : "Identifier for the department where the employee works",
+              "mappings" : [ ],
+              "tags" : [ ]
+            }
+          }, {
+            "name" : "Salary",
+            "type" : "decimal(20,2)",
+            "nullable" : true,
+            "metadata" : {
+              "description" : "The salary amount of the employee as a string",
+              "mappings" : [ ],
+              "tags" : [ ]
+            }
+          }, {
+            "name" : "Experience",
+            "type" : "decimal(20,1)",
+            "nullable" : true,
+            "metadata" : {
+              "description" : "The number of years the employee has worked in their field",
+              "mappings" : [ ],
+              "tags" : [ ]
+            }
+          }, {
+            "name" : "Bonus",
+            "type" : "decimal(20,2)",
+            "nullable" : true,
+            "metadata" : {
+              "description" : "String value representing the bonus amount received by the employee",
+              "mappings" : [ ],
+              "tags" : [ ]
+            }
+          }, {
+            "name" : "City",
+            "type" : "string",
+            "nullable" : true,
+            "metadata" : {
+              "description" : "City where the employee is located",
+              "mappings" : [ ],
+              "tags" : [ ]
+            }
+          }, {
+            "name" : "Gender",
+            "type" : "string",
+            "nullable" : true,
+            "metadata" : {
+              "description" : "The gender of the employee",
+              "mappings" : [ ],
+              "tags" : [ ]
+            }
+          } ]
+        },
+        "customExpression" : "",
+        "renameMethod" : "Add Prefix"
+      },
+      "componentInfo" : {
+        "gemId" : "gitUri=http://gitserver:3000/DxEheDCJ_team_5751/DxEheDCJ_project_12654.git&subPath=&tag=0.2.47&projectSubscriptionProjectId=12654&path=gems/BulkColumnRename",
+        "projectName" : "ProphecySparkBasicsPython"
+      }
+    },
+    "WruWVP-79a-xlQa3bo7uK$$Z7YqYFTIIDGhEBBWt1Ie1" : {
+      "id" : "WruWVP-79a-xlQa3bo7uK$$Z7YqYFTIIDGhEBBWt1Ie1",
+      "component" : "Join",
+      "metadata" : {
+        "label" : "Source_0_Source_1",
+        "slug" : "Source_0_Source_1",
+        "x" : -60,
+        "y" : -80,
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false,
+        "isImported" : false,
+        "dataPreview" : false
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "gCzjWVw4ThYkSLhIZwsUP$$aDtSGuNs0NUpy3ydzzc-_",
+          "slug" : "Source_0",
+          "schema" : {
+            "type" : "struct",
+            "fields" : [ {
+              "name" : "Emp_EmployeeID",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Unique identifier for each employee",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "Emp_Name",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "The full name of the employee",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "Emp_DeptID",
+              "type" : "integer",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Identifier for the department where the employee works",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "Emp_Salary",
+              "type" : "decimal(20,2)",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "The salary amount of the employee as a string",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "Emp_Experience",
+              "type" : "decimal(20,1)",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "The number of years the employee has worked in their field",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "Emp_Bonus",
+              "type" : "decimal(20,2)",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "String value representing the bonus amount received by the employee",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "Emp_City",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "City where the employee is located",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "Emp_Gender",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "The gender of the employee",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            } ]
+          },
+          "isStreaming" : false
+        }, {
+          "id" : "H_T6n_vbyjojiIYZ0aJl6$$DMsmLr2a1Rj8qDyzeEOwW",
+          "slug" : "Source_1",
+          "schema" : {
+            "type" : "struct",
+            "fields" : [ {
+              "name" : "Dept_DeptID",
+              "type" : "integer",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Unique identifier for the department",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "Dept_Department",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Name of the department within the organization",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "Dept_DeptHead",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "The name of the head of the department",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "Dept_Location",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "The physical location of the department",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "Dept_Budget",
+              "type" : "decimal(20,2)",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Total budget allocated for the department",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "Dept_EmployeeCount",
+              "type" : "integer",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Total number of employees in the department",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            } ]
+          },
+          "isStreaming" : false
+        } ],
+        "outputs" : [ {
+          "id" : "FaQ_ORaZqq8T0j7W80m1r$$czAVO0MNzHCG08MCWAGPQ",
+          "slug" : "out"
+        } ],
+        "selectedInputFields" : [ ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      },
+      "properties" : {
+        "conditions" : [ {
+          "alias" : "Source_1",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "Source_0.Emp_DeptID==Source_1.Dept_DeptID"
+          },
+          "joinType" : "inner"
+        } ],
+        "expressions" : [ ],
+        "hints" : [ {
+          "id" : "gCzjWVw4ThYkSLhIZwsUP$$aDtSGuNs0NUpy3ydzzc-_",
+          "alias" : "Source_0",
+          "hintType" : "none",
+          "propagateColumns" : false
+        }, {
+          "id" : "H_T6n_vbyjojiIYZ0aJl6$$DMsmLr2a1Rj8qDyzeEOwW",
+          "alias" : "Source_1",
+          "hintType" : "none",
+          "propagateColumns" : false
+        } ],
+        "allIn1" : null,
+        "activeTab" : "conditions",
+        "columnsSelector" : [ "H_T6n_vbyjojiIYZ0aJl6$$DMsmLr2a1Rj8qDyzeEOwW##Dept_DeptID", "gCzjWVw4ThYkSLhIZwsUP$$aDtSGuNs0NUpy3ydzzc-_##Emp_DeptID" ],
+        "allIn0" : null,
+        "whereClause" : null,
+        "headAlias" : "Source_0"
+      },
+      "componentInfo" : {
+        "gemId" : "gitUri=http://gitserver:3000/DxEheDCJ_team_5751/DxEheDCJ_project_12654.git&subPath=&tag=0.2.47&projectSubscriptionProjectId=12654&path=gems/Join",
+        "projectName" : "ProphecySparkBasicsPython"
+      }
+    },
+    "yP2dFzxp4H4ylgfupDmeD$$Tdqyr8hxEoxZKc9SMWoPB" : {
+      "id" : "yP2dFzxp4H4ylgfupDmeD$$Tdqyr8hxEoxZKc9SMWoPB",
+      "component" : "Source",
+      "metadata" : {
+        "label" : "Employee_join",
+        "slug" : "Employee_join",
+        "x" : -480,
+        "y" : -180,
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false,
+        "isImported" : false
+      },
+      "ports" : {
+        "inputs" : [ ],
+        "outputs" : [ {
+          "id" : "bYo1exPuGoW5MotFNbdab$$t1jNxcIJ7rubO-X1YtT75",
+          "slug" : "out"
+        } ],
+        "selectedInputFields" : [ ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      },
+      "properties" : {
+        "datasetId" : "datasets/Employee_join"
+      }
+    },
+    "hnelYUsNsCedks_BhiQpY$$i3Ud1w_tWn1pYi2O2L9mG" : {
+      "id" : "hnelYUsNsCedks_BhiQpY$$i3Ud1w_tWn1pYi2O2L9mG",
+      "component" : "Source",
+      "metadata" : {
+        "label" : "Department_Join",
+        "slug" : "Department_Join",
+        "x" : -480,
+        "y" : 20,
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false,
+        "isImported" : false
+      },
+      "ports" : {
+        "inputs" : [ ],
+        "outputs" : [ {
+          "id" : "DDQK1u5pJo_72vk8JzYWF$$Nsr85Nywujg_hrq_bDHOi",
+          "slug" : "out"
+        } ],
+        "selectedInputFields" : [ ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      },
+      "properties" : {
+        "datasetId" : "datasets/Department_Join"
+      }
+    }
+  },
+  "ports" : {
+    "inputs" : [ ],
+    "outputs" : [ ],
+    "selectedInputFields" : [ ],
+    "isCustomOutputSchema" : false,
+    "autoUpdateOnRun" : false
+  }
+}

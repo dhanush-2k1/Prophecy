@@ -26,6 +26,22 @@ pipelines:
       - datasets/tagrget_output
     subgraphs: []
     dependencies: {}
+  pipelines/join:
+    name: join
+    description: ''
+    author: dhanushmandapaka2k1@gmail.com
+    mode: batch
+    artefactID: ''
+    language: python
+    createdAt: '2025-08-11 05:18:59'
+    datasets:
+      inputs:
+      - datasets/Department_Join
+      - datasets/Employee_join
+      outputs:
+      - datasets/Emp_join
+    subgraphs: []
+    dependencies: {}
 datasets:
   datasets/emp:
     name: emp
@@ -53,6 +69,45 @@ datasets:
         description: ''
         author: dhanushmandapaka2k1@gmail.com
         createdAt: '2025-08-11 05:10:10'
+  datasets/Employee_join:
+    name: Employee_join
+    description: ''
+    author: dhanushmandapaka2k1@gmail.com
+    createdAt: '2025-08-11 06:24:43'
+    mode: batch
+    physicalDatasets:
+      spark_fabric:
+        fabricId: 32124
+        datasetType: File
+        description: ''
+        author: dhanushmandapaka2k1@gmail.com
+        createdAt: '2025-08-11 06:24:43'
+  datasets/Department_Join:
+    name: Department_Join
+    description: ''
+    author: dhanushmandapaka2k1@gmail.com
+    createdAt: '2025-08-11 06:26:39'
+    mode: batch
+    physicalDatasets:
+      spark_fabric:
+        fabricId: 32124
+        datasetType: File
+        description: ''
+        author: dhanushmandapaka2k1@gmail.com
+        createdAt: '2025-08-11 06:26:39'
+  datasets/Emp_join:
+    name: Emp_join
+    description: ''
+    author: dhanushmandapaka2k1@gmail.com
+    createdAt: '2025-08-11 06:34:59'
+    mode: batch
+    physicalDatasets:
+      spark_fabric:
+        fabricId: 32124
+        datasetType: File
+        description: ''
+        author: dhanushmandapaka2k1@gmail.com
+        createdAt: '2025-08-11 06:34:59'
 templates: {}
 jobs: {}
 gemContainer:

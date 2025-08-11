@@ -1,0 +1,46 @@
+version: 1
+schema:
+  type: struct
+  fields:
+  - name: DeptID
+    type: integer
+    nullable: true
+    metadata:
+      description: Unique identifier for the department
+      mappings: []
+      tags: []
+  - name: Department
+    type: string
+    nullable: true
+    metadata:
+      description: Name of the department within the organization
+      mappings: []
+      tags: []
+  - name: DeptHead
+    type: string
+    nullable: true
+    metadata:
+      description: The name of the head of the department
+      mappings: []
+      tags: []
+  - name: Location
+    type: string
+    nullable: true
+    metadata:
+      description: The physical location of the department
+      mappings: []
+      tags: []
+  - name: Budget
+    type: decimal(20,2)
+    nullable: true
+    metadata:
+      description: Total budget allocated for the department
+      mappings: []
+      tags: []
+  - name: EmployeeCount
+    type: integer
+    nullable: true
+    metadata:
+      description: Total number of employees in the department
+      mappings: []
+      tags: []
