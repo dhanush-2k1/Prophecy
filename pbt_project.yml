@@ -73,6 +73,20 @@ pipelines:
       - datasets/Employee_ou
     subgraphs: []
     dependencies: {}
+  pipelines/compare_columns:
+    name: compare_columns
+    description: ''
+    author: dhanushmandapaka2k1@gmail.com
+    mode: batch
+    artefactID: ''
+    language: python
+    createdAt: '2025-08-11 11:37:14'
+    datasets:
+      inputs:
+      - datasets/Employee_join
+      outputs: []
+    subgraphs: []
+    dependencies: {}
 datasets:
   datasets/emp:
     name: emp
