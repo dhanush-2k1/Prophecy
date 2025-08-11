@@ -10,7 +10,7 @@ def emp(spark: SparkSession) -> DataFrame:
     return spark.read\
         .schema(
           StructType([
-            StructField("ID", IntegerType(), True), StructField("First_Name", StringType(), True), StructField("Last_Name", StringType(), True), StructField("Age", IntegerType(), True), StructField("City", StringType(), True), StructField("Occupation", StringType(), True), StructField("Phone", DoubleType(), True), StructField("Email", StringType(), True), StructField("Salary", DecimalType(20, 2), True), StructField("Department", StringType(), True)
+            StructField("EmployeeID", StringType(), True), StructField("Name", StringType(), True), StructField("DeptID", StringType(), True), StructField("Salary", DoubleType(), True), StructField("Experience", StringType(), True)
         ])
         )\
         .option("header", True)\

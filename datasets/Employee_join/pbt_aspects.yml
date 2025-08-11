@@ -6,55 +6,55 @@ schema:
     type: string
     nullable: true
     metadata:
-      description: Unique identifier for each employee
+      description: ''
       mappings: []
       tags: []
   - name: Name
     type: string
     nullable: true
     metadata:
-      description: The full name of the employee
+      description: ''
       mappings: []
       tags: []
   - name: DeptID
-    type: integer
+    type: string
     nullable: true
     metadata:
-      description: Identifier for the department where the employee works
+      description: ''
       mappings: []
       tags: []
   - name: Salary
-    type: decimal(20,2)
+    type: string
     nullable: true
     metadata:
-      description: The salary amount of the employee as a string
+      description: ''
       mappings: []
       tags: []
   - name: Experience
-    type: decimal(20,1)
+    type: string
     nullable: true
     metadata:
-      description: The number of years the employee has worked in their field
+      description: ''
       mappings: []
       tags: []
   - name: Bonus
-    type: decimal(20,2)
+    type: string
     nullable: true
     metadata:
-      description: String value representing the bonus amount received by the employee
+      description: ''
       mappings: []
       tags: []
   - name: City
     type: string
     nullable: true
     metadata:
-      description: City where the employee is located
+      description: ''
       mappings: []
       tags: []
   - name: Gender
     type: string
     nullable: true
     metadata:
-      description: The gender of the employee
+      description: ''
       mappings: []
       tags: []

@@ -1,4 +1,3 @@
-from .filter_by_age_salary import filter_by_age_salary
 from .sort_by_avg_salary_desc import sort_by_avg_salary_desc
 from .tagrget_output import tagrget_output
 from .department_salary_age_avg import department_salary_age_avg

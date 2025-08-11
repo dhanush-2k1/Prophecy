@@ -1,0 +1,82 @@
+{
+  "metainfo" : {
+    "type" : "Databricks",
+    "fabricId" : "32124",
+    "jobId" : "jobs/test_join",
+    "name" : "test_join",
+    "schedule" : "0 15 15 * * ? *",
+    "scheduleTimeZone" : "UTC",
+    "jobClusterMode" : {
+      "clusterMode" : "Single"
+    },
+    "enabled" : false,
+    "defaultClusterSize" : "small",
+    "alerting" : {
+      "emails" : "dhanushmandapaka2k1@gmail.com",
+      "onStart" : true,
+      "onSuccess" : true,
+      "onFailure" : true
+    },
+    "maxConcurrentRuns" : 1,
+    "processDefaultSettings" : {
+      "retries" : 0,
+      "alerting" : {
+        "emails" : "",
+        "onStart" : false,
+        "onSuccess" : false,
+        "onFailure" : false
+      },
+      "emails" : "",
+      "onStart" : false,
+      "onSuccess" : false,
+      "onFailure" : false
+    }
+  },
+  "processes" : {
+    "NIiB0GgJJ8S3e0m6IRjHu" : {
+      "id" : "NIiB0GgJJ8S3e0m6IRjHu",
+      "component" : "Pipeline",
+      "metadata" : {
+        "label" : "join",
+        "slug" : "join",
+        "x" : 100,
+        "y" : 100
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "in",
+          "slug" : ""
+        } ],
+        "outputs" : [ {
+          "id" : "out",
+          "slug" : ""
+        } ]
+      },
+      "settings" : {
+        "alerting" : {
+          "emails" : "",
+          "onStart" : false,
+          "onSuccess" : false,
+          "onFailure" : false
+        },
+        "emails" : "",
+        "onStart" : false,
+        "onSuccess" : false,
+        "onFailure" : false
+      },
+      "properties" : {
+        "pipelineId" : "pipelines/join",
+        "configurations" : {
+          "schema" : [ ],
+          "instances" : {
+            "spark_project" : [ "default" ]
+          },
+          "overrides" : { },
+          "selectedInstance" : "default"
+        },
+        "projectId" : "55507"
+      }
+    }
+  },
+  "connections" : [ ]
+}

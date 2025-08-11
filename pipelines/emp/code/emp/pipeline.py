@@ -8,8 +8,7 @@ from emp.graph import *
 
 def pipeline(spark: SparkSession) -> None:
     df_emp = emp(spark)
-    df_filter_by_age_salary = filter_by_age_salary(spark, df_emp)
-    df_department_salary_age_avg = department_salary_age_avg(spark, df_filter_by_age_salary)
+    df_department_salary_age_avg = department_salary_age_avg(spark)
     df_sort_by_avg_salary_desc = sort_by_avg_salary_desc(spark, df_department_salary_age_avg)
     df_bulk_rename_columns = bulk_rename_columns(spark, df_sort_by_avg_salary_desc)
     df_clean_dataframe = clean_dataframe(spark, df_bulk_rename_columns)

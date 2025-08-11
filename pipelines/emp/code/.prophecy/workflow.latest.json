@@ -156,92 +156,47 @@
           "schema" : {
             "type" : "struct",
             "fields" : [ {
-              "name" : "ID",
-              "type" : "integer",
-              "nullable" : true,
-              "metadata" : {
-                "description" : "Unique identifier for each employee in the dataset.",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            }, {
-              "name" : "First_Name",
+              "name" : "EmployeeID",
               "type" : "string",
               "nullable" : true,
               "metadata" : {
-                "description" : "The first name of the employee.",
+                "description" : "",
                 "mappings" : [ ],
                 "tags" : [ ]
               }
             }, {
-              "name" : "Last_Name",
+              "name" : "Name",
               "type" : "string",
               "nullable" : true,
               "metadata" : {
-                "description" : "The surname of the employee, used for identification and formal communication.",
+                "description" : "",
                 "mappings" : [ ],
                 "tags" : [ ]
               }
             }, {
-              "name" : "Age",
-              "type" : "integer",
-              "nullable" : true,
-              "metadata" : {
-                "description" : "The age of the employee, indicating their experience level and potential career stage.",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            }, {
-              "name" : "City",
+              "name" : "DeptID",
               "type" : "string",
               "nullable" : true,
               "metadata" : {
-                "description" : "City where the employee resides.",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            }, {
-              "name" : "Occupation",
-              "type" : "string",
-              "nullable" : true,
-              "metadata" : {
-                "description" : "Job title or role of the employee within the organization.",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            }, {
-              "name" : "Phone",
-              "type" : "double",
-              "nullable" : true,
-              "metadata" : {
-                "description" : "Contact number of the employee; A 10-digit mobile number used for communication.",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            }, {
-              "name" : "Email",
-              "type" : "string",
-              "nullable" : true,
-              "metadata" : {
-                "description" : "Email address of the employee; Used for official communication and correspondence.",
+                "description" : "",
                 "mappings" : [ ],
                 "tags" : [ ]
               }
             }, {
               "name" : "Salary",
-              "type" : "decimal(20,2)",
+              "type" : "double",
               "nullable" : true,
               "metadata" : {
-                "description" : "Annual salary of the employee; Represents the total compensation in a decimal format with two decimal places.",
+                "description" : "",
                 "mappings" : [ ],
                 "tags" : [ ]
               }
             }, {
-              "name" : "Department",
+              "name" : "Experience",
               "type" : "string",
               "nullable" : true,
               "metadata" : {
-                "description" : "The department where the employee works, indicating their area of expertise and organizational role.",
+                "description" : "",
                 "mappings" : [ ],
                 "tags" : [ ]
               }
@@ -285,39 +240,7 @@
       "ports" : {
         "inputs" : [ {
           "id" : "2CxquRBkQa4wHq02FNPTs$$7CMKpXbzO0aSuSbP72TLS",
-          "slug" : "flatten_employee_schema",
-          "schema" : {
-            "type" : "struct",
-            "fields" : [ {
-              "name" : "Emp_Department",
-              "type" : "string",
-              "nullable" : true,
-              "metadata" : {
-                "description" : "The department where the employee works, indicating their area of expertise and organizational role.",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            }, {
-              "name" : "Emp_avg_sal",
-              "type" : "decimal(21,2)",
-              "nullable" : true,
-              "metadata" : {
-                "description" : "",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            }, {
-              "name" : "Emp_avg_age",
-              "type" : "double",
-              "nullable" : false,
-              "metadata" : {
-                "description" : "",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            } ]
-          },
-          "isStreaming" : false
+          "slug" : "flatten_employee_schema"
         } ],
         "outputs" : [ ],
         "selectedInputFields" : [ ],
@@ -370,102 +293,7 @@
       "ports" : {
         "inputs" : [ {
           "id" : "3UvTtElhTLtiNEjuOB-u_$$hZUdi8uJ265JbWvrNO_K_",
-          "slug" : "in0",
-          "schema" : {
-            "type" : "struct",
-            "fields" : [ {
-              "name" : "ID",
-              "type" : "integer",
-              "nullable" : true,
-              "metadata" : {
-                "description" : "Unique identifier for each employee in the dataset.",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            }, {
-              "name" : "First_Name",
-              "type" : "string",
-              "nullable" : true,
-              "metadata" : {
-                "description" : "The first name of the employee.",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            }, {
-              "name" : "Last_Name",
-              "type" : "string",
-              "nullable" : true,
-              "metadata" : {
-                "description" : "The surname of the employee, used for identification and formal communication.",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            }, {
-              "name" : "Age",
-              "type" : "integer",
-              "nullable" : true,
-              "metadata" : {
-                "description" : "The age of the employee, indicating their experience level and potential career stage.",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            }, {
-              "name" : "City",
-              "type" : "string",
-              "nullable" : true,
-              "metadata" : {
-                "description" : "City where the employee resides.",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            }, {
-              "name" : "Occupation",
-              "type" : "string",
-              "nullable" : true,
-              "metadata" : {
-                "description" : "Job title or role of the employee within the organization.",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            }, {
-              "name" : "Phone",
-              "type" : "double",
-              "nullable" : true,
-              "metadata" : {
-                "description" : "Contact number of the employee; A 10-digit mobile number used for communication.",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            }, {
-              "name" : "Email",
-              "type" : "string",
-              "nullable" : true,
-              "metadata" : {
-                "description" : "Email address of the employee; Used for official communication and correspondence.",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            }, {
-              "name" : "Salary",
-              "type" : "decimal(20,2)",
-              "nullable" : true,
-              "metadata" : {
-                "description" : "Annual salary of the employee; Represents the total compensation in a decimal format with two decimal places.",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            }, {
-              "name" : "Department",
-              "type" : "string",
-              "nullable" : true,
-              "metadata" : {
-                "description" : "The department where the employee works, indicating their area of expertise and organizational role.",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            } ]
-          },
-          "isStreaming" : false
+          "slug" : "in0"
         } ],
         "outputs" : [ {
           "id" : "3xJvZzILpZ57LLLHi-t0l$$GNTYSK8RIj8UzprtFDUxy",
@@ -534,39 +362,7 @@
       "ports" : {
         "inputs" : [ {
           "id" : "I-2VqZdiYAL1MoG3vZKOm$$1qUcLlJbH3iYSxPFZHyNk",
-          "slug" : "in0",
-          "schema" : {
-            "type" : "struct",
-            "fields" : [ {
-              "name" : "Department",
-              "type" : "string",
-              "nullable" : true,
-              "metadata" : {
-                "description" : "The department where the employee works, indicating their area of expertise and organizational role.",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            }, {
-              "name" : "avg_sal",
-              "type" : "decimal(21,2)",
-              "nullable" : true,
-              "metadata" : {
-                "description" : "",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            }, {
-              "name" : "avg_age",
-              "type" : "double",
-              "nullable" : true,
-              "metadata" : {
-                "description" : "",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            } ]
-          },
-          "isStreaming" : false
+          "slug" : "in0"
         } ],
         "outputs" : [ {
           "id" : "1hN6MTtuDmmyEkysSFKBp$$zexfNW6ohImhH77xyn0mG",
@@ -608,39 +404,7 @@
       "ports" : {
         "inputs" : [ {
           "id" : "Buw6MBIpCLaqkOnQpCYQz$$EQRF2PPtPEm3qojRGg10j",
-          "slug" : "remove_duplicates",
-          "schema" : {
-            "type" : "struct",
-            "fields" : [ {
-              "name" : "Emp_Department",
-              "type" : "string",
-              "nullable" : true,
-              "metadata" : {
-                "description" : "The department where the employee works, indicating their area of expertise and organizational role.",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            }, {
-              "name" : "Emp_avg_sal",
-              "type" : "decimal(21,2)",
-              "nullable" : true,
-              "metadata" : {
-                "description" : "",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            }, {
-              "name" : "Emp_avg_age",
-              "type" : "double",
-              "nullable" : false,
-              "metadata" : {
-                "description" : "",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            } ]
-          },
-          "isStreaming" : false
+          "slug" : "remove_duplicates"
         } ],
         "outputs" : [ {
           "id" : "UibM7pQqSjWXowDAWSBzj$$EYXu7Q6-FAEaZhV8YW3K0",
@@ -706,39 +470,7 @@
       "ports" : {
         "inputs" : [ {
           "id" : "_PzoDBEhP1gLV6tm2C0lA$$86SibKbXLGwOGoVMomYUM",
-          "slug" : "df",
-          "schema" : {
-            "type" : "struct",
-            "fields" : [ {
-              "name" : "Emp_Department",
-              "type" : "string",
-              "nullable" : true,
-              "metadata" : {
-                "description" : "The department where the employee works, indicating their area of expertise and organizational role.",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            }, {
-              "name" : "Emp_avg_sal",
-              "type" : "decimal(21,2)",
-              "nullable" : true,
-              "metadata" : {
-                "description" : "",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            }, {
-              "name" : "Emp_avg_age",
-              "type" : "double",
-              "nullable" : true,
-              "metadata" : {
-                "description" : "",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            } ]
-          },
-          "isStreaming" : false
+          "slug" : "df"
         } ],
         "outputs" : [ {
           "id" : "DQAgLF_xUDaw5xuikNsn8$$qjF024RUfdqtvIc-vQent",
@@ -845,39 +577,7 @@
       "ports" : {
         "inputs" : [ {
           "id" : "ftVmHWxvPmwZhHagSvbNi$$JeKJ5ak_7SmOUqXL9icB3",
-          "slug" : "clean_dataframe",
-          "schema" : {
-            "type" : "struct",
-            "fields" : [ {
-              "name" : "Emp_Department",
-              "type" : "string",
-              "nullable" : true,
-              "metadata" : {
-                "description" : "The department where the employee works, indicating their area of expertise and organizational role.",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            }, {
-              "name" : "Emp_avg_sal",
-              "type" : "decimal(21,2)",
-              "nullable" : true,
-              "metadata" : {
-                "description" : "",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            }, {
-              "name" : "Emp_avg_age",
-              "type" : "double",
-              "nullable" : false,
-              "metadata" : {
-                "description" : "",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            } ]
-          },
-          "isStreaming" : false
+          "slug" : "clean_dataframe"
         } ],
         "outputs" : [ {
           "id" : "VrJ0gGir5GqD9ONZl9Att$$9mHb6CWlwY8UN3Y-wO2JZ",
@@ -916,39 +616,7 @@
       "ports" : {
         "inputs" : [ {
           "id" : "l18ReqKjK_0fZqRZ5m8Zu$$8KUp0Y1gb3hhYv1ZfFBtC",
-          "slug" : "in0",
-          "schema" : {
-            "type" : "struct",
-            "fields" : [ {
-              "name" : "Department",
-              "type" : "string",
-              "nullable" : true,
-              "metadata" : {
-                "description" : "The department where the employee works, indicating their area of expertise and organizational role.",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            }, {
-              "name" : "avg_sal",
-              "type" : "decimal(21,2)",
-              "nullable" : true,
-              "metadata" : {
-                "description" : "",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            }, {
-              "name" : "avg_age",
-              "type" : "double",
-              "nullable" : true,
-              "metadata" : {
-                "description" : "",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            } ]
-          },
-          "isStreaming" : false
+          "slug" : "in0"
         } ],
         "outputs" : [ {
           "id" : "-h2fKLqctUJ3fvHZUMrhT$$4_7hfmXxxy_GS2kZb7wBS",
@@ -1010,6 +678,150 @@
     "autoUpdateOnRun" : false
   },
   "diagnostics" : [ {
+    "property" : "$.workflow.processes.l9feL7NGe8IB-Nu4QwsUB$$lAnpiCfydmBcC5EPfLQvb",
+    "range" : {
+      "start" : {
+        "line" : 0,
+        "character" : 0
+      },
+      "end" : {
+        "line" : 0,
+        "character" : 0
+      }
+    },
+    "severity" : 1,
+    "message" : "Error occurred while doing Schema Analysis: [UNRESOLVED_COLUMN.WITH_SUGGESTION] A column or function parameter with name `Age` cannot be resolved. Did you mean one of the following? [`Name`, `DeptID`, `Salary`, `EmployeeID`, `Experience`].;\n'Filter (('Age > 25) AND (Salary#791 >= cast(500000 as double)))\n+- LogicalRDD [EmployeeID#788, Name#789, DeptID#790, Salary#791, Experience#792], false\n",
+    "tags" : [ ],
+    "relatedInformation" : [ ]
+  }, {
+    "property" : "$.workflow.processes.ySAetswf6zJapAA0p0Xqi$$XZCI1D6fJM3ly0WPPQKPr",
+    "range" : {
+      "start" : {
+        "line" : 0,
+        "character" : 0
+      },
+      "end" : {
+        "line" : 0,
+        "character" : 0
+      }
+    },
+    "severity" : 2,
+    "message" : "One of the upstream gems is broken. Please, fix it first.",
+    "tags" : [ ],
+    "relatedInformation" : [ ]
+  }, {
+    "property" : "$.workflow.processes._dkYEJ_hOCaujQ1aJotoj$$mBQbeGF7c6S7u0nYzEADm",
+    "range" : {
+      "start" : {
+        "line" : 0,
+        "character" : 0
+      },
+      "end" : {
+        "line" : 0,
+        "character" : 0
+      }
+    },
+    "severity" : 2,
+    "message" : "One of the upstream gems is broken. Please, fix it first.",
+    "tags" : [ ],
+    "relatedInformation" : [ ]
+  }, {
+    "property" : "$.workflow.processes._dkYEJ_hOCaujQ1aJotoj$$mBQbeGF7c6S7u0nYzEADm.properties.orders[0].expression.expression",
+    "range" : {
+      "start" : {
+        "line" : 0,
+        "character" : 0
+      },
+      "end" : {
+        "line" : 0,
+        "character" : 0
+      }
+    },
+    "severity" : 2,
+    "message" : "No match found for column avg_sal",
+    "tags" : [ ],
+    "relatedInformation" : [ ]
+  }, {
+    "property" : "$.workflow.processes.9fBud8XZT5u79uEHI0PLU$$XEqRuE0SPdNY7_An7omj8",
+    "range" : {
+      "start" : {
+        "line" : 0,
+        "character" : 0
+      },
+      "end" : {
+        "line" : 0,
+        "character" : 0
+      }
+    },
+    "severity" : 2,
+    "message" : "One of the upstream gems is broken. Please, fix it first.",
+    "tags" : [ ],
+    "relatedInformation" : [ ]
+  }, {
+    "property" : "$.workflow.processes.fzIyNp4S3QHOKqz8Wxbqq$$oY72_W38Eo5WlY6jbCgrR",
+    "range" : {
+      "start" : {
+        "line" : 0,
+        "character" : 0
+      },
+      "end" : {
+        "line" : 0,
+        "character" : 0
+      }
+    },
+    "severity" : 2,
+    "message" : "One of the upstream gems is broken. Please, fix it first.",
+    "tags" : [ ],
+    "relatedInformation" : [ ]
+  }, {
+    "property" : "$.workflow.processes.vA5vF5pDj2brHr7pj0MMj$$8mMM_5bdoSJfahk0ZeauB",
+    "range" : {
+      "start" : {
+        "line" : 0,
+        "character" : 0
+      },
+      "end" : {
+        "line" : 0,
+        "character" : 0
+      }
+    },
+    "severity" : 2,
+    "message" : "One of the upstream gems is broken. Please, fix it first.",
+    "tags" : [ ],
+    "relatedInformation" : [ ]
+  }, {
+    "property" : "$.workflow.processes.oMAZfbge7P0mxSHnVhn57$$UR-N0-AUK4PeEwwtMElkb",
+    "range" : {
+      "start" : {
+        "line" : 0,
+        "character" : 0
+      },
+      "end" : {
+        "line" : 0,
+        "character" : 0
+      }
+    },
+    "severity" : 2,
+    "message" : "One of the upstream gems is broken. Please, fix it first.",
+    "tags" : [ ],
+    "relatedInformation" : [ ]
+  }, {
+    "property" : "$.workflow.processes.H41cMFZhKpx3jq26GzbSs$$sGk92ZfI4Yb7k1FWFxzoH",
+    "range" : {
+      "start" : {
+        "line" : 0,
+        "character" : 0
+      },
+      "end" : {
+        "line" : 0,
+        "character" : 0
+      }
+    },
+    "severity" : 2,
+    "message" : "One of the upstream gems is broken. Please, fix it first.",
+    "tags" : [ ],
+    "relatedInformation" : [ ]
+  }, {
     "property" : "$.workflow.processes.wDVREzpU2KF1RPHca19p-$$4nBrztS2vSxrwa-82OT_H.ports.inputs[0]",
     "range" : {
       "start" : {
