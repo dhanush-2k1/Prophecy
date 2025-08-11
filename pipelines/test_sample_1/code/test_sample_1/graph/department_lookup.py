@@ -8,5 +8,5 @@ from test_sample_1.functions import *
 
 def department_lookup(spark: SparkSession, in0: DataFrame):
     keyColumns = ['''DeptID''']
-    valueColumns = ['''DeptID''']
-    createLookup("test", in0, spark, keyColumns, valueColumns)
+    valueColumns = ['''Department''']
+    createLookup("Dept_lookup", in0, spark, keyColumns, valueColumns)

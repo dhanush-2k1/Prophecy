@@ -10,6 +10,8 @@ def pipeline(spark: SparkSession) -> None:
     df_Department_Join = Department_Join(spark)
     department_lookup(spark, df_Department_Join)
     df_Employee_join = Employee_join(spark)
+    df_reformat_employee_data = reformat_employee_data(spark, df_Employee_join)
+    Employee_ou(spark, df_reformat_employee_data)
 
 def main():
     spark = SparkSession.builder.enableHiveSupport().appName("test_sample_1").getOrCreate()

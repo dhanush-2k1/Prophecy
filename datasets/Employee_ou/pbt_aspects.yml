@@ -1,0 +1,39 @@
+version: 1
+schema:
+  type: struct
+  fields:
+  - name: EmployeeID
+    type: string
+    nullable: true
+    metadata:
+      description: ''
+      mappings: []
+      tags: []
+  - name: Name
+    type: string
+    nullable: true
+    metadata:
+      description: ''
+      mappings: []
+      tags: []
+  - name: Dept_Name
+    type: string
+    nullable: true
+    metadata:
+      description: Name of the department within the organization
+      mappings: []
+      tags: []
+  - name: Salary
+    type: double
+    nullable: true
+    metadata:
+      description: ''
+      mappings: []
+      tags: []
+  - name: Experience
+    type: decimal(20,1)
+    nullable: true
+    metadata:
+      description: ''
+      mappings: []
+      tags: []

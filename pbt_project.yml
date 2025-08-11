@@ -69,7 +69,8 @@ pipelines:
       inputs:
       - datasets/Department_Join
       - datasets/Employee_join
-      outputs: []
+      outputs:
+      - datasets/Employee_ou
     subgraphs: []
     dependencies: {}
 datasets:
@@ -151,6 +152,19 @@ datasets:
         description: ''
         author: dhanushmandapaka2k1@gmail.com
         createdAt: '2025-08-11 10:39:23'
+  datasets/Employee_ou:
+    name: Employee_ou
+    description: ''
+    author: dhanushmandapaka2k1@gmail.com
+    createdAt: '2025-08-11 11:32:13'
+    mode: batch
+    physicalDatasets:
+      spark_fabric:
+        fabricId: 32124
+        datasetType: File
+        description: ''
+        author: dhanushmandapaka2k1@gmail.com
+        createdAt: '2025-08-11 11:32:13'
 templates: {}
 jobs:
   jobs/test_join:

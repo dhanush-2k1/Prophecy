@@ -15,230 +15,7 @@
     },
     "id" : "1",
     "uri" : "pipelines/test_sample_1",
-    "sourceSuggestions" : [ {
-      "sourceLabel" : "Department_Join_1",
-      "sourceDatasetId" : "datasets/Department_Join",
-      "canJoinWith" : [ {
-        "processLabel" : "Employee_join",
-        "processId" : "Hasa1X4Yiv4OsDADTr2HT$$0pxrhZ5JC9FDYlJNOGTT0",
-        "joinColumns" : [ "DeptID" ],
-        "isRecommended" : true,
-        "properties" : {
-          "columnsSelector" : [ "DeptID" ],
-          "conditions" : [ {
-            "alias" : "Department_Join_1",
-            "expression" : "(Employee_join.DeptID = Department_Join_1.DeptID)",
-            "joinType" : "inner"
-          } ],
-          "expressions" : [ {
-            "alias" : "Department",
-            "expression" : "Department_Join_1.Department"
-          }, {
-            "alias" : "DeptHead",
-            "expression" : "Department_Join_1.DeptHead"
-          }, {
-            "alias" : "Location",
-            "expression" : "Department_Join_1.Location"
-          }, {
-            "alias" : "Budget",
-            "expression" : "Department_Join_1.Budget"
-          }, {
-            "alias" : "EmployeeCount",
-            "expression" : "Department_Join_1.EmployeeCount"
-          }, {
-            "alias" : "Name",
-            "expression" : "Employee_join.Name"
-          }, {
-            "alias" : "Salary",
-            "expression" : "Employee_join.Salary"
-          }, {
-            "alias" : "Bonus",
-            "expression" : "Employee_join.Bonus"
-          }, {
-            "alias" : "Experience",
-            "expression" : "Employee_join.Experience"
-          }, {
-            "alias" : "Gender",
-            "expression" : "Employee_join.Gender"
-          }, {
-            "alias" : "EmployeeID",
-            "expression" : "Employee_join.EmployeeID"
-          }, {
-            "alias" : "DeptID",
-            "expression" : "Employee_join.DeptID"
-          }, {
-            "alias" : "City",
-            "expression" : "Employee_join.City"
-          } ],
-          "headAlias" : "datasets/Department_Join"
-        }
-      } ]
-    }, {
-      "sourceLabel" : "emp",
-      "sourceDatasetId" : "datasets/emp",
-      "canJoinWith" : [ {
-        "processLabel" : "Employee_join",
-        "processId" : "Hasa1X4Yiv4OsDADTr2HT$$0pxrhZ5JC9FDYlJNOGTT0",
-        "joinColumns" : [ "EmployeeID", "Name", "Salary" ],
-        "isRecommended" : true,
-        "properties" : {
-          "columnsSelector" : [ "EmployeeID", "Name", "Salary" ],
-          "conditions" : [ {
-            "alias" : "emp",
-            "expression" : "(((Employee_join.EmployeeID = emp.EmployeeID) AND (Employee_join.Name = emp.Name)) AND (Employee_join.Salary = emp.Salary))",
-            "joinType" : "inner"
-          } ],
-          "expressions" : [ {
-            "alias" : "Name",
-            "expression" : "Employee_join.Name"
-          }, {
-            "alias" : "Salary",
-            "expression" : "Employee_join.Salary"
-          }, {
-            "alias" : "Bonus",
-            "expression" : "Employee_join.Bonus"
-          }, {
-            "alias" : "Experience",
-            "expression" : "Employee_join.Experience"
-          }, {
-            "alias" : "Gender",
-            "expression" : "Employee_join.Gender"
-          }, {
-            "alias" : "EmployeeID",
-            "expression" : "Employee_join.EmployeeID"
-          }, {
-            "alias" : "DeptID",
-            "expression" : "Employee_join.DeptID"
-          }, {
-            "alias" : "City",
-            "expression" : "Employee_join.City"
-          } ],
-          "headAlias" : "datasets/emp"
-        }
-      } ]
-    }, {
-      "sourceLabel" : "Emp_join",
-      "sourceDatasetId" : "datasets/Emp_join",
-      "canJoinWith" : [ {
-        "processLabel" : "Employee_join",
-        "processId" : "Hasa1X4Yiv4OsDADTr2HT$$0pxrhZ5JC9FDYlJNOGTT0",
-        "joinColumns" : [ "EmployeeID", "DeptID" ],
-        "isRecommended" : true,
-        "properties" : {
-          "columnsSelector" : [ "EmployeeID", "DeptID" ],
-          "conditions" : [ {
-            "alias" : "Emp_join",
-            "expression" : "((Employee_join.DeptID = Emp_join.Dept_DeptID) AND (Employee_join.EmployeeID = Emp_join.Emp_EmployeeID))",
-            "joinType" : "inner"
-          } ],
-          "expressions" : [ {
-            "alias" : "Emp_Name",
-            "expression" : "Emp_join.Emp_Name"
-          }, {
-            "alias" : "Emp_DeptID",
-            "expression" : "Emp_join.Emp_DeptID"
-          }, {
-            "alias" : "Emp_Salary",
-            "expression" : "Emp_join.Emp_Salary"
-          }, {
-            "alias" : "Emp_Experience",
-            "expression" : "Emp_join.Emp_Experience"
-          }, {
-            "alias" : "Emp_Bonus",
-            "expression" : "Emp_join.Emp_Bonus"
-          }, {
-            "alias" : "Emp_City",
-            "expression" : "Emp_join.Emp_City"
-          }, {
-            "alias" : "Emp_Gender",
-            "expression" : "Emp_join.Emp_Gender"
-          }, {
-            "alias" : "Dept_Department",
-            "expression" : "Emp_join.Dept_Department"
-          }, {
-            "alias" : "Dept_DeptHead",
-            "expression" : "Emp_join.Dept_DeptHead"
-          }, {
-            "alias" : "Dept_Location",
-            "expression" : "Emp_join.Dept_Location"
-          }, {
-            "alias" : "Dept_Budget",
-            "expression" : "Emp_join.Dept_Budget"
-          }, {
-            "alias" : "Dept_EmployeeCount",
-            "expression" : "Emp_join.Dept_EmployeeCount"
-          }, {
-            "alias" : "Name",
-            "expression" : "Employee_join.Name"
-          }, {
-            "alias" : "Salary",
-            "expression" : "Employee_join.Salary"
-          }, {
-            "alias" : "Bonus",
-            "expression" : "Employee_join.Bonus"
-          }, {
-            "alias" : "Experience",
-            "expression" : "Employee_join.Experience"
-          }, {
-            "alias" : "Gender",
-            "expression" : "Employee_join.Gender"
-          }, {
-            "alias" : "EmployeeID",
-            "expression" : "Employee_join.EmployeeID"
-          }, {
-            "alias" : "DeptID",
-            "expression" : "Employee_join.DeptID"
-          }, {
-            "alias" : "City",
-            "expression" : "Employee_join.City"
-          } ],
-          "headAlias" : "datasets/Emp_join"
-        }
-      } ]
-    }, {
-      "sourceLabel" : "Test_Shravan",
-      "sourceDatasetId" : "datasets/Test_Shravan",
-      "canJoinWith" : [ {
-        "processLabel" : "Employee_join",
-        "processId" : "Hasa1X4Yiv4OsDADTr2HT$$0pxrhZ5JC9FDYlJNOGTT0",
-        "joinColumns" : [ "EmployeeID", "Name", "Salary" ],
-        "isRecommended" : true,
-        "properties" : {
-          "columnsSelector" : [ "EmployeeID", "Name", "Salary" ],
-          "conditions" : [ {
-            "alias" : "Test_Shravan",
-            "expression" : "(((Employee_join.EmployeeID = Test_Shravan.EmployeeID) AND (Employee_join.Name = Test_Shravan.Name)) AND (Employee_join.Salary = Test_Shravan.Salary))",
-            "joinType" : "inner"
-          } ],
-          "expressions" : [ {
-            "alias" : "Name",
-            "expression" : "Employee_join.Name"
-          }, {
-            "alias" : "Salary",
-            "expression" : "Employee_join.Salary"
-          }, {
-            "alias" : "Bonus",
-            "expression" : "Employee_join.Bonus"
-          }, {
-            "alias" : "Experience",
-            "expression" : "Employee_join.Experience"
-          }, {
-            "alias" : "Gender",
-            "expression" : "Employee_join.Gender"
-          }, {
-            "alias" : "EmployeeID",
-            "expression" : "Employee_join.EmployeeID"
-          }, {
-            "alias" : "DeptID",
-            "expression" : "Employee_join.DeptID"
-          }, {
-            "alias" : "City",
-            "expression" : "Employee_join.City"
-          } ],
-          "headAlias" : "datasets/Test_Shravan"
-        }
-      } ]
-    } ],
+    "sourceSuggestions" : [ ],
     "pipelineSettingsInfo" : {
       "applicationName" : "test_sample_1",
       "hasApplication" : true,
@@ -315,16 +92,283 @@
     "sourcePort" : "i2ea-ZpGBJfiZ7JdZ2a8l$$eqN6QzrXr7aDschc_5weM",
     "target" : "iAH0GDvGcKoO7D34E2H-J$$SPBMmY-RpEEF7XWiR29bL",
     "targetPort" : "L4Tx5ZQPO0jCraio22l29$$lWA3dkNckNJe8R4zmnq_r"
+  }, {
+    "id" : "TX5WX26YVkcf-m6xuT2tl$$3Z9SKT-UcAOKSDMK1sSvj",
+    "source" : "Hasa1X4Yiv4OsDADTr2HT$$0pxrhZ5JC9FDYlJNOGTT0",
+    "sourcePort" : "LbALyZovrBggULxI85nQf$$caQlZnCrpJrRbP44CVPEo",
+    "target" : "oiyf7cn0Rzq5oJnka4cU3$$xsqPTvupFMMwmCvUcN1Tp",
+    "targetPort" : "cUJTBN6MGAtNZ1P_MKsmV$$Fj5b9zoQXrSRXw7y6oSyb"
+  }, {
+    "id" : "poXTbod392vgoIneXOmHc$$3o6L5Md6UdU4ytabrPlW4",
+    "source" : "oiyf7cn0Rzq5oJnka4cU3$$xsqPTvupFMMwmCvUcN1Tp",
+    "sourcePort" : "swQOtDWRCMUY3uV1XgCLI$$hjBGPPWANYH4Wc21l26y5",
+    "target" : "6axaU_ALz32YEl0623UVu$$_1cPa0z7YfKXtZA-ReQPO",
+    "targetPort" : "3ESYubghu-COaZCPGG2et$$BLpS9HcIm6ZaMzJduHXgh"
   } ],
   "processes" : {
+    "Hasa1X4Yiv4OsDADTr2HT$$0pxrhZ5JC9FDYlJNOGTT0" : {
+      "id" : "Hasa1X4Yiv4OsDADTr2HT$$0pxrhZ5JC9FDYlJNOGTT0",
+      "component" : "Source",
+      "metadata" : {
+        "label" : "Employee_join",
+        "slug" : "Employee_join",
+        "x" : -1400,
+        "y" : 40,
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false,
+        "isImported" : false
+      },
+      "ports" : {
+        "inputs" : [ ],
+        "outputs" : [ {
+          "id" : "LbALyZovrBggULxI85nQf$$caQlZnCrpJrRbP44CVPEo",
+          "slug" : "out"
+        } ],
+        "selectedInputFields" : [ ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      },
+      "properties" : {
+        "datasetId" : "datasets/Employee_join"
+      }
+    },
+    "6axaU_ALz32YEl0623UVu$$_1cPa0z7YfKXtZA-ReQPO" : {
+      "id" : "6axaU_ALz32YEl0623UVu$$_1cPa0z7YfKXtZA-ReQPO",
+      "component" : "Target",
+      "metadata" : {
+        "label" : "Employee_ou",
+        "slug" : "Employee_ou",
+        "x" : -1040,
+        "y" : 40,
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false,
+        "isImported" : false
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "3ESYubghu-COaZCPGG2et$$BLpS9HcIm6ZaMzJduHXgh",
+          "slug" : "in0",
+          "schema" : {
+            "type" : "struct",
+            "fields" : [ {
+              "name" : "EmployeeID",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "Name",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "Dept_Name",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Name of the department within the organization",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "Salary",
+              "type" : "double",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "Experience",
+              "type" : "decimal(20,1)",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            } ]
+          },
+          "isStreaming" : false
+        } ],
+        "outputs" : [ ],
+        "selectedInputFields" : [ ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      },
+      "properties" : {
+        "datasetId" : "datasets/Employee_ou"
+      }
+    },
+    "oiyf7cn0Rzq5oJnka4cU3$$xsqPTvupFMMwmCvUcN1Tp" : {
+      "id" : "oiyf7cn0Rzq5oJnka4cU3$$xsqPTvupFMMwmCvUcN1Tp",
+      "component" : "Reformat",
+      "metadata" : {
+        "label" : "reformat_employee_data",
+        "slug" : "reformat_employee_data",
+        "x" : -1200,
+        "y" : 40,
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false,
+        "isImported" : false,
+        "dataPreview" : false
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "cUJTBN6MGAtNZ1P_MKsmV$$Fj5b9zoQXrSRXw7y6oSyb",
+          "slug" : "in0",
+          "schema" : {
+            "type" : "struct",
+            "fields" : [ {
+              "name" : "EmployeeID",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "Name",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "DeptID",
+              "type" : "integer",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "Salary",
+              "type" : "double",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "Experience",
+              "type" : "decimal(20,1)",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "Bonus",
+              "type" : "double",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "City",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "Gender",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            } ]
+          },
+          "isStreaming" : false
+        } ],
+        "outputs" : [ {
+          "id" : "swQOtDWRCMUY3uV1XgCLI$$hjBGPPWANYH4Wc21l26y5",
+          "slug" : "out"
+        } ],
+        "selectedInputFields" : [ ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      },
+      "properties" : {
+        "importLanguage" : "${$.workflow.metainfo.frontEndLanguage}",
+        "expressions" : [ {
+          "target" : "EmployeeID",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "EmployeeID"
+          },
+          "description" : ""
+        }, {
+          "target" : "Name",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "Name"
+          },
+          "description" : ""
+        }, {
+          "target" : "Dept_Name",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "Dept_lookup(DeptID)['department']"
+          },
+          "description" : ""
+        }, {
+          "target" : "Salary",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "Salary"
+          },
+          "description" : ""
+        }, {
+          "target" : "Experience",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "Experience"
+          },
+          "description" : ""
+        } ],
+        "importString" : "",
+        "activeTab" : "expressions",
+        "columnsSelector" : [ "cUJTBN6MGAtNZ1P_MKsmV$$Fj5b9zoQXrSRXw7y6oSyb##EmployeeID", "cUJTBN6MGAtNZ1P_MKsmV$$Fj5b9zoQXrSRXw7y6oSyb##Name", "cUJTBN6MGAtNZ1P_MKsmV$$Fj5b9zoQXrSRXw7y6oSyb##Salary", "cUJTBN6MGAtNZ1P_MKsmV$$Fj5b9zoQXrSRXw7y6oSyb##Experience", "cUJTBN6MGAtNZ1P_MKsmV$$Fj5b9zoQXrSRXw7y6oSyb##DeptID" ]
+      },
+      "componentInfo" : {
+        "gemId" : "gitUri=http://gitserver:3000/DxEheDCJ_team_5751/DxEheDCJ_project_12654.git&subPath=&tag=0.2.47&projectSubscriptionProjectId=12654&path=gems/Reformat",
+        "projectName" : "ProphecySparkBasicsPython"
+      }
+    },
     "KcDyNQdbS8xSOhm-GizRe$$E-lOzoy7NjeJ6VijMmW4m" : {
       "id" : "KcDyNQdbS8xSOhm-GizRe$$E-lOzoy7NjeJ6VijMmW4m",
       "component" : "Source",
       "metadata" : {
         "label" : "Department_Join",
         "slug" : "Department_Join",
-        "x" : 20,
-        "y" : 260,
+        "x" : -1400,
+        "y" : 280,
         "phase" : 0,
         "cache" : false,
         "detailedStats" : false,
@@ -350,8 +394,8 @@
       "metadata" : {
         "label" : "department_lookup",
         "slug" : "department_lookup",
-        "x" : 240,
-        "y" : 200,
+        "x" : -1220,
+        "y" : 280,
         "phase" : -1,
         "cache" : false,
         "detailedStats" : false,
@@ -428,36 +472,9 @@
       },
       "properties" : {
         "isRange" : false,
-        "processName" : "test",
+        "processName" : "Dept_lookup",
         "keyColumns" : [ "DeptID" ],
-        "valueColumns" : [ "DeptID" ]
-      }
-    },
-    "Hasa1X4Yiv4OsDADTr2HT$$0pxrhZ5JC9FDYlJNOGTT0" : {
-      "id" : "Hasa1X4Yiv4OsDADTr2HT$$0pxrhZ5JC9FDYlJNOGTT0",
-      "component" : "Source",
-      "metadata" : {
-        "label" : "Employee_join",
-        "slug" : "Employee_join",
-        "x" : 20,
-        "y" : 100,
-        "phase" : 0,
-        "cache" : false,
-        "detailedStats" : false,
-        "isImported" : false
-      },
-      "ports" : {
-        "inputs" : [ ],
-        "outputs" : [ {
-          "id" : "LbALyZovrBggULxI85nQf$$caQlZnCrpJrRbP44CVPEo",
-          "slug" : "out"
-        } ],
-        "selectedInputFields" : [ ],
-        "isCustomOutputSchema" : false,
-        "autoUpdateOnRun" : false
-      },
-      "properties" : {
-        "datasetId" : "datasets/Employee_join"
+        "valueColumns" : [ "Department" ]
       }
     }
   },
