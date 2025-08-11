@@ -690,7 +690,7 @@
       }
     },
     "severity" : 1,
-    "message" : "Error occurred while doing Schema Analysis: [UNRESOLVED_COLUMN.WITH_SUGGESTION] A column or function parameter with name `Age` cannot be resolved. Did you mean one of the following? [`Name`, `DeptID`, `Salary`, `EmployeeID`, `Experience`].;\n'Filter (('Age > 25) AND (Salary#791 >= cast(500000 as double)))\n+- LogicalRDD [EmployeeID#788, Name#789, DeptID#790, Salary#791, Experience#792], false\n",
+    "message" : "Error occurred while doing Schema Analysis: [UNRESOLVED_COLUMN.WITH_SUGGESTION] A column or function parameter with name `Age` cannot be resolved. Did you mean one of the following? [`Name`, `DeptID`, `Salary`, `EmployeeID`, `Experience`].;\n'Filter (('Age > 25) AND (Salary#1090 >= cast(500000 as double)))\n+- LogicalRDD [EmployeeID#1087, Name#1088, DeptID#1089, Salary#1090, Experience#1091], false\n",
     "tags" : [ ],
     "relatedInformation" : [ ]
   }, {
