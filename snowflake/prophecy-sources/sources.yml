@@ -1,0 +1,103 @@
+---
+version: 2
+sources:
+- name: "SNOWFLAKE_LEARNING_DB.PUBLIC"
+  database: "SNOWFLAKE_LEARNING_DB"
+  schema: "PUBLIC"
+  config:
+    enabled: true
+  tables:
+  - name: "EMP"
+    description: "Employee records detailing identification, names, and departmental\
+      \ affiliations."
+    quoting:
+      identifier: true
+    columns:
+    - name: "ID"
+      description: "Unique identifier for each employee"
+      dataType:
+        type: "Number"
+    - name: "NAME"
+      description: "The name of the employee"
+      dataType:
+        type: "String"
+    - name: "DEPT"
+      description: "Department where the employee works"
+      dataType:
+        type: "String"
+    type: "table"
+  - name: "STUDENTS"
+    description: "Student information encompassing personal details and academic performance,\
+      \ aiding in enrollment and academic tracking."
+    columns:
+    - name: "STUDENT_ID"
+      description: "The unique identifier for each student"
+      dataType:
+        type: "Number"
+    - name: "FIRST_NAME"
+      description: "The first name of the student"
+      dataType:
+        type: "String"
+    - name: "LAST_NAME"
+      description: "The last name of the student"
+      dataType:
+        type: "String"
+    - name: "DATE_OF_BIRTH"
+      description: "The birth date of the student"
+      dataType:
+        type: "Date"
+    - name: "GENDER"
+      description: "The gender of the student"
+      dataType:
+        type: "String"
+    - name: "EMAIL"
+      description: "Email address of the student"
+      dataType:
+        type: "String"
+    - name: "PHONE"
+      description: "Contact phone number of the student"
+      dataType:
+        type: "String"
+    - name: "ENROLL_DATE"
+      description: "Date when the student enrolled in the institution"
+      dataType:
+        type: "Date"
+    - name: "GPA"
+      description: "The Grade Point Average of the student"
+      dataType:
+        type: "Number"
+    type: "table"
+  - name: "STUDENTS_SEMESTER"
+    description: "Student performance records by semester, providing insights into\
+      \ academic progress and branch-specific outcomes."
+    columns:
+    - name: "STUDENT_ID"
+      description: "Unique identifier for each student"
+      dataType:
+        type: "Number"
+    - name: "FIRST_NAME"
+      description: "The first name of the student"
+      dataType:
+        type: "String"
+    - name: "LAST_NAME"
+      description: "The last name of the student"
+      dataType:
+        type: "String"
+    - name: "BRANCH"
+      description: "The academic branch or field of study the student is enrolled\
+        \ in"
+      dataType:
+        type: "String"
+    - name: "YEAR_OF_JOIN"
+      description: "The year when the student joined the institution"
+      dataType:
+        type: "Number"
+    - name: "SEMESTER"
+      description: "The semester in which the student is currently enrolled"
+      dataType:
+        type: "String"
+    - name: "SCORE"
+      description: "The academic score achieved by the student in the semester"
+      dataType:
+        type: "Number"
+    type: "table"

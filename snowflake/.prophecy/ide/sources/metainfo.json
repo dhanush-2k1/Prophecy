@@ -1,0 +1,476 @@
+{
+  "name" : "snowflake_sql",
+  "fileSystem" : {
+    "type" : "Folder",
+    "name" : "",
+    "children" : { },
+    "path" : "",
+    "editable" : true
+  },
+  "providerType" : "snowflake",
+  "prophecyIDEFolder" : {
+    "name" : "",
+    "children" : { },
+    "path" : "",
+    "editable" : true
+  },
+  "externalSources" : {
+    "type" : "Project",
+    "name" : "",
+    "children" : [ {
+      "type" : "Database",
+      "name" : "SNOWFLAKE",
+      "children" : [ ]
+    }, {
+      "type" : "Database",
+      "name" : "SNOWFLAKE_LEARNING_DB",
+      "children" : [ {
+        "type" : "Schema",
+        "name" : "INFORMATION_SCHEMA",
+        "children" : [ ]
+      }, {
+        "type" : "Schema",
+        "name" : "PUBLIC",
+        "tables" : {
+          "TEST_SHRAVAN" : {
+            "entityType" : "TABLE",
+            "providerType" : "Snowflake",
+            "fields" : [ {
+              "name" : "GENDER",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "AVG_GPA",
+              "dataType" : {
+                "type" : "Number"
+              }
+            }, {
+              "name" : "MAX_GPA",
+              "dataType" : {
+                "type" : "Number"
+              }
+            }, {
+              "name" : "MIN_GPA",
+              "dataType" : {
+                "type" : "Number"
+              }
+            } ]
+          },
+          "STUDENTS" : {
+            "entityType" : "TABLE",
+            "providerType" : "Snowflake",
+            "fields" : [ {
+              "name" : "STUDENT_ID",
+              "dataType" : {
+                "type" : "Number"
+              }
+            }, {
+              "name" : "FIRST_NAME",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "LAST_NAME",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "DATE_OF_BIRTH",
+              "dataType" : {
+                "type" : "Date"
+              }
+            }, {
+              "name" : "GENDER",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "EMAIL",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "PHONE",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "ENROLL_DATE",
+              "dataType" : {
+                "type" : "Date"
+              }
+            }, {
+              "name" : "GPA",
+              "dataType" : {
+                "type" : "Number"
+              }
+            } ]
+          },
+          "SAMPLE_19" : {
+            "entityType" : "TABLE",
+            "providerType" : "Snowflake",
+            "fields" : [ {
+              "name" : "TOTALSAL",
+              "dataType" : {
+                "type" : "Number"
+              }
+            }, {
+              "name" : "EMP_ID",
+              "dataType" : {
+                "type" : "Number"
+              }
+            }, {
+              "name" : "FIRST_NAME",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "LAST_NAME",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "DEPARTMENT",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "HIRE_DATE",
+              "dataType" : {
+                "type" : "Date"
+              }
+            }, {
+              "name" : "BONUS_PERCENT",
+              "dataType" : {
+                "type" : "Number"
+              }
+            }, {
+              "name" : "MANAGER_ID",
+              "dataType" : {
+                "type" : "Number"
+              }
+            } ]
+          },
+          "MY_MODEL" : {
+            "entityType" : "TABLE",
+            "providerType" : "Snowflake",
+            "fields" : [ {
+              "name" : "FIRST_NAME",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "LAST_NAME",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "BONUS_PERCENT",
+              "dataType" : {
+                "type" : "Number"
+              }
+            }, {
+              "name" : "HIRE_DATE",
+              "dataType" : {
+                "type" : "Date"
+              }
+            }, {
+              "name" : "REGION",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "SALARY",
+              "dataType" : {
+                "type" : "Number"
+              }
+            }, {
+              "name" : "MANAGER_ID",
+              "dataType" : {
+                "type" : "Number"
+              }
+            }, {
+              "name" : "DEPARTMENT",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "EMP_ID",
+              "dataType" : {
+                "type" : "Number"
+              }
+            }, {
+              "name" : "UNQ_ID",
+              "dataType" : {
+                "type" : "String"
+              }
+            } ]
+          },
+          "SALES_UNIVERSAL" : {
+            "entityType" : "TABLE",
+            "providerType" : "Snowflake",
+            "fields" : [ {
+              "name" : "SALE_ID",
+              "dataType" : {
+                "type" : "Number"
+              }
+            }, {
+              "name" : "ORDER_DATE",
+              "dataType" : {
+                "type" : "Date"
+              }
+            }, {
+              "name" : "SHIP_DATE",
+              "dataType" : {
+                "type" : "Date"
+              }
+            }, {
+              "name" : "CUSTOMER_ID",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "CUSTOMER_NAME",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "REGION",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "COUNTRY",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "PRODUCT_ID",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "PRODUCT_NAME",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "CATEGORY",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "SUB_CATEGORY",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "QUANTITY",
+              "dataType" : {
+                "type" : "Number"
+              }
+            }, {
+              "name" : "UNIT_PRICE",
+              "dataType" : {
+                "type" : "Number"
+              }
+            }, {
+              "name" : "DISCOUNT",
+              "dataType" : {
+                "type" : "Number"
+              }
+            }, {
+              "name" : "PAYMENT_MODE",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "STATUS",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "LAST_UPDATED",
+              "dataType" : {
+                "type" : "Timestamp"
+              }
+            } ]
+          },
+          "CUSTOMER_DETAILS" : {
+            "entityType" : "TABLE",
+            "providerType" : "Snowflake",
+            "fields" : [ {
+              "name" : "CUSTOMER_ID",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "CUSTOMER_NAME",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "AGE",
+              "dataType" : {
+                "type" : "Number"
+              }
+            }, {
+              "name" : "GENDER",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "CITY",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "STATE",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "REGION",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "COUNTRY",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "LOYALTY_POINTS",
+              "dataType" : {
+                "type" : "Number"
+              }
+            } ]
+          },
+          "STUDENTS_SEMESTER" : {
+            "entityType" : "TABLE",
+            "providerType" : "Snowflake",
+            "fields" : [ {
+              "name" : "STUDENT_ID",
+              "dataType" : {
+                "type" : "Number"
+              }
+            }, {
+              "name" : "FIRST_NAME",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "LAST_NAME",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "BRANCH",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "YEAR_OF_JOIN",
+              "dataType" : {
+                "type" : "Number"
+              }
+            }, {
+              "name" : "SEMESTER",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "SCORE",
+              "dataType" : {
+                "type" : "Number"
+              }
+            } ]
+          },
+          "EMP" : {
+            "entityType" : "TABLE",
+            "providerType" : "Snowflake",
+            "fields" : [ {
+              "name" : "ID",
+              "dataType" : {
+                "type" : "Number"
+              }
+            }, {
+              "name" : "NAME",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "DEPT",
+              "dataType" : {
+                "type" : "String"
+              }
+            } ]
+          },
+          "EMPL" : {
+            "entityType" : "TABLE",
+            "providerType" : "Snowflake",
+            "fields" : [ {
+              "name" : "EMP_ID",
+              "dataType" : {
+                "type" : "Number"
+              }
+            }, {
+              "name" : "FIRST_NAME",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "LAST_NAME",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "DEPARTMENT",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "SALARY",
+              "dataType" : {
+                "type" : "Number"
+              }
+            }, {
+              "name" : "HIRE_DATE",
+              "dataType" : {
+                "type" : "Date"
+              }
+            }, {
+              "name" : "REGION",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "BONUS_PERCENT",
+              "dataType" : {
+                "type" : "Number"
+              }
+            }, {
+              "name" : "MANAGER_ID",
+              "dataType" : {
+                "type" : "Number"
+              }
+            } ]
+          }
+        }
+      } ]
+    }, {
+      "type" : "Database",
+      "name" : "SNOWFLAKE_SAMPLE_DATA",
+      "children" : [ ]
+    } ]
+  },
+  "dependenciesContainer" : {
+    "dependencies" : { },
+    "prophecyProjectDependencies" : {
+      "https://github.com/prophecy-io/snowflake-sql-basics" : "45118"
+    }
+  },
+  "entitiesToSync" : [ ],
+  "frontEndLanguage" : "sql"
+}

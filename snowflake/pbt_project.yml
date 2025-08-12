@@ -1,0 +1,221 @@
+name: snowflake_sql
+description: ''
+version: 0.0.1
+author: dhanushmandapaka2k1@gmail.com
+language: sql
+buildSystem: ''
+buildSystemDetails: null
+pipelines: {}
+datasets: {}
+templates: {}
+jobs: {}
+gemContainer:
+  languageVersion: ''
+  gemLibsVersion: ''
+  gems: {}
+  dependencies: null
+functions:
+  author: null
+  createdAt: '2025-08-12 05:06:53'
+  udfs: {}
+  udafs: {}
+  expressions: {}
+  airflowFunctions: {}
+  businessRules: {}
+subgraphs: {}
+sqlModels:
+  .prophecy/metadata/sqlmodels/Students:
+    name: Students
+    schema: null
+    description: null
+    author: dhanushmandapaka2k1@gmail.com
+    files:
+    - models/Students.sql
+    - .prophecy/ide/models/Students.json
+    - models/schema.yml
+    sqlDependencies:
+      models: []
+      datasets: []
+      seeds: []
+      sources: []
+      snapshots: []
+    createdAt: '2025-08-12 06:22:16'
+  .prophecy/metadata/sqlmodels/Test_Shravan:
+    name: Test_Shravan
+    schema:
+      entityType: ''
+      providerType: Snowflake
+      fields:
+      - name: GENDER
+        dataType:
+          type: String
+      - name: AVG_GPA
+        dataType:
+          type: Number
+      - name: MAX_GPA
+        dataType:
+          type: Number
+      - name: MIN_GPA
+        dataType:
+          type: Number
+    description: null
+    author: dhanushmandapaka2k1@gmail.com
+    files:
+    - models/Test_Shravan.sql
+    - .prophecy/ide/models/Test_Shravan.json
+    - models/schema.yml
+    sqlDependencies:
+      models: []
+      datasets: []
+      seeds: []
+      sources: []
+      snapshots: []
+    createdAt: '2025-08-12 05:09:22'
+sqlSnapshots: {}
+sqlTests: {}
+sqlMacros:
+  .prophecy/metadata/sqlmacros/generate_schema_name:
+    name: generate_schema_name
+    macroType: expression
+    description: null
+    author: dhanushmandapaka2k1@gmail.com
+    files:
+    - macros/generate_schema_name.sql
+    - .prophecy/ide/macros/generate_schema_name.json
+    createdAt: '2025-08-12 05:06:55'
+  .prophecy/metadata/sqlmacros/prophecy_tmp_source:
+    name: prophecy_tmp_source
+    macroType: expression
+    description: null
+    author: dhanushmandapaka2k1@gmail.com
+    files:
+    - macros/prophecy_tmp_source.sql
+    - .prophecy/ide/macros/prophecy_tmp_source.json
+    createdAt: '2025-08-12 05:07:38'
+sqlSeeds: {}
+sqlSources:
+  .prophecy/metadata/sqlsources/SNOWFLAKE_LEARNING_DB_PUBLIC:
+    name: SNOWFLAKE_LEARNING_DB.PUBLIC
+    description: null
+    author: dhanushmandapaka2k1@gmail.com
+    files:
+    - prophecy-sources/sources.yml
+    createdAt: '2025-08-12 05:09:48'
+    tables:
+    - name: EMP
+      schema:
+        entityType: ''
+        providerType: snowflake
+        fields:
+        - name: ID
+          dataType:
+            type: Number
+        - name: NAME
+          dataType:
+            type: String
+        - name: DEPT
+          dataType:
+            type: String
+      description: Employee records detailing identification, names, and departmental
+        affiliations.
+      author: dhanushmandapaka2k1@gmail.com
+      createdAt: '2025-08-12 05:09:48'
+      tableType: table
+    - name: STUDENTS
+      schema:
+        entityType: ''
+        providerType: snowflake
+        fields:
+        - name: STUDENT_ID
+          dataType:
+            type: Number
+        - name: FIRST_NAME
+          dataType:
+            type: String
+        - name: LAST_NAME
+          dataType:
+            type: String
+        - name: DATE_OF_BIRTH
+          dataType:
+            type: Date
+        - name: GENDER
+          dataType:
+            type: String
+        - name: EMAIL
+          dataType:
+            type: String
+        - name: PHONE
+          dataType:
+            type: String
+        - name: ENROLL_DATE
+          dataType:
+            type: Date
+        - name: GPA
+          dataType:
+            type: Number
+      description: Student information encompassing personal details and academic
+        performance, aiding in enrollment and academic tracking.
+      author: dhanushmandapaka2k1@gmail.com
+      createdAt: '2025-08-12 05:25:52'
+      tableType: table
+    - name: STUDENTS_SEMESTER
+      schema:
+        entityType: ''
+        providerType: snowflake
+        fields:
+        - name: STUDENT_ID
+          dataType:
+            type: Number
+        - name: FIRST_NAME
+          dataType:
+            type: String
+        - name: LAST_NAME
+          dataType:
+            type: String
+        - name: BRANCH
+          dataType:
+            type: String
+        - name: YEAR_OF_JOIN
+          dataType:
+            type: Number
+        - name: SEMESTER
+          dataType:
+            type: String
+        - name: SCORE
+          dataType:
+            type: Number
+      description: Student performance records by semester, providing insights into
+        academic progress and branch-specific outcomes.
+      author: dhanushmandapaka2k1@gmail.com
+      createdAt: '2025-08-12 06:40:27'
+      tableType: table
+sqlUnreferencedSources: {}
+sqlPipeline:
+  name: sqlPipeline
+  description: null
+  author: dhanushmandapaka2k1@gmail.com
+  createdAt: '2025-08-12 05:06:53'
+dependencies: []
+projectDependencies:
+  '45118':
+    projectUID: 45118
+    projectName: ProphecySnowflakeSqlBasics
+    repositoryPath: gitUri=https://github.com/prophecy-io/snowflake-sql-basics&subPath=
+    version: 0.0.6
+    isDefault: true
+    author: null
+    createdAt: '2025-08-12 05:06:39'
+flags:
+  shouldAddDefaultDependenciesIfAbsent: false
+pipelineConfigurations: {}
+sqlOrchestratorPipelines:
+  .prophecy/metadata/sqlorchestratorpipeline/test_sql:
+    name: test_sql
+    schema: null
+    description: null
+    author: dhanushmandapaka2k1@gmail.com
+    files:
+    - .prophecy/ide/pipelines/test_sql.json
+    - pipelines/test_sql.py
+    createdAt: '2025-08-12 05:07:38'
+sqlBusinessApps: {}

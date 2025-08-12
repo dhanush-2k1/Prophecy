@@ -1,0 +1,377 @@
+{
+  "id" : "Test_Shravan",
+  "metainfo" : {
+    "label" : "Test_Shravan",
+    "autoLayout" : false,
+    "staleState" : "none",
+    "sourceSuggestions" : {
+      "sources" : [ ]
+    },
+    "graphConfig" : {
+      "entityConfig" : {
+        "materialized" : "table",
+        "type" : "ModelConfig"
+      }
+    },
+    "version" : 3
+  },
+  "processes" : {
+    "V3S8N4gIjn5ZdRKGAs3fO$$zYfOb83dFQXtIp2fWXPGB" : {
+      "id" : "V3S8N4gIjn5ZdRKGAs3fO$$zYfOb83dFQXtIp2fWXPGB",
+      "component" : "WindowFunction",
+      "metadata" : {
+        "label" : "student_gpa_rankings",
+        "slug" : "student_gpa_rankings",
+        "x" : -40,
+        "y" : -120,
+        "phase" : 0,
+        "macroDependencies" : [ ],
+        "isLabelGrayed" : false
+      },
+      "properties" : {
+        "expressions" : [ {
+          "expression" : {
+            "expression" : "DENSE_RANK()"
+          },
+          "alias" : "rank",
+          "_row_id" : "644269332"
+        } ],
+        "activeTab" : "orderTab",
+        "columnsSelector" : [ "3WJFooWBMQs-4OK6x3w6u$$ct7K7-ooQigS3bFe8_UuD##GENDER", "3WJFooWBMQs-4OK6x3w6u$$ct7K7-ooQigS3bFe8_UuD##GPA" ],
+        "partitionExpressions" : [ {
+          "expression" : {
+            "expression" : "GENDER"
+          },
+          "_row_id" : "2136911780"
+        } ],
+        "ordersBy" : [ {
+          "expression" : {
+            "expression" : {
+              "expression" : "GPA"
+            },
+            "_row_id" : "735639554"
+          },
+          "sortType" : "desc"
+        } ]
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "3WJFooWBMQs-4OK6x3w6u$$ct7K7-ooQigS3bFe8_UuD",
+          "slug" : "in0"
+        } ],
+        "outputs" : [ {
+          "id" : "Qhv0LvkI1h8GedUlIKuop$$sMdsD5AEHvd8ZOIGE_nOs",
+          "slug" : "out"
+        } ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      }
+    },
+    "lwYdLeH91a-P0zRMgCV7q" : {
+      "id" : "lwYdLeH91a-P0zRMgCV7q",
+      "component" : "Source",
+      "metadata" : {
+        "label" : "STUDENTS",
+        "slug" : "STUDENTS",
+        "x" : -500,
+        "y" : -120,
+        "phase" : 0
+      },
+      "properties" : {
+        "table" : {
+          "name" : "STUDENTS",
+          "sourceType" : "Source",
+          "sourceName" : "SNOWFLAKE_LEARNING_DB.PUBLIC",
+          "alias" : "",
+          "additionalProperties" : null
+        }
+      },
+      "ports" : {
+        "inputs" : [ ],
+        "outputs" : [ {
+          "id" : "6gz5f4kqjX8wxnR-p--tc",
+          "slug" : "out"
+        } ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      }
+    },
+    "Cj9L8t_PCse3Xq0uGR1ai$$jDUcoEn5RoFjGxk9Y2WWp" : {
+      "id" : "Cj9L8t_PCse3Xq0uGR1ai$$jDUcoEn5RoFjGxk9Y2WWp",
+      "component" : "Aggregate",
+      "metadata" : {
+        "label" : "gender_gpa_statistics",
+        "slug" : "gender_gpa_statistics",
+        "x" : 80,
+        "y" : -120,
+        "phase" : 0,
+        "macroDependencies" : [ ],
+        "isLabelGrayed" : false
+      },
+      "properties" : {
+        "aggregate" : [ {
+          "expression" : {
+            "expression" : "GENDER"
+          },
+          "alias" : "gender",
+          "_row_id" : "DvS5n2U08O"
+        }, {
+          "expression" : {
+            "expression" : "AVG(GPA)"
+          },
+          "alias" : "Avg_GPA",
+          "_row_id" : "1386247981"
+        }, {
+          "expression" : {
+            "expression" : "MAX(GPA)"
+          },
+          "alias" : "max_gpa",
+          "_row_id" : "ZwVOaTPXSr"
+        }, {
+          "expression" : {
+            "expression" : "MIN(GPA)"
+          },
+          "alias" : "min_gpa",
+          "_row_id" : "QZ6BjK8xOL"
+        } ],
+        "allowSelection" : true,
+        "condition" : {
+          "expression" : ""
+        },
+        "activeTab" : "aggregate",
+        "columnsSelector" : [ "3I9sOnCWfbmHZ3mpXNy8x$$ZpZWsbN8yXCr_rlK4jJ1g##GENDER", "3I9sOnCWfbmHZ3mpXNy8x$$ZpZWsbN8yXCr_rlK4jJ1g##GPA" ],
+        "groupBy" : [ {
+          "expression" : {
+            "expression" : "GENDER"
+          },
+          "_row_id" : "496155838"
+        } ]
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "3I9sOnCWfbmHZ3mpXNy8x$$ZpZWsbN8yXCr_rlK4jJ1g",
+          "slug" : "in0"
+        } ],
+        "outputs" : [ {
+          "id" : "RLzeFXoxZEoj9gG7IgAar$$-zqttVh9Q6g7Ba8ErCk5Y",
+          "slug" : "out"
+        } ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      }
+    },
+    "Test_Shravan##APf1S2PZ" : {
+      "id" : "Test_Shravan##APf1S2PZ",
+      "component" : "TargetModel",
+      "metadata" : {
+        "label" : "Test_Shravan",
+        "x" : 260,
+        "y" : -260,
+        "phase" : 0,
+        "macroDependencies" : [ ]
+      },
+      "properties" : {
+        "customQueryDisabled" : true,
+        "customQuery" : false,
+        "incrementalEditorDisabled" : true,
+        "query" : "SELECT * \n\nFROM gender_gpa_statistics\n",
+        "isModel" : true,
+        "incrementalKey" : false,
+        "incremental" : {
+          "expression" : "true"
+        }
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "xijLmCZB",
+          "slug" : "gender_gpa_statistics"
+        } ],
+        "outputs" : [ {
+          "id" : "L7vOFVeG",
+          "slug" : "out"
+        } ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      }
+    },
+    "6hCLo10Qjob6Lnzl0AUea$$dINNpZLpcEVYmZgEHtDn8" : {
+      "id" : "6hCLo10Qjob6Lnzl0AUea$$dINNpZLpcEVYmZgEHtDn8",
+      "component" : "Aggregate",
+      "metadata" : {
+        "label" : "Aggregate_1",
+        "slug" : "Aggregate_1",
+        "x" : -320,
+        "y" : -120,
+        "phase" : 0,
+        "macroDependencies" : [ ]
+      },
+      "properties" : {
+        "aggregate" : [ {
+          "expression" : {
+            "expression" : "STUDENT_ID"
+          },
+          "alias" : "STUDENT_ID",
+          "_row_id" : "1155850884"
+        }, {
+          "expression" : {
+            "expression" : "CONCAT(FIRST_NAME, ' ', LAST_NAME)"
+          },
+          "alias" : "Full_name",
+          "_row_id" : "JIAQ3L-UrP"
+        }, {
+          "expression" : {
+            "expression" : "DATE_OF_BIRTH"
+          },
+          "alias" : "DATE_OF_BIRTH",
+          "_row_id" : "501495777"
+        }, {
+          "expression" : {
+            "expression" : "GENDER"
+          },
+          "alias" : "GENDER",
+          "_row_id" : "505514188"
+        }, {
+          "expression" : {
+            "expression" : "EMAIL"
+          },
+          "alias" : "EMAIL",
+          "_row_id" : "29100373"
+        }, {
+          "expression" : {
+            "expression" : "PHONE"
+          },
+          "alias" : "PHONE",
+          "_row_id" : "1263812624"
+        }, {
+          "expression" : {
+            "expression" : "ENROLL_DATE"
+          },
+          "alias" : "ENROLL_DATE",
+          "_row_id" : "430977617"
+        }, {
+          "expression" : {
+            "expression" : "GPA"
+          },
+          "alias" : "GPA",
+          "_row_id" : "593746490"
+        } ],
+        "allowSelection" : true,
+        "condition" : {
+          "expression" : ""
+        },
+        "activeTab" : "aggregate",
+        "columnsSelector" : [ "t_u-PjgeiUWxxKVJM01gw$$7PI9kkT6YpWlBNHOcvY4X##STUDENT_ID", "t_u-PjgeiUWxxKVJM01gw$$7PI9kkT6YpWlBNHOcvY4X##FIRST_NAME", "t_u-PjgeiUWxxKVJM01gw$$7PI9kkT6YpWlBNHOcvY4X##LAST_NAME", "t_u-PjgeiUWxxKVJM01gw$$7PI9kkT6YpWlBNHOcvY4X##DATE_OF_BIRTH", "t_u-PjgeiUWxxKVJM01gw$$7PI9kkT6YpWlBNHOcvY4X##GENDER", "t_u-PjgeiUWxxKVJM01gw$$7PI9kkT6YpWlBNHOcvY4X##EMAIL", "t_u-PjgeiUWxxKVJM01gw$$7PI9kkT6YpWlBNHOcvY4X##PHONE", "t_u-PjgeiUWxxKVJM01gw$$7PI9kkT6YpWlBNHOcvY4X##ENROLL_DATE", "t_u-PjgeiUWxxKVJM01gw$$7PI9kkT6YpWlBNHOcvY4X##GPA" ],
+        "groupBy" : [ ]
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "t_u-PjgeiUWxxKVJM01gw$$7PI9kkT6YpWlBNHOcvY4X",
+          "slug" : "in0"
+        } ],
+        "outputs" : [ {
+          "id" : "7k1TzNxSgFcu9wpPdmyET$$6HbtavIIsBCqHLZ4BN3T6",
+          "slug" : "out"
+        } ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      }
+    },
+    "KaGD35A2niIDjwujNmvzi$$xtYaNyQU8UMFSlHJAGijy" : {
+      "id" : "KaGD35A2niIDjwujNmvzi$$xtYaNyQU8UMFSlHJAGijy",
+      "component" : "Reformat",
+      "metadata" : {
+        "label" : "student_information",
+        "slug" : "student_information",
+        "x" : -180,
+        "y" : -120,
+        "phase" : 0,
+        "macroDependencies" : [ ],
+        "isLabelGrayed" : false
+      },
+      "properties" : {
+        "columnsSelector" : [ "FC-m0tP7_qaj7dST8nZoV$$O_lmuvJM0O7WMy-02sirG##STUDENT_ID", "FC-m0tP7_qaj7dST8nZoV$$O_lmuvJM0O7WMy-02sirG##FULL_NAME", "FC-m0tP7_qaj7dST8nZoV$$O_lmuvJM0O7WMy-02sirG##DATE_OF_BIRTH", "FC-m0tP7_qaj7dST8nZoV$$O_lmuvJM0O7WMy-02sirG##GENDER", "FC-m0tP7_qaj7dST8nZoV$$O_lmuvJM0O7WMy-02sirG##EMAIL", "FC-m0tP7_qaj7dST8nZoV$$O_lmuvJM0O7WMy-02sirG##GPA" ],
+        "expressions" : [ {
+          "expression" : {
+            "expression" : "STUDENT_ID"
+          },
+          "alias" : "STUDENT_ID",
+          "_row_id" : "1270926282"
+        }, {
+          "expression" : {
+            "expression" : "FULL_NAME"
+          },
+          "alias" : "FULL_NAME",
+          "_row_id" : "149299709"
+        }, {
+          "expression" : {
+            "expression" : "DATE_OF_BIRTH"
+          },
+          "alias" : "DATE_OF_BIRTH",
+          "_row_id" : "753300537"
+        }, {
+          "expression" : {
+            "expression" : "GENDER"
+          },
+          "alias" : "GENDER",
+          "_row_id" : "1862632683"
+        }, {
+          "expression" : {
+            "expression" : "EMAIL"
+          },
+          "alias" : "EMAIL",
+          "_row_id" : "1317352754"
+        }, {
+          "expression" : {
+            "expression" : "GPA"
+          },
+          "alias" : "GPA",
+          "_row_id" : "811342014"
+        } ]
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "FC-m0tP7_qaj7dST8nZoV$$O_lmuvJM0O7WMy-02sirG",
+          "slug" : "in0"
+        } ],
+        "outputs" : [ {
+          "id" : "wR-4JgnBvRxCaKZXb_077$$3YQ7O8isLO_a8td-MFavw",
+          "slug" : "out"
+        } ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      }
+    }
+  },
+  "connections" : [ {
+    "id" : "Kog1BOjsvEJLc902pwH9C$$4nO_oMdpCF63AslHglPJL",
+    "source" : "lwYdLeH91a-P0zRMgCV7q",
+    "sourcePort" : "6gz5f4kqjX8wxnR-p--tc",
+    "target" : "6hCLo10Qjob6Lnzl0AUea$$dINNpZLpcEVYmZgEHtDn8",
+    "targetPort" : "t_u-PjgeiUWxxKVJM01gw$$7PI9kkT6YpWlBNHOcvY4X"
+  }, {
+    "id" : "Q3V-7lK5l4qctbumLh0Tk$$wReKz1hDSyslnMPO_hyhF",
+    "source" : "6hCLo10Qjob6Lnzl0AUea$$dINNpZLpcEVYmZgEHtDn8",
+    "sourcePort" : "7k1TzNxSgFcu9wpPdmyET$$6HbtavIIsBCqHLZ4BN3T6",
+    "target" : "KaGD35A2niIDjwujNmvzi$$xtYaNyQU8UMFSlHJAGijy",
+    "targetPort" : "FC-m0tP7_qaj7dST8nZoV$$O_lmuvJM0O7WMy-02sirG"
+  }, {
+    "id" : "hH9Zp-J-3mzADuEce91B0$$qYyakwgDGUGRICV9kNV8-",
+    "source" : "KaGD35A2niIDjwujNmvzi$$xtYaNyQU8UMFSlHJAGijy",
+    "sourcePort" : "wR-4JgnBvRxCaKZXb_077$$3YQ7O8isLO_a8td-MFavw",
+    "target" : "V3S8N4gIjn5ZdRKGAs3fO$$zYfOb83dFQXtIp2fWXPGB",
+    "targetPort" : "3WJFooWBMQs-4OK6x3w6u$$ct7K7-ooQigS3bFe8_UuD"
+  }, {
+    "id" : "ubkcjR3lIT-m_dHougtio$$K6d4nnZF_SjPLxd3lgvFA",
+    "source" : "V3S8N4gIjn5ZdRKGAs3fO$$zYfOb83dFQXtIp2fWXPGB",
+    "sourcePort" : "Qhv0LvkI1h8GedUlIKuop$$sMdsD5AEHvd8ZOIGE_nOs",
+    "target" : "Cj9L8t_PCse3Xq0uGR1ai$$jDUcoEn5RoFjGxk9Y2WWp",
+    "targetPort" : "3I9sOnCWfbmHZ3mpXNy8x$$ZpZWsbN8yXCr_rlK4jJ1g"
+  }, {
+    "id" : "64q1i3zXOd0SVt1UstNXP$$884WGG4IAi8ypKCi4lSWZ",
+    "source" : "Cj9L8t_PCse3Xq0uGR1ai$$jDUcoEn5RoFjGxk9Y2WWp",
+    "sourcePort" : "RLzeFXoxZEoj9gG7IgAar$$-zqttVh9Q6g7Ba8ErCk5Y",
+    "target" : "Test_Shravan##APf1S2PZ",
+    "targetPort" : "xijLmCZB"
+  } ],
+  "component" : "Model"
+}

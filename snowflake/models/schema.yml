@@ -1,0 +1,48 @@
+---
+version: 2
+models:
+- name: "Test_Shravan"
+  columns:
+  - name: "GENDER"
+    dataType:
+      type: "String"
+  - name: "AVG_GPA"
+    dataType:
+      type: "Number"
+  - name: "MAX_GPA"
+    dataType:
+      type: "Number"
+  - name: "MIN_GPA"
+    dataType:
+      type: "Number"
+  tests: []
+- name: "Students"
+  columns:
+  - name: "DATE_OF_BIRTH"
+    dataType:
+      type: "Date"
+  - name: "GPA"
+    dataType:
+      type: "Number"
+  - name: "GENDER"
+    dataType:
+      type: "String"
+  - name: "FIRST_NAME"
+    dataType:
+      type: "String"
+  - name: "LAST_NAME"
+    dataType:
+      type: "String"
+  - name: "EMAIL"
+    dataType:
+      type: "String"
+  - name: "PHONE"
+    dataType:
+      type: "String"
+  - name: "STUDENT_ID"
+    dataType:
+      type: "Number"
+  - name: "ENROLL_DATE"
+    dataType:
+      type: "Date"
+  tests: []
