@@ -101,3 +101,35 @@ sources:
       dataType:
         type: "Number"
     type: "table"
+  - name: "STUDENT_MARKS"
+    description: "Student performance records capturing individual marks, aiding in\
+      \ academic assessment and progress tracking."
+    columns:
+    - name: "STUDENT_ID"
+      description: "Unique identifier for each student"
+      dataType:
+        type: "Number"
+    - name: "NAME"
+      description: "The name of the student"
+      dataType:
+        type: "String"
+    - name: "MARKS"
+      description: "Array of marks obtained by the student in various subjects"
+      dataType:
+        type: "Array"
+    type: "table"
+  - name: "EVENTS_DATA"
+    description: "Event records capturing various details, enabling insights into\
+      \ event occurrences and characteristics."
+    columns:
+    - name: "ID"
+      description: "Unique identifier for each event"
+      tags: []
+      dataType:
+        type: "Number"
+    - name: "DETAILS"
+      description: "Array containing detailed information about the event"
+      tags: []
+      dataType:
+        type: "Array"
+    type: "table"

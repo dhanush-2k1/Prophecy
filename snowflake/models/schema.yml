@@ -16,7 +16,7 @@ models:
     dataType:
       type: "Number"
   tests: []
-- name: "Students"
+- name: "flattenSchema"
   columns:
   - name: "DATE_OF_BIRTH"
     dataType:
@@ -25,12 +25,6 @@ models:
     dataType:
       type: "Number"
   - name: "GENDER"
-    dataType:
-      type: "String"
-  - name: "FIRST_NAME"
-    dataType:
-      type: "String"
-  - name: "LAST_NAME"
     dataType:
       type: "String"
   - name: "EMAIL"
@@ -42,6 +36,12 @@ models:
   - name: "STUDENT_ID"
     dataType:
       type: "Number"
+  - name: "FULL_NAME"
+    dataType:
+      type: "String"
+  - name: "PERFORMANCE"
+    dataType:
+      type: "String"
   - name: "ENROLL_DATE"
     dataType:
       type: "Date"

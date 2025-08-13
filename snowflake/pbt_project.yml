@@ -24,22 +24,6 @@ functions:
   businessRules: {}
 subgraphs: {}
 sqlModels:
-  .prophecy/metadata/sqlmodels/Students:
-    name: Students
-    schema: null
-    description: null
-    author: dhanushmandapaka2k1@gmail.com
-    files:
-    - models/Students.sql
-    - .prophecy/ide/models/Students.json
-    - models/schema.yml
-    sqlDependencies:
-      models: []
-      datasets: []
-      seeds: []
-      sources: []
-      snapshots: []
-    createdAt: '2025-08-12 06:22:16'
   .prophecy/metadata/sqlmodels/Test_Shravan:
     name: Test_Shravan
     schema:
@@ -71,6 +55,52 @@ sqlModels:
       sources: []
       snapshots: []
     createdAt: '2025-08-12 05:09:22'
+  .prophecy/metadata/sqlmodels/flattenSchema:
+    name: flattenSchema
+    schema:
+      entityType: ''
+      providerType: Snowflake
+      fields:
+      - name: STUDENT_ID
+        dataType:
+          type: Number
+      - name: FULL_NAME
+        dataType:
+          type: String
+      - name: DATE_OF_BIRTH
+        dataType:
+          type: Date
+      - name: GENDER
+        dataType:
+          type: String
+      - name: EMAIL
+        dataType:
+          type: String
+      - name: PHONE
+        dataType:
+          type: String
+      - name: ENROLL_DATE
+        dataType:
+          type: Date
+      - name: GPA
+        dataType:
+          type: Number
+      - name: PERFORMANCE
+        dataType:
+          type: String
+    description: null
+    author: dhanushmandapaka2k1@gmail.com
+    files:
+    - models/flattenSchema.sql
+    - .prophecy/ide/models/flattenSchema.json
+    - models/schema.yml
+    sqlDependencies:
+      models: []
+      datasets: []
+      seeds: []
+      sources: []
+      snapshots: []
+    createdAt: '2025-08-12 10:45:42'
 sqlSnapshots: {}
 sqlTests: {}
 sqlMacros:
@@ -188,6 +218,41 @@ sqlSources:
         academic progress and branch-specific outcomes.
       author: dhanushmandapaka2k1@gmail.com
       createdAt: '2025-08-12 06:40:27'
+      tableType: table
+    - name: STUDENT_MARKS
+      schema:
+        entityType: ''
+        providerType: snowflake
+        fields:
+        - name: STUDENT_ID
+          dataType:
+            type: Number
+        - name: NAME
+          dataType:
+            type: String
+        - name: MARKS
+          dataType:
+            type: Array
+      description: Student performance records capturing individual marks, aiding
+        in academic assessment and progress tracking.
+      author: dhanushmandapaka2k1@gmail.com
+      createdAt: '2025-08-12 10:09:53'
+      tableType: table
+    - name: EVENTS_DATA
+      schema:
+        entityType: ''
+        providerType: snowflake
+        fields:
+        - name: ID
+          dataType:
+            type: Number
+        - name: DETAILS
+          dataType:
+            type: Array
+      description: Event records capturing various details, enabling insights into
+        event occurrences and characteristics.
+      author: dhanushmandapaka2k1@gmail.com
+      createdAt: '2025-08-12 10:59:07'
       tableType: table
 sqlUnreferencedSources: {}
 sqlPipeline:

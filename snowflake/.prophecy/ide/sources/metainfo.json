@@ -107,6 +107,16 @@
               }
             } ]
           },
+          "SRT" : {
+            "entityType" : "TABLE",
+            "providerType" : "Snowflake",
+            "fields" : [ {
+              "name" : "JSON_COLUMN",
+              "dataType" : {
+                "type" : "String"
+              }
+            } ]
+          },
           "SAMPLE_19" : {
             "entityType" : "TABLE",
             "providerType" : "Snowflake",
@@ -149,6 +159,16 @@
               "name" : "MANAGER_ID",
               "dataType" : {
                 "type" : "Number"
+              }
+            } ]
+          },
+          "SDF" : {
+            "entityType" : "TABLE",
+            "providerType" : "Snowflake",
+            "fields" : [ {
+              "name" : "CUSTOMERS",
+              "dataType" : {
+                "type" : "Array"
               }
             } ]
           },
@@ -387,6 +407,21 @@
               }
             } ]
           },
+          "EVENTS_DATA" : {
+            "entityType" : "TABLE",
+            "providerType" : "Snowflake",
+            "fields" : [ {
+              "name" : "ID",
+              "dataType" : {
+                "type" : "Number"
+              }
+            }, {
+              "name" : "DETAILS",
+              "dataType" : {
+                "type" : "Array"
+              }
+            } ]
+          },
           "EMP" : {
             "entityType" : "TABLE",
             "providerType" : "Snowflake",
@@ -404,6 +439,16 @@
               "name" : "DEPT",
               "dataType" : {
                 "type" : "String"
+              }
+            } ]
+          },
+          "DFG" : {
+            "entityType" : "TABLE",
+            "providerType" : "Snowflake",
+            "fields" : [ {
+              "name" : "CUSTOMERS",
+              "dataType" : {
+                "type" : "Array"
               }
             } ]
           },

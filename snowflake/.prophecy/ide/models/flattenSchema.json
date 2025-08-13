@@ -1,0 +1,462 @@
+{
+  "id" : "flattenSchema",
+  "metainfo" : {
+    "label" : "flattenSchema",
+    "autoLayout" : false,
+    "staleState" : "none",
+    "sourceSuggestions" : {
+      "sources" : [ ]
+    },
+    "graphConfig" : {
+      "entityConfig" : {
+        "materialized" : "incremental",
+        "incremental_strategy" : "\"append\"",
+        "type" : "ModelConfig"
+      },
+      "userDefinedConfig" : {
+        "vars" : { }
+      }
+    },
+    "version" : 3
+  },
+  "processes" : {
+    "JOu4KMZ-K7CPYs7sW8fSu" : {
+      "id" : "JOu4KMZ-K7CPYs7sW8fSu",
+      "component" : "Source",
+      "metadata" : {
+        "label" : "STUDENTS",
+        "slug" : "STUDENTS",
+        "x" : -740,
+        "y" : -200,
+        "phase" : 0
+      },
+      "properties" : {
+        "table" : {
+          "name" : "STUDENTS",
+          "sourceType" : "Table",
+          "sourceName" : "SNOWFLAKE_LEARNING_DB.PUBLIC",
+          "alias" : ""
+        }
+      },
+      "ports" : {
+        "inputs" : [ ],
+        "outputs" : [ {
+          "id" : "-FYAL3po-MjzravdMdmbv",
+          "slug" : "out"
+        } ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      }
+    },
+    "final##hFC6QBtX" : {
+      "id" : "final##hFC6QBtX",
+      "component" : "TargetModel",
+      "metadata" : {
+        "label" : "flattenSchema",
+        "x" : -220,
+        "y" : -200,
+        "phase" : 0,
+        "macroDependencies" : [ ],
+        "isLabelGrayed" : false
+      },
+      "properties" : {
+        "customQueryDisabled" : true,
+        "customQuery" : false,
+        "incrementalEditorDisabled" : true,
+        "query" : "SELECT * \n\nFROM Subgraph_1\n",
+        "isModel" : true,
+        "incrementalKey" : false,
+        "incremental" : {
+          "expression" : "true"
+        }
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "Wp9jtx8o",
+          "slug" : "Subgraph_1"
+        } ],
+        "outputs" : [ {
+          "id" : "HAGDWSay",
+          "slug" : "out"
+        } ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      }
+    },
+    "u-uUHA6IxeDkVRhCykAxa$$FFBlfekkvKOdWplwkbaFi" : {
+      "id" : "u-uUHA6IxeDkVRhCykAxa$$FFBlfekkvKOdWplwkbaFi",
+      "component" : "Subgraph",
+      "metadata" : {
+        "label" : "Subgraph_1",
+        "slug" : "Subgraph_1",
+        "x" : -460,
+        "y" : -220,
+        "phase" : 0,
+        "macroDependencies" : [ ]
+      },
+      "processes" : {
+        "D995siEmUH3L905tgfh00$$C3mrH9jeRfKwzOC3wwsmU" : {
+          "id" : "D995siEmUH3L905tgfh00$$C3mrH9jeRfKwzOC3wwsmU",
+          "component" : "Reformat",
+          "metadata" : {
+            "label" : "student_performance_summary",
+            "slug" : "student_performance_summary",
+            "x" : -860,
+            "y" : 180,
+            "phase" : 0,
+            "macroDependencies" : [ ],
+            "isLabelGrayed" : false
+          },
+          "properties" : {
+            "columnsSelector" : [ "1mfUKsl5UmuOQeme9Mu4g$$YZT0M2243PsT3Lzccalg7##STUDENT_ID", "1mfUKsl5UmuOQeme9Mu4g$$YZT0M2243PsT3Lzccalg7##FIRST_NAME", "1mfUKsl5UmuOQeme9Mu4g$$YZT0M2243PsT3Lzccalg7##LAST_NAME", "1mfUKsl5UmuOQeme9Mu4g$$YZT0M2243PsT3Lzccalg7##DATE_OF_BIRTH", "1mfUKsl5UmuOQeme9Mu4g$$YZT0M2243PsT3Lzccalg7##GENDER", "1mfUKsl5UmuOQeme9Mu4g$$YZT0M2243PsT3Lzccalg7##EMAIL", "1mfUKsl5UmuOQeme9Mu4g$$YZT0M2243PsT3Lzccalg7##PHONE", "1mfUKsl5UmuOQeme9Mu4g$$YZT0M2243PsT3Lzccalg7##ENROLL_DATE", "1mfUKsl5UmuOQeme9Mu4g$$YZT0M2243PsT3Lzccalg7##GPA", "1mfUKsl5UmuOQeme9Mu4g$$YZT0M2243PsT3Lzccalg7##gpa" ],
+            "expressions" : [ {
+              "expression" : {
+                "expression" : "STUDENT_ID"
+              },
+              "alias" : "STUDENT_ID",
+              "_row_id" : "137903155"
+            }, {
+              "expression" : {
+                "expression" : "CONCAT(FIRST_NAME, ' ', LAST_NAME)"
+              },
+              "alias" : "full_name",
+              "_row_id" : "1648920885"
+            }, {
+              "expression" : {
+                "expression" : "DATE_OF_BIRTH"
+              },
+              "alias" : "DATE_OF_BIRTH",
+              "_row_id" : "779244742"
+            }, {
+              "expression" : {
+                "expression" : "GENDER"
+              },
+              "alias" : "GENDER",
+              "_row_id" : "1309521014"
+            }, {
+              "expression" : {
+                "expression" : "EMAIL"
+              },
+              "alias" : "EMAIL",
+              "_row_id" : "1837896306"
+            }, {
+              "expression" : {
+                "expression" : "PHONE"
+              },
+              "alias" : "PHONE",
+              "_row_id" : "837472392"
+            }, {
+              "expression" : {
+                "expression" : "ENROLL_DATE"
+              },
+              "alias" : "ENROLL_DATE",
+              "_row_id" : "1358199928"
+            }, {
+              "expression" : {
+                "expression" : "GPA"
+              },
+              "alias" : "GPA",
+              "_row_id" : "395954246"
+            }, {
+              "expression" : {
+                "expression" : "CASE \r\nWHEN GPA>=3.90 and GPA<=4.00 THEN 'Excellent' \r\nwhen gpa>=3.75 and gpa<=3.89 then 'very Good'\r\nwhen gpa>=3.50 and gpa<=3.74 then 'Good'\r\nwhen gpa>=3.00 and gpa<=3.49 then 'Above Average'\r\nwhen gpa>=2.50 and gpa<=2.99 then 'Average'\r\nwhen gpa>=2.00 and gpa<=2.49 then 'Below Average'\r\nwhen gpa<=1.99 then 'Fail'\r\nEND"
+              },
+              "alias" : "Performance",
+              "_row_id" : "rE6QVOS_uM"
+            } ]
+          },
+          "ports" : {
+            "inputs" : [ {
+              "id" : "1mfUKsl5UmuOQeme9Mu4g$$YZT0M2243PsT3Lzccalg7",
+              "schema" : {
+                "entityType" : "",
+                "providerType" : "snowflake",
+                "fields" : [ {
+                  "name" : "STUDENT_ID",
+                  "dataType" : {
+                    "type" : "Number"
+                  }
+                }, {
+                  "name" : "FIRST_NAME",
+                  "dataType" : {
+                    "type" : "String"
+                  }
+                }, {
+                  "name" : "LAST_NAME",
+                  "dataType" : {
+                    "type" : "String"
+                  }
+                }, {
+                  "name" : "DATE_OF_BIRTH",
+                  "dataType" : {
+                    "type" : "Date"
+                  }
+                }, {
+                  "name" : "GENDER",
+                  "dataType" : {
+                    "type" : "String"
+                  }
+                }, {
+                  "name" : "EMAIL",
+                  "dataType" : {
+                    "type" : "String"
+                  }
+                }, {
+                  "name" : "PHONE",
+                  "dataType" : {
+                    "type" : "String"
+                  }
+                }, {
+                  "name" : "ENROLL_DATE",
+                  "dataType" : {
+                    "type" : "Date"
+                  }
+                }, {
+                  "name" : "GPA",
+                  "dataType" : {
+                    "type" : "Number"
+                  }
+                } ]
+              },
+              "slug" : "in0"
+            } ],
+            "outputs" : [ {
+              "id" : "5EuKWmWlpIqYVU5fnZVcD$$Thom_oeXZS95VlG-W_Neh",
+              "schema" : {
+                "entityType" : "",
+                "providerType" : "Snowflake",
+                "fields" : [ {
+                  "name" : "STUDENT_ID",
+                  "dataType" : {
+                    "type" : "Number"
+                  }
+                }, {
+                  "name" : "FULL_NAME",
+                  "dataType" : {
+                    "type" : "String"
+                  }
+                }, {
+                  "name" : "DATE_OF_BIRTH",
+                  "dataType" : {
+                    "type" : "Date"
+                  }
+                }, {
+                  "name" : "GENDER",
+                  "dataType" : {
+                    "type" : "String"
+                  }
+                }, {
+                  "name" : "EMAIL",
+                  "dataType" : {
+                    "type" : "String"
+                  }
+                }, {
+                  "name" : "PHONE",
+                  "dataType" : {
+                    "type" : "String"
+                  }
+                }, {
+                  "name" : "ENROLL_DATE",
+                  "dataType" : {
+                    "type" : "Date"
+                  }
+                }, {
+                  "name" : "GPA",
+                  "dataType" : {
+                    "type" : "Number"
+                  }
+                }, {
+                  "name" : "PERFORMANCE",
+                  "dataType" : {
+                    "type" : "String"
+                  }
+                } ]
+              },
+              "slug" : "out"
+            } ],
+            "isCustomOutputSchema" : false,
+            "autoUpdateOnRun" : false
+          }
+        },
+        "OSXyvbBxes7LBcMub-kdq$$BDQVZ-_ODkSnbmRk2qRS8" : {
+          "id" : "OSXyvbBxes7LBcMub-kdq$$BDQVZ-_ODkSnbmRk2qRS8",
+          "component" : "Filter",
+          "metadata" : {
+            "label" : "excellent_performance_records",
+            "slug" : "excellent_performance_records",
+            "x" : 160,
+            "y" : 220,
+            "phase" : 0,
+            "macroDependencies" : [ ],
+            "isLabelGrayed" : false
+          },
+          "properties" : {
+            "columnsSelector" : [ "jOfPfC70Mwj-HyeymwuS-$$8ZeqxJevxpWNeEtIpYZsW##PERFORMANCE" ],
+            "condition" : {
+              "expression" : "PERFORMANCE = 'Excellent'"
+            }
+          },
+          "ports" : {
+            "inputs" : [ {
+              "id" : "jOfPfC70Mwj-HyeymwuS-$$8ZeqxJevxpWNeEtIpYZsW",
+              "schema" : {
+                "entityType" : "",
+                "providerType" : "Snowflake",
+                "fields" : [ {
+                  "name" : "STUDENT_ID",
+                  "dataType" : {
+                    "type" : "Number"
+                  }
+                }, {
+                  "name" : "FULL_NAME",
+                  "dataType" : {
+                    "type" : "String"
+                  }
+                }, {
+                  "name" : "DATE_OF_BIRTH",
+                  "dataType" : {
+                    "type" : "Date"
+                  }
+                }, {
+                  "name" : "GENDER",
+                  "dataType" : {
+                    "type" : "String"
+                  }
+                }, {
+                  "name" : "EMAIL",
+                  "dataType" : {
+                    "type" : "String"
+                  }
+                }, {
+                  "name" : "PHONE",
+                  "dataType" : {
+                    "type" : "String"
+                  }
+                }, {
+                  "name" : "ENROLL_DATE",
+                  "dataType" : {
+                    "type" : "Date"
+                  }
+                }, {
+                  "name" : "GPA",
+                  "dataType" : {
+                    "type" : "Number"
+                  }
+                }, {
+                  "name" : "PERFORMANCE",
+                  "dataType" : {
+                    "type" : "String"
+                  }
+                } ]
+              },
+              "slug" : "in0"
+            } ],
+            "outputs" : [ {
+              "id" : "J_NvqKABpsVfiuFIDmsug$$bZjoETAzYpVPmWwSzBxnN",
+              "schema" : {
+                "entityType" : "",
+                "providerType" : "Snowflake",
+                "fields" : [ {
+                  "name" : "STUDENT_ID",
+                  "dataType" : {
+                    "type" : "Number"
+                  }
+                }, {
+                  "name" : "FULL_NAME",
+                  "dataType" : {
+                    "type" : "String"
+                  }
+                }, {
+                  "name" : "DATE_OF_BIRTH",
+                  "dataType" : {
+                    "type" : "Date"
+                  }
+                }, {
+                  "name" : "GENDER",
+                  "dataType" : {
+                    "type" : "String"
+                  }
+                }, {
+                  "name" : "EMAIL",
+                  "dataType" : {
+                    "type" : "String"
+                  }
+                }, {
+                  "name" : "PHONE",
+                  "dataType" : {
+                    "type" : "String"
+                  }
+                }, {
+                  "name" : "ENROLL_DATE",
+                  "dataType" : {
+                    "type" : "Date"
+                  }
+                }, {
+                  "name" : "GPA",
+                  "dataType" : {
+                    "type" : "Number"
+                  }
+                }, {
+                  "name" : "PERFORMANCE",
+                  "dataType" : {
+                    "type" : "String"
+                  }
+                } ]
+              },
+              "slug" : "out"
+            } ],
+            "isCustomOutputSchema" : false,
+            "autoUpdateOnRun" : false
+          }
+        }
+      },
+      "connections" : [ {
+        "id" : "K8rrNwGPE1N7gYnDZ64Lu",
+        "source" : "u-uUHA6IxeDkVRhCykAxa$$FFBlfekkvKOdWplwkbaFi",
+        "sourcePort" : "tRXC-OhmkOkYj04D3252c$$nCrGsM8PLFDhy1ij9qms4",
+        "target" : "D995siEmUH3L905tgfh00$$C3mrH9jeRfKwzOC3wwsmU",
+        "targetPort" : "1mfUKsl5UmuOQeme9Mu4g$$YZT0M2243PsT3Lzccalg7"
+      }, {
+        "id" : "aF7gTgnxzi17ChECYyPAu$$cb8k7UNKNyP47AWrOpFXh",
+        "source" : "D995siEmUH3L905tgfh00$$C3mrH9jeRfKwzOC3wwsmU",
+        "sourcePort" : "5EuKWmWlpIqYVU5fnZVcD$$Thom_oeXZS95VlG-W_Neh",
+        "target" : "OSXyvbBxes7LBcMub-kdq$$BDQVZ-_ODkSnbmRk2qRS8",
+        "targetPort" : "jOfPfC70Mwj-HyeymwuS-$$8ZeqxJevxpWNeEtIpYZsW"
+      }, {
+        "id" : "i8LagXprdxCdor_NrnWOe",
+        "source" : "OSXyvbBxes7LBcMub-kdq$$BDQVZ-_ODkSnbmRk2qRS8",
+        "sourcePort" : "J_NvqKABpsVfiuFIDmsug$$bZjoETAzYpVPmWwSzBxnN",
+        "target" : "u-uUHA6IxeDkVRhCykAxa$$FFBlfekkvKOdWplwkbaFi",
+        "targetPort" : "CcK7VPHdGJLzbVmEf4jJ7$$ffZ-c1RktVnEX9wy-wlhA"
+      } ],
+      "ports" : {
+        "inputs" : [ {
+          "id" : "tRXC-OhmkOkYj04D3252c$$nCrGsM8PLFDhy1ij9qms4",
+          "slug" : "STUDENTS"
+        } ],
+        "outputs" : [ {
+          "id" : "CcK7VPHdGJLzbVmEf4jJ7$$ffZ-c1RktVnEX9wy-wlhA",
+          "slug" : "out"
+        } ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      },
+      "properties" : { },
+      "canonical" : false
+    }
+  },
+  "connections" : [ {
+    "id" : "2dgRCNYFHCblwp2RtiOyx$$bko3HDkHQCXOTQSvBWrSM",
+    "source" : "JOu4KMZ-K7CPYs7sW8fSu",
+    "sourcePort" : "-FYAL3po-MjzravdMdmbv",
+    "target" : "u-uUHA6IxeDkVRhCykAxa$$FFBlfekkvKOdWplwkbaFi",
+    "targetPort" : "tRXC-OhmkOkYj04D3252c$$nCrGsM8PLFDhy1ij9qms4"
+  }, {
+    "id" : "JYDkioz_FPCNy7rhnuqFa$$EGZXuo00driiJeVUKMk2j",
+    "source" : "u-uUHA6IxeDkVRhCykAxa$$FFBlfekkvKOdWplwkbaFi",
+    "sourcePort" : "CcK7VPHdGJLzbVmEf4jJ7$$ffZ-c1RktVnEX9wy-wlhA",
+    "target" : "final##hFC6QBtX",
+    "targetPort" : "Wp9jtx8o"
+  } ],
+  "component" : "Model"
+}
